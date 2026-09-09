@@ -7,7 +7,7 @@ Purpose: establish the approved Release 1 business-analysis baseline before data
 - [Product backlog and acceptance criteria](product-backlog.md)
 - [AS-IS, TO-BE, role-access, and customer-risk process flows](process-flows.md)
 - [Requirements traceability matrix](requirements-traceability-matrix.md)
-- [Approved Planning baseline](../../../02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md)
+- [Approved Planning baseline](../../02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md)
 
 ## Status
 
