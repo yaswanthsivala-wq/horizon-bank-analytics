@@ -2,29 +2,37 @@
 
 ## Banking Operations & Customer Risk Analytics
 
-This repository documents the Horizon Community Bank Banking Operations & Customer Risk Analytics project across its lifecycle. Initiation approval and completed GitHub synchronization have been confirmed by the user. Detailed business objectives, scope, stakeholders, requirements, data sources, success measures, and delivery dates are **Pending confirmation**.
+This repository is the permanent source of truth for a fictional, synthetic-data portfolio project covering the full Data Analyst and Business Analyst lifecycle. It documents requirements, process analysis, data design, engineering, SQL analysis, Power BI reporting, testing, monitoring, and closure without using real bank or customer data.
 
-Current authorization covers Initiation documentation and its commit and push to `main` at [origin](https://github.com/yaswanthsivala-wq/horizon-bank-analytics). The [project charter](docs/01-initiation/project-charter.md) and [stakeholder register](docs/01-initiation/stakeholder-register.md) separate confirmed information from assumptions, constraints, and pending decisions. Review of these newly written documents is Pending confirmation. Planning awaits explicit authorization; technical implementation has not started and no automated workflow is configured.
+## Current status
+
+Initiation and Planning are approved. Execution Sprint 1 business-analysis artifacts have been published and await synchronization and verification in the permanent local VS Code repository. Sprint 2 has not started.
+
+- [Project status](PROJECT_STATUS.md)
+- [Planning baseline](docs/02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md)
+- [Sprint 01 business analysis](docs/03-execution/sprint-01-business-analysis/README.md)
+- [Changelog](CHANGELOG.md)
 
 ## Project lifecycle
 
-| Phase | Location | Intended documentation |
+| Phase | Location | Status |
 | --- | --- | --- |
-| Initiation | [01-initiation](docs/01-initiation/README.md) | Charter, business context, stakeholders, approvals |
-| Planning | [02-planning](docs/02-planning/README.md) | Scope, requirements, delivery plan, data governance, quality, communications |
-| Execution | [03-execution](docs/03-execution/README.md) | Work records, design, analysis, validation, deliverables |
-| Monitoring and Control | [04-monitoring-and-control](docs/04-monitoring-and-control/README.md) | Progress, risks, issues, changes, decisions, reviews |
-| Closure | [05-closure](docs/05-closure/README.md) | Acceptance, handover, lessons learned, closure report, archive |
+| Initiation | [01-initiation](docs/01-initiation/README.md) | Approved; existing files preserved |
+| Planning | [02-planning](docs/02-planning/README.md) | Approved; baseline published |
+| Execution | [03-execution](docs/03-execution/README.md) | Sprint 1 BA published; local verification pending |
+| Monitoring and Control | [04-monitoring-and-control](docs/04-monitoring-and-control/README.md) | Tracking structure prepared |
+| Closure | [05-closure](docs/05-closure/README.md) | Not started |
 
-## Reserved technical directories
+## Release 1 direction
 
-- `src/`: future application or analysis source.
-- `sql/`: future SQL scripts.
-- `data/`: future local data; raw, interim, processed, and external contents are ignored by Git.
-- `dashboards/`: future dashboard artifacts.
-- `tests/`: future tests.
-- `.github/workflows/`: reserved for future authorized automation; no workflow is configured.
+Release 1 will integrate five simulated daily source extracts covering customers/accounts, transactions, loans/payments, fraud alerts, complaints, and branch reference data. The planned solution uses Python, PostgreSQL, SQL, and Power BI with data-quality controls, reconciliation, explainable risk indicators, masking, role-based reporting, and 24 months of synthetic history.
 
-Empty directories contain `.gitkeep` placeholders so Git can retain them. The lifecycle subdirectories reserve locations for future artifacts; their existence does not indicate completed work or approval.
+## Repository safeguards
 
-Read [AGENTS.md](AGENTS.md) before making changes. Track progress in [PROJECT_STATUS.md](PROJECT_STATUS.md) and repository changes in [CHANGELOG.md](CHANGELOG.md).
+- GitHub `main` and the local folder `C:\Users\yaswa\OneDrive\Desktop\horizon-bank-analytics` are the permanent source of truth.
+- Existing Initiation documentation must be preserved.
+- Real customer information, credentials, environment files, and generated data must not be committed.
+- Risk indicators support human review and do not represent confirmed fraud or automated lending decisions.
+- Sprint 2 must not begin until Sprint 1 is committed, pushed, pulled locally, and verified.
+
+Read [AGENTS.md](AGENTS.md) before making changes.
