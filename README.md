@@ -2,9 +2,9 @@
 
 ## Banking Operations & Customer Risk Analytics
 
-This local repository provides the project lifecycle structure. Business objectives, scope, stakeholders, requirements, data sources, success measures, and delivery dates are **pending confirmation**.
+This repository documents the Horizon Community Bank Banking Operations & Customer Risk Analytics project across its lifecycle. Initiation approval and completed GitHub synchronization have been confirmed by the user. Detailed business objectives, scope, stakeholders, requirements, data sources, success measures, and delivery dates are **Pending confirmation**.
 
-Only repository scaffolding has been authorized. Technical implementation has not started. No GitHub connection, remote repository, or automated workflow is configured.
+Current authorization covers Initiation documentation and its commit and push to `main` at [origin](https://github.com/yaswanthsivala-wq/horizon-bank-analytics). The [project charter](docs/01-initiation/project-charter.md) and [stakeholder register](docs/01-initiation/stakeholder-register.md) separate confirmed information from assumptions, constraints, and pending decisions. Review of these newly written documents is Pending confirmation. Planning awaits explicit authorization; technical implementation has not started and no automated workflow is configured.
 
 ## Project lifecycle
 
