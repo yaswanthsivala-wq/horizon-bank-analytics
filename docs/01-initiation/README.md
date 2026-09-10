@@ -1,25 +1,27 @@
 # Initiation
 
-Purpose: establish and obtain approval for the project's business context and mandate.
+Purpose: record the approved business context and mandate for Horizon Community Bank Banking Operations & Customer Risk Analytics.
 
-Current artifacts:
+**Initiation is approved; baseline documentation corrected.** The approved baseline was supplied by the user on September 9, 2026.
 
-- [Project charter](project-charter.md): confirmed mandate, approval evidence, constraints, and pending decisions.
-- [Stakeholder register](stakeholder-register.md): confirmed participation and unresolved stakeholder information.
+## Artifact inventory
 
-Reserved artifact locations (still empty; current documents are at the paths above):
+- [Project charter](project-charter.md): approved purpose, problems, objectives, scope, exclusions, assumptions, constraints, and dated approval evidence.
+- [Stakeholder register](stakeholder-register.md): confirmed fictional role definitions and unconfirmed real-person assignments.
+- [Approved Planning baseline](../02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md): subsequent requirements, KPI dictionary, provisional risk rules, role responsibilities, schedule, and governance.
 
-- `business-context/`: confirmed problem statement, objectives, and supporting context.
-- `charter/`: draft and approved project charter.
-- `stakeholders/`: confirmed stakeholders, responsibilities, and engagement needs.
-- `approvals/`: initiation review and approval evidence.
+Reserved directories `business-context/`, `charter/`, `stakeholders/`, and `approvals/` retain placeholders; the substantive Initiation artifacts are linked above.
 
-Progress: Initiation charter and stakeholder register prepared using available confirmed information.
+## Business context and progress
 
-Open questions: detailed business context, objectives, scope, ownership, stakeholders, success measures, and original approval details are Pending confirmation.
+The fictional-bank portfolio project addresses siloed reporting, inconsistent KPIs, customer identity reconciliation, limited drill-down, and weak lineage and access controls. Targets include monthly reporting under four hours from a three-business-day baseline and validated daily data by 6:00 a.m. Central Time. These are approved objectives, not measured results.
 
-Approval status: Initiation approval confirmed by the user on 2026-09-09; this is the date of confirmation, not an asserted original approval date. Review or approval of newly authored documents is Pending confirmation.
+Delivery uses synthetic data only, twenty-four months of history, daily batches, local Power BI Desktop/PostgreSQL/Python/Git/GitHub, a one-person team, a six-week target, and no paid enterprise infrastructure. The charter records the complete approved scope and exclusions.
 
-No substantive business or technical assumptions have been adopted. Current work is limited to Initiation documentation and authorized Git publication. Next approval gate: explicit authorization to begin Planning. See [project status](../../PROJECT_STATUS.md).
+Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis is published and awaiting user approval. Sprint 2 Data Design and technical implementation have not started.
 
-Maintain this inventory and status as work proceeds; follow the root AGENTS.md.
+## Pending evidence and next gate
+
+KPI definitions, baseline risk rules, role definitions, and testing expectations are documented in Planning. Real-person assignments, source-owner review evidence, executed validation, and acceptance remain **Pending confirmation**.
+
+The next gate is `/approve sprint-1-ba`, pending user approval after required verification. No implementation, test, KPI-achievement, UAT, or acceptance results are claimed. See [project status](../../PROJECT_STATUS.md).

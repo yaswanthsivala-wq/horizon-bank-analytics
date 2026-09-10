@@ -14,6 +14,8 @@
 
 The Initiation phase was approved by the project sponsor on September 9, 2026. This document converts the approved initiation into the Planning baseline. Execution must not introduce unsupported claims, real customer information, or unapproved scope.
 
+Planning was approved by the user on September 9, 2026. Sprint 1 Business Analysis is published and awaiting user approval after required verification. Sprint 2 Data Design and technical implementation have not started.
+
 ## 2. Executive Summary
 
 Horizon Community Bank currently relies on separate operational reports from Core Banking, Loan Operations, Fraud Operations, Customer Service, and Branch Administration. Manual consolidation produces delayed reporting, inconsistent KPI calculations, customer-identity reconciliation problems, and no unified view of operational and customer risk.
@@ -314,7 +316,7 @@ Project status will be classified as:
 | Gate | Required before | Approval evidence |
 |---|---|---|
 | G1 Initiation | Planning | Approved September 9, 2026 |
-| G2 Planning Baseline | Execution | Sponsor approval of this plan |
+| G2 Planning Baseline | Execution | Approved by the user September 9, 2026 |
 | G3 Data Design | ETL construction | Approved ERD, dictionary, and mappings |
 | G4 Analytics Validation | Dashboard finalization | Reconciled KPI and risk calculations |
 | G5 UAT and Compliance | Release | Passed UAT and security/masking review |
@@ -322,7 +324,9 @@ Project status will be classified as:
 
 ## 20. Execution Entry Criteria
 
-Execution may begin after Gate G2 when:
+Gate G2 was approved by the user September 9, 2026. The original Execution entry criteria are retained below; this approval does not constitute Sprint 1 acceptance or authorization to begin Sprint 2.
+
+Execution entry criteria:
 
 - The scope and six-week schedule are accepted.
 - The functional and nonfunctional requirements are accepted.
@@ -330,7 +334,9 @@ Execution may begin after Gate G2 when:
 - The synthetic-data-only limitation is acknowledged.
 - The provisional high-risk rule is accepted as an analytical indicator, not an automated fraud decision.
 
-## 21. Immediate Execution Queue After Approval
+## 21. Original Planned Execution Queue
+
+This is the original planned queue, not a completion record. The [backlog and acceptance criteria](../03-execution/sprint-01-business-analysis/product-backlog.md), [process flows](../03-execution/sprint-01-business-analysis/process-flows.md), and [traceability matrix](../03-execution/sprint-01-business-analysis/requirements-traceability-matrix.md) are published and awaiting Sprint 1 user approval. Data Design and technical implementation remain not started. No completion of other queue items is implied.
 
 1. Create repository structure and environment files.
 2. Create the detailed eight-story backlog with acceptance criteria.
@@ -341,5 +347,7 @@ Execution may begin after Gate G2 when:
 
 ---
 
-**Planning status:** Complete — awaiting Gate G2 approval.  
-**Approval command:** `/approve planning`
+**Planning status:** Approved September 9, 2026.
+**Current gate:** `/approve sprint-1-ba`
+
+This command remains pending user approval after required verification. No implementation, test, KPI-achievement, UAT, or acceptance results are claimed.

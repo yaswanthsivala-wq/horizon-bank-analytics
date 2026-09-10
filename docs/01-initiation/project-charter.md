@@ -2,55 +2,98 @@
 
 Project: **Horizon Community Bank — Banking Operations & Customer Risk Analytics**
 
-Recorded: 2026-09-09
+Updated: 2026-09-10
 
-## Confirmed information
+Status: **Initiation approved**
 
-- The repository is for the Horizon Community Bank Banking Operations & Customer Risk Analytics project.
-- Initiation has already been approved, as confirmed by the user in the current instruction.
-- The user confirmed GitHub synchronization is complete and authorized Initiation documentation, a commit, and a push of `main` to `origin`.
-- The current work covers Initiation documentation only. Planning requires separate authorization.
+## Confirmed project purpose
 
-## Mandate and business context
+Build a realistic, portfolio-grade analytics solution for a fictional community bank to improve banking operations, customer-risk visibility, and management decision-making.
 
-The confirmed project subject is banking operations and customer risk analytics. A detailed business problem, objectives, benefits, business scope, deliverables, success measures, and acceptance criteria are **Pending confirmation**. The available repository contains lifecycle scaffolding, not a substantive approved business brief. This charter records only information available in the repository and current user instruction.
+## Confirmed core business problems
 
-## Authorization and approval evidence
+- Siloed operational data and separate reports across Core Banking, Loan Operations, Fraud Operations, Customer Service/CRM, and Branch Administration.
+- Conflicting KPI definitions and inconsistent monthly reports.
+- Customer identity-reconciliation problems.
+- No trusted unified operational and customer-risk view.
+- Limited drill-down from branch to segment to customer.
+- Manual, slow, error-prone reporting.
+- Weak data lineage, ownership, and access controls.
 
-| Record | Date recorded | Evidence and rationale | Owner / authority |
-| --- | --- | --- | --- |
-| Initiation approval confirmation | 2026-09-09 | User instruction: "GitHub synchronization is complete and initiation has already been approved." Records existing approval; original approval date and artifact are Pending confirmation. | Confirmation supplied by the user; named approver and organizational role are Pending confirmation. |
-| Documentation and Git publication authorization | 2026-09-09 | User requested Initiation documents, the specified commit, push, and synchronization verification. This supplies further authorization beyond the scaffold-only baseline in AGENTS.md. | User; formal project role is Pending confirmation. |
-| Planning gate | 2026-09-09 | User instruction: "Do not begin Planning until authorized." | Planning approval authority is Pending confirmation. |
+## Confirmed business objectives
 
-Initiation approval is confirmed by the user. Review or approval of this newly written charter and stakeholder register is **Pending confirmation**; earlier approval is not evidence of acceptance of newly authored content.
+- Establish one trusted source of truth for operational and customer-risk KPIs.
+- Reduce monthly reporting time from three business days to under four hours.
+- Make validated daily data available by 6:00 a.m. Central Time.
+- Standardize Release 1 KPI definitions and data lineage.
+- Enable branch, segment, and customer-level drill-down.
+- Create a unified view of customer, account, loan, fraud, complaint, and branch activity.
+- Enable controlled investigations by authorized users.
+- Protect sensitive fields through role-based visibility, masking, and export controls.
 
-## Assumptions
+These are approved objectives and targets for the fictional scenario, not achieved outcomes or measured technical results.
 
-No substantive business or technical assumptions have been adopted. Future proposed content must be labeled **Draft — not approved** until confirmed.
+## Confirmed Release 1 scope
 
-## Constraints
+- Synthetic Core Banking, Loan Servicing, Fraud Monitoring, CRM, and Branch Reference sources.
+- Twenty-four months of historical data.
+- Daily batch ingestion.
+- PostgreSQL analytical database.
+- Python ETL.
+- Customer identity standardization.
+- Reconciliation and data-quality exception reporting.
+- Approved KPIs and prior-period comparisons.
+- Configurable provisional customer-risk rules.
+- Power BI reports with role-based pages, filters, and drill-downs.
+- Restricted CSV and PDF exports.
+- Documentation, testing evidence, recommendations, and GitHub portfolio materials.
 
-- Remain within Initiation documentation and explicitly authorized Git operations.
-- Do not begin Planning, technical implementation, analysis, data access, or remote service configuration under this authorization.
-- Do not invent stakeholder identities, business metrics, data sources, requirements, technical results, or completed work.
-- Keep credentials, environment files, customer information, and generated data out of Git. Synthetic or sanitized examples require authorization.
+## Confirmed exclusions
 
-## Pending decisions and information
+- Production banking connections or real customer data.
+- Streaming or real-time processing.
+- Hourly fraud-system integration.
+- Predictive machine-learning fraud decisions.
+- Automatic account blocking, loan decisions, or fraud decisions.
+- Permanently approved enterprise-risk definitions.
+- Quantified fraud-loss or delinquency-reduction commitments.
+- Mobile application development.
 
-| Item | Status |
-| --- | --- |
-| Detailed business problem, objectives, benefits, scope, exclusions, and deliverables | Pending confirmation |
-| Stakeholder identities, sponsor, project owner, responsibilities, and decision rights | Pending confirmation; see the [stakeholder register](stakeholder-register.md) |
-| Success measures, targets, and acceptance criteria | Pending confirmation |
-| Data sources, availability, access authorization, and governance requirements | Pending confirmation |
-| Budget, resources, schedule, and milestones | Pending confirmation |
-| Business and delivery risks, dependencies, owners, and responses | Pending confirmation |
-| Original Initiation approval date, named approver, and supporting artifact | Pending confirmation |
-| Review of these documents and authorization to begin Planning | Pending confirmation |
+## Approved assumptions
 
-## Progress and limitations
+- One daily extract per source.
+- Source-owner approval is represented through project governance.
 
-The lifecycle scaffold exists and Initiation documentation has been prepared. No business analysis, technical implementation, technical tests, or project acceptance is evidenced by this documentation. Missing business detail limits the charter's completeness without changing the user's confirmation of Initiation approval.
+These are confirmed elements of the approved delivery basis; no completed source-owner approvals or actual extracts are claimed.
 
-Next approval gate: explicit authorization to begin Planning. See [project status](../../PROJECT_STATUS.md).
+## Approved constraints
+
+- Use synthetic data only.
+- Local Power BI Desktop, PostgreSQL, Python, Git, and GitHub.
+- One-person portfolio delivery team.
+- Six-week target schedule.
+- No paid enterprise infrastructure.
+- Demonstrate security through data design and Power BI role simulation.
+- Validate the 6:00 a.m. target using simulated scheduled runs.
+- Do not invent real stakeholder names. Use stakeholder roles and mark specific names as not applicable or pending.
+
+## Approval evidence and lifecycle
+
+| Record | Date | Evidence |
+| --- | --- | --- |
+| Approved Initiation baseline | 2026-09-09 | User supplied the approved purpose, problems, objectives, scope, exclusions, assumptions, and constraints recorded above. |
+| Historical checkpoint | 2026-09-09 | Baseline corrections were preserved in local checkpoint commit `16fab131dabdf17d0b891919c1ce667f698cf46c`. |
+| Planning approval | 2026-09-09 | Planning approved by the user; see the [Planning baseline](../02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md). |
+| Lifecycle confirmation | 2026-09-10 | Sprint 1 Business Analysis published and awaiting user approval; Sprint 2 Data Design and technical implementation not started, as confirmed by the user. |
+
+## Documented definitions and pending decisions
+
+The approved Planning baseline documents role definitions, requirements, KPI formulas, provisional risk conditions, masking and export requirements, the six-sprint schedule, testing expectations, and governance. Those definitions are confirmed baseline content, not absent information or achieved results.
+
+Real-person assignments, actual source-owner review evidence, detailed design decisions not specified in Planning, executed validation evidence, and acceptance remain **Pending confirmation**. Confirmed fictional role definitions do not establish real-person assignments or prove consultation. See the [stakeholder register](stakeholder-register.md).
+
+## Progress and evidence limits
+
+Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis is published and awaiting user approval. Sprint 2 Data Design and technical implementation have not started. No implementation, test, KPI-achievement, UAT, or acceptance results are claimed.
+
+The next gate is `/approve sprint-1-ba`, pending user approval after required verification. See [project status](../../PROJECT_STATUS.md).

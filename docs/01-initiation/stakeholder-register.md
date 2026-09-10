@@ -2,41 +2,36 @@
 
 Project: **Horizon Community Bank — Banking Operations & Customer Risk Analytics**
 
-Recorded: 2026-09-09
+Updated: 2026-09-10
 
-## Confirmed information
+Status: **Initiation approved**
 
-The user confirmed Initiation approval and authorized the current documentation and Git publication work. No individual stakeholder names, formal project roles, contact details, responsibilities, influence assessments, or engagement preferences are available in the repository or current instruction.
+## Confirmed role definitions
 
-| Reference | Confirmed participation | Identity and formal role | Authority evidenced |
-| --- | --- | --- | --- |
-| Current requesting user | Provided the current work instruction and confirmation of Initiation approval | Pending confirmation | Authorized Initiation documentation, commit, push, and synchronization verification; explicitly withheld authorization to begin Planning. Organizational decision rights are Pending confirmation. |
+Horizon Community Bank is fictional. The roles, responsibilities, and approval-authority definitions below are recorded in section 6 of the [approved Planning baseline](../02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md). They describe project governance, not an actually staffed bank or evidence of consultation.
 
-The requesting user is not presumed to be the project sponsor, original Initiation approver, or any named repository account holder.
+| Role | Defined responsibility | Defined approval authority |
+| --- | --- | --- |
+| Project Sponsor | Funding, priority, scope decisions | Charter, scope, final release |
+| Director of Banking Operations | Operational requirements and core-banking definitions | Operations KPIs |
+| Loan Operations Manager | Loan and delinquency definitions | Loan KPIs |
+| Fraud Manager | Fraud-alert definitions and investigation needs | Fraud indicators |
+| Customer Service Manager | Complaint definitions and SLA rules | Complaint KPIs |
+| Risk Manager | Provisional customer-risk rules | Risk logic |
+| Compliance Officer | Masking, access, retention, and exports | Compliance release approval |
+| Branch Administration Manager | Branch hierarchy and ownership | Branch reference data |
+| Data Analyst / Business Analyst | Requirements, analysis, testing, dashboards, documentation | Delivery recommendation |
 
-## Assumptions
+## Assignments and governance limits
 
-No stakeholder identities or assignments are assumed. No proposed stakeholder roster has been adopted. Future proposed entries must be labeled **Draft — not approved**.
+- Real names for fictional bank roles: **Not applicable**. Specific portfolio contributor and governance-role assignments: **Pending confirmation**. Any proposed assignment is **Draft — not approved** until confirmed.
+- The one-person delivery team does not imply separate people filling every business role.
+- Source-owner approval is represented through project governance; no completed source-owner review or stakeholder consultation is claimed.
+- Baseline role visibility, masking, and export requirements are documented. Actual user-to-role assignments and security validation evidence remain **Pending confirmation**.
+- Use synthetic data only. Demonstrate security through data design and Power BI role simulation. Do not infer identities from repository ownership.
 
-## Constraints
+## Approval and progress
 
-- This is an Initiation record; it does not establish a Planning communications plan or responsibility baseline.
-- Do not infer a person's identity or organizational role from Git metadata or repository ownership.
-- Do not add personal contact information or claim stakeholder consultation without evidence.
+Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis is published and awaiting user approval. Sprint 2 Data Design and technical implementation have not started.
 
-## Pending decisions and information
-
-These are information gaps, not confirmed stakeholder assignments.
-
-| Information needed | Status |
-| --- | --- |
-| Named sponsor, project owner, and Initiation approver | Pending confirmation |
-| Relevant business representatives and intended users | Pending confirmation |
-| Data ownership, governance, and technical responsibilities | Pending confirmation |
-| Approval authority for Planning and later acceptance | Pending confirmation |
-| Stakeholder responsibilities, interests, influence, and engagement needs | Pending confirmation |
-| Approved contact channels and communication preferences | Pending confirmation |
-
-## Approval status and next gate
-
-Initiation approval is confirmed by the user's instruction, as recorded in the [project charter](project-charter.md). Review or approval of this newly written register is **Pending confirmation**. Stakeholder identification and assignments remain incomplete. Planning must await explicit authorization.
+The next gate is user approval of Sprint 1 BA after required verification. Role definitions do not constitute Sprint 1 acceptance or evidence of implementation, testing, KPI achievement, or UAT. See the [project charter](project-charter.md).

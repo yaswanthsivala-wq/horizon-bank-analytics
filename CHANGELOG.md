@@ -2,6 +2,15 @@
 
 Record meaningful repository and documentation changes here. Entries describe actual work and explicitly recorded approvals.
 
+## Baseline and lifecycle reconciliation — 2026-09-10
+
+- Reconciled the approved Initiation purpose, business problems, objectives, scope, exclusions, assumptions, constraints, and stakeholder-role documentation.
+- Recorded the confirmed September 9, 2026 Planning approval in the Planning baseline approval record, G2 row, entry-criteria context, and footer; identified Sprint 1 BA user approval as the next gate after required verification.
+- Retained the published Planning and Sprint 1 artifact inventory, links, and historical GitHub publication evidence. Distinguished documented definitions from pending validation evidence and unconfirmed assignments.
+- Preserved approved Planning content and all Sprint 1 BA files. Sprint 2 Data Design and technical implementation remain not started; no implementation, test, KPI-achievement, UAT, or acceptance results are claimed.
+
+The entries below record historical publication activities and status at those dates. Their references to unchanged Initiation files describe that earlier publication, before this authorized baseline correction.
+
 ## Planning and Sprint 1 BA — 2026-09-09
 
 ### Added
