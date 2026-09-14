@@ -19,4 +19,4 @@ Purpose: define the authorized work, delivery approach, requirements, controls, 
 
 Planning was explicitly approved by the user on 2026-09-09. The baseline has been published. Execution Sprint 1 business-analysis artifacts are stored under [Sprint 01 — Business Analysis](../03-execution/sprint-01-business-analysis/README.md).
 
-The next approval gate is `/approve sprint-1-ba` after GitHub and the permanent local repository are synchronized and verified.
+Sprint 1 BA user approval and synchronization verification are recorded in the [approval record](../04-monitoring-and-control/sprint-01-approval-record.md). Sprint 2 Data Design requires explicit user authorization and has not started.

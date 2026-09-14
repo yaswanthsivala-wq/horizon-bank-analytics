@@ -2,7 +2,7 @@
 
 Project: **Horizon Community Bank — Banking Operations & Customer Risk Analytics**
 
-Updated: 2026-09-10
+Updated: 2026-09-14
 
 Status: **Initiation approved**
 
@@ -32,6 +32,6 @@ Horizon Community Bank is fictional. The roles, responsibilities, and approval-a
 
 ## Approval and progress
 
-Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis is published and awaiting user approval. Sprint 2 Data Design and technical implementation have not started.
+Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis was approved by the user; required synchronization was verified September 14, 2026. Sprint 2 Data Design and technical implementation have not started.
 
-The next gate is user approval of Sprint 1 BA after required verification. Role definitions do not constitute Sprint 1 acceptance or evidence of implementation, testing, KPI achievement, or UAT. See the [project charter](project-charter.md).
+Sprint 1 BA approval does not confirm real-person role assignments or implementation, testing, KPI achievement, UAT, or release acceptance. Sprint 2 requires explicit user authorization. See the [project charter](project-charter.md).

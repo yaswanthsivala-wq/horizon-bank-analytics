@@ -1,17 +1,17 @@
 # Project status
 
-Last updated: 2026-09-10
+Last updated: 2026-09-14
 
 ## Current state
 
-Initiation is approved. Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis is published and awaiting user approval. Sprint 2 Data Design and technical implementation have not started. The published Planning baseline and Sprint 1 BA package are documented below. Required local verification remains a prerequisite to Sprint 1 approval.
+Initiation is approved. Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis was approved by the user; required synchronization was verified September 14, 2026. Sprint 2 Data Design and technical implementation have not started. The published Planning baseline and Sprint 1 BA package are documented below.
 
 | Phase | Status |
 | --- | --- |
 | Initiation | Approved; baseline documentation corrected |
 | Planning | Approved September 9, 2026; master baseline published |
-| Execution | Sprint 1 BA published and awaiting user approval; required local verification pending; Sprint 2 Data Design and technical implementation not started |
-| Monitoring and Control | Tracking structure prepared; substantive reporting begins with technical execution |
+| Execution | Sprint 1 BA approved; synchronization verified September 14, 2026; Sprint 2 Data Design and technical implementation not started |
+| Monitoring and Control | Sprint 1 BA approval and synchronization evidence recorded; technical progress reporting not started |
 | Closure | Not started |
 
 ## Sprint 1 delivered artifacts
@@ -42,12 +42,12 @@ The following records documentation publication checks reported for the earlier 
 
 The [approved Planning baseline](docs/02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md) defines requirements, KPI formulas, provisional risk rules, role responsibilities, masking and export controls, the six-sprint schedule, and testing and governance expectations. These definitions are documented; they are not implementation results.
 
-Real-person assignments, actual source-owner review records, implementation and validation evidence, and user acceptance remain **Pending confirmation**. No stakeholder consultation or test execution is inferred from a documented role or test plan.
+Real-person assignments, actual source-owner review records, implementation and validation evidence, and release acceptance remain **Pending confirmation**. No stakeholder consultation or test execution is inferred from a documented role or test plan.
 
-## Remaining Sprint 1 control
+## Sprint 1 approval and synchronization evidence
 
-Before Sprint 1 approval, verify the published artifacts in the permanent local repository, expected files, Markdown links, and required repository synchronization evidence. Publication alone is not acceptance. Sprint 1 remains awaiting user approval; Sprint 2 Data Design and technical implementation have not started.
+Sprint 1 BA user approval was received through `/approve sprint-1-ba`. The successful push and subsequent verification on September 14, 2026 confirmed local main, HEAD, and origin/main at `b44fc5be7bbbc3ead6b9252a0077ec244e1352e8`, zero ahead/behind, and a clean working tree and index. See the [approval and synchronization record](docs/04-monitoring-and-control/sprint-01-approval-record.md). This evidence applies to that published commit, before this approval-record update.
 
 ## Next gate
 
-After required verification, `/approve sprint-1-ba` remains pending user approval. Do not approve Sprint 1 or begin Sprint 2 as part of documentation reconciliation.
+Sprint 1 BA approval is recorded. Explicit user authorization is required before starting Sprint 2 Data Design. Sprint 2 and technical implementation remain not started.

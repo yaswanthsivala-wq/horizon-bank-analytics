@@ -18,10 +18,10 @@ The fictional-bank portfolio project addresses siloed reporting, inconsistent KP
 
 Delivery uses synthetic data only, twenty-four months of history, daily batches, local Power BI Desktop/PostgreSQL/Python/Git/GitHub, a one-person team, a six-week target, and no paid enterprise infrastructure. The charter records the complete approved scope and exclusions.
 
-Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis is published and awaiting user approval. Sprint 2 Data Design and technical implementation have not started.
+Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis was approved by the user; required synchronization was verified September 14, 2026. Sprint 2 Data Design and technical implementation have not started.
 
 ## Pending evidence and next gate
 
-KPI definitions, baseline risk rules, role definitions, and testing expectations are documented in Planning. Real-person assignments, source-owner review evidence, executed validation, and acceptance remain **Pending confirmation**.
+KPI definitions, baseline risk rules, role definitions, and testing expectations are documented in Planning. Real-person assignments, source-owner review evidence, executed validation, and release acceptance remain **Pending confirmation**.
 
-The next gate is `/approve sprint-1-ba`, pending user approval after required verification. No implementation, test, KPI-achievement, UAT, or acceptance results are claimed. See [project status](../../PROJECT_STATUS.md).
+Sprint 1 BA approval is recorded. Explicit authorization to start Sprint 2 remains pending. This approval covers BA documentation only; no implementation, test, KPI-achievement, UAT, or release-acceptance results are claimed. See [project status](../../PROJECT_STATUS.md).

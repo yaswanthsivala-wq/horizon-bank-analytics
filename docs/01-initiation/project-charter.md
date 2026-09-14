@@ -2,7 +2,7 @@
 
 Project: **Horizon Community Bank — Banking Operations & Customer Risk Analytics**
 
-Updated: 2026-09-10
+Updated: 2026-09-14
 
 Status: **Initiation approved**
 
@@ -90,10 +90,10 @@ These are confirmed elements of the approved delivery basis; no completed source
 
 The approved Planning baseline documents role definitions, requirements, KPI formulas, provisional risk conditions, masking and export requirements, the six-sprint schedule, testing expectations, and governance. Those definitions are confirmed baseline content, not absent information or achieved results.
 
-Real-person assignments, actual source-owner review evidence, detailed design decisions not specified in Planning, executed validation evidence, and acceptance remain **Pending confirmation**. Confirmed fictional role definitions do not establish real-person assignments or prove consultation. See the [stakeholder register](stakeholder-register.md).
+Real-person assignments, actual source-owner review evidence, detailed design decisions not specified in Planning, executed validation evidence, and release acceptance remain **Pending confirmation**. Confirmed fictional role definitions do not establish real-person assignments or prove consultation. See the [stakeholder register](stakeholder-register.md).
 
 ## Progress and evidence limits
 
-Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis is published and awaiting user approval. Sprint 2 Data Design and technical implementation have not started. No implementation, test, KPI-achievement, UAT, or acceptance results are claimed.
+Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis was approved by the user; required synchronization was verified September 14, 2026. Sprint 2 Data Design and technical implementation have not started. This approval covers BA documentation only; no implementation, test, KPI-achievement, UAT, or release-acceptance results are claimed.
 
-The next gate is `/approve sprint-1-ba`, pending user approval after required verification. See [project status](../../PROJECT_STATUS.md).
+Sprint 1 BA approval is recorded. Explicit authorization to start Sprint 2 remains pending. See [project status](../../PROJECT_STATUS.md).

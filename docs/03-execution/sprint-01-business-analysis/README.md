@@ -12,8 +12,8 @@ Purpose: establish the approved Release 1 business-analysis baseline before data
 ## Status
 
 - Planning gate: approved by the user on 2026-09-09.
-- Sprint 1 BA artifacts: published to `main`; local verification pending.
+- Sprint 1 BA artifacts: published and approved by the user; synchronization verified September 14, 2026.
 - Technical implementation: not started.
-- Next gate: `/approve sprint-1-ba`, only after the GitHub commit is pulled and verified in the permanent local repository.
+- Next authorization: explicit user instruction to start Sprint 2 Data Design; Sprint 2 has not started. See the [approval and synchronization record](../../04-monitoring-and-control/sprint-01-approval-record.md).
 
 All business entities, roles, thresholds, volumes, and technical choices in these artifacts describe the approved fictional/synthetic portfolio scenario. They do not claim access to or use of production bank data.

@@ -6,7 +6,7 @@ This repository is the permanent source of truth for a fictional, synthetic-data
 
 ## Current status
 
-Initiation is approved. Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis is published and awaiting user approval. Sprint 2 Data Design and technical implementation have not started. Required local verification remains a prerequisite to Sprint 1 approval.
+Initiation is approved. Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis was approved by the user; required synchronization was verified September 14, 2026. Sprint 2 Data Design and technical implementation have not started.
 
 - [Project status](PROJECT_STATUS.md)
 - [Planning baseline](docs/02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md)
@@ -19,8 +19,8 @@ Initiation is approved. Planning was approved by the user September 9, 2026. Spr
 | --- | --- | --- |
 | Initiation | [01-initiation](docs/01-initiation/README.md) | Approved; baseline documentation corrected |
 | Planning | [02-planning](docs/02-planning/README.md) | Approved September 9, 2026; baseline published |
-| Execution | [03-execution](docs/03-execution/README.md) | Sprint 1 BA published and awaiting user approval; required local verification pending; Sprint 2 Data Design and technical implementation not started |
-| Monitoring and Control | [04-monitoring-and-control](docs/04-monitoring-and-control/README.md) | Tracking structure prepared |
+| Execution | [03-execution](docs/03-execution/README.md) | Sprint 1 BA approved; synchronization verified September 14, 2026; Sprint 2 Data Design and technical implementation not started |
+| Monitoring and Control | [04-monitoring-and-control](docs/04-monitoring-and-control/README.md) | Sprint 1 BA approval and synchronization evidence recorded |
 | Closure | [05-closure](docs/05-closure/README.md) | Not started |
 
 ## Approved business context

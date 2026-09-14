@@ -14,7 +14,7 @@
 
 The Initiation phase was approved by the project sponsor on September 9, 2026. This document converts the approved initiation into the Planning baseline. Execution must not introduce unsupported claims, real customer information, or unapproved scope.
 
-Planning was approved by the user on September 9, 2026. Sprint 1 Business Analysis is published and awaiting user approval after required verification. Sprint 2 Data Design and technical implementation have not started.
+Planning was approved by the user on September 9, 2026. Sprint 1 Business Analysis was approved by the user; required synchronization was verified September 14, 2026. Sprint 2 Data Design and technical implementation have not started.
 
 ## 2. Executive Summary
 
@@ -336,7 +336,7 @@ Execution entry criteria:
 
 ## 21. Original Planned Execution Queue
 
-This is the original planned queue, not a completion record. The [backlog and acceptance criteria](../03-execution/sprint-01-business-analysis/product-backlog.md), [process flows](../03-execution/sprint-01-business-analysis/process-flows.md), and [traceability matrix](../03-execution/sprint-01-business-analysis/requirements-traceability-matrix.md) are published and awaiting Sprint 1 user approval. Data Design and technical implementation remain not started. No completion of other queue items is implied.
+This is the original planned queue, not a completion record. The [backlog and acceptance criteria](../03-execution/sprint-01-business-analysis/product-backlog.md), [process flows](../03-execution/sprint-01-business-analysis/process-flows.md), and [traceability matrix](../03-execution/sprint-01-business-analysis/requirements-traceability-matrix.md) are published and covered by the received Sprint 1 BA approval; synchronization was verified September 14, 2026. Data Design and technical implementation remain not started. No completion of other queue items is implied.
 
 1. Create repository structure and environment files.
 2. Create the detailed eight-story backlog with acceptance criteria.
@@ -348,6 +348,6 @@ This is the original planned queue, not a completion record. The [backlog and ac
 ---
 
 **Planning status:** Approved September 9, 2026.
-**Current gate:** `/approve sprint-1-ba`
+**Sprint 1 BA gate:** `/approve sprint-1-ba` received; synchronization verified September 14, 2026.
 
-This command remains pending user approval after required verification. No implementation, test, KPI-achievement, UAT, or acceptance results are claimed.
+The Sprint 1 BA gate is satisfied for the published documentation, as recorded in the [approval record](../04-monitoring-and-control/sprint-01-approval-record.md). Explicit authorization to start Sprint 2 remains pending. No implementation, test, KPI-achievement, UAT, or release-acceptance results are claimed.

@@ -2,6 +2,15 @@
 
 Record meaningful repository and documentation changes here. Entries describe actual work and explicitly recorded approvals.
 
+## Sprint 1 BA approval recorded - 2026-09-14
+
+- Recorded the received `/approve sprint-1-ba` user approval and successful synchronization of published commit `b44fc5be7bbbc3ead6b9252a0077ec244e1352e8`.
+- Updated lifecycle summaries and gate documentation; added a dated Monitoring and Control approval/evidence record.
+- Preserved the approved business and Planning baselines and Sprint 1 backlog, process flows, and traceability content. Approval covers BA documentation, not implementation, testing, KPI achievement, UAT, or release acceptance.
+- Sprint 2 Data Design and technical implementation remain not started; explicit authorization to start Sprint 2 is still required.
+
+Earlier entries below retain historical status as recorded at their dates.
+
 ## Baseline and lifecycle reconciliation — 2026-09-10
 
 - Reconciled the approved Initiation purpose, business problems, objectives, scope, exclusions, assumptions, constraints, and stakeholder-role documentation.

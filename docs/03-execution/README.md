@@ -16,4 +16,4 @@ Purpose: document authorized delivery activities and their evidence.
 
 ## Status
 
-Execution Sprint 1 business-analysis documentation has been published to GitHub. Technical implementation and Sprint 2 have not started. Local pull and verification are required before the `/approve sprint-1-ba` gate may be accepted.
+Execution Sprint 1 business-analysis documentation is published and approved by the user. Synchronization was verified September 14, 2026; see the [approval record](../04-monitoring-and-control/sprint-01-approval-record.md). Technical implementation and Sprint 2 Data Design have not started. Starting Sprint 2 requires explicit user authorization.
