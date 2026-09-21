@@ -50,9 +50,9 @@ Real-person assignments, actual source-owner review records, implementation and 
 
 Sprint 1 BA user approval was received through `/approve sprint-1-ba`. The successful push and subsequent verification on September 14, 2026 confirmed local main, HEAD, and origin/main at `b44fc5be7bbbc3ead6b9252a0077ec244e1352e8`, zero ahead/behind, and a clean working tree and index. See the [approval and synchronization record](docs/04-monitoring-and-control/sprint-01-approval-record.md). This evidence applies to that published commit, before this approval-record update.
 
-## Next gate
+## Next authorized step
 
-G3 logical Data Design is approved September 17, 2026. Obtain separate explicit authorization for any physical design, fixture generation or implementation. No other gate is approved; material changes to approved design require change control.
+WP-PD01 documentation and static foundation SQL are authorized and delivered. Review its static-validation record, then obtain separate explicit PD02 authorization before local-version inspection, connection, installation, SQL execution or runtime tests. G3 remains approved; G4 and all other later gates remain unapproved.
 
 ## Sprint 2 design delivery - 2026-09-15
 
@@ -115,3 +115,9 @@ User-authorized fictional-project scope clarification replaces real-source verif
 ## G3 logical design approval - 2026-09-17
 
 The requesting user approved the complete consolidated Sprint 2 logical package. See [gate decision](docs/04-monitoring-and-control/g3-data-design-approval.md). This updates lifecycle status only: no real-source verification, production readiness, physical implementation, generated fixtures, executed reconciliation, implemented RLS/security, KPI achievement, UAT or publication readiness is claimed. All post-G3 work requires separate authorization; material design changes require change control. Dated prior statuses remain historical.
+
+## WP-PD01 authorized delivery - 2026-09-17
+
+G3 remains approved. The user authorized only physical-design documentation and foundation SQL authorship/static review. WP-PD01 documents all 109 logical entities/982 fields and proposed enforcement; no database inspection or execution, dependency installation, fixtures or runtime tests. PD02 and all executable work require separate authorization. Earlier statements that no physical design was authorized are historical to G3 approval. No approved business semantics changed.
+
+[WP-PD01 package](docs/03-execution/sprint-03-physical-design/README.md).

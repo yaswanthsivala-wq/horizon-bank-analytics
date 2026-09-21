@@ -1,0 +1,9 @@
+# Safe development rollback and cleanup
+
+No cleanup is executed in PD01. Foundation SQL targets a future dedicated empty/disposable database only. Never use an existing personal/shared database or guess a target name. Preexisting schema/role/extension names cause failure; do not adopt or overwrite them. Transaction rollback should leave no partial foundation on a failed first application; exact extension/transaction behavior requires later authorized execution tests.
+
+Before any future deletion, resolve the absolute filesystem targets and verify containment under approved generated roots (data/raw, data/interim, data/processed, artifacts). Use native PowerShell literal paths end-to-end; no cross-shell recursive deletion, symlink/junction escape or broad workspace removal. Show dry-run targets and an exact run-manifest allowlist; refuse missing/ambiguous ownership. Credentials, approved documents, migration source and unrelated artifacts are never cleanup targets.
+
+Database cleanup requires explicit target authorization, exact database identity/connection checks, object ownership/dependency inspection and sanitized evidence preservation. Dropping a disposable database does not remove cluster-wide roles: remove roles only if created by that approved run, unshared and dependency-free, with separate explicit cleanup scope. No broad DROP ... CASCADE script is authored. Existing dev artifacts are preserved unless named and authorized.
+
+After a future committed migration with retained evidence, prefer controlled forward correction; destructive downgrade must not destroy required audit/history. Disposable test rollback is separate from retention-governed disposal. Keep raw/sensitive fixture files out of Git and logs; existing data/artifacts ignore rules apply. Remove .gitkeep only where a substantive tracked file actually occupies that same directory. Do not claim cleanup success without performed, verified actions.

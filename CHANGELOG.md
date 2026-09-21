@@ -154,3 +154,7 @@ Requesting user authorized documentation-only gate-scope clarification: fictiona
 ## G3 approved - 2026-09-17
 
 Requesting user explicitly issued /approve G3 for the complete consolidated Sprint 2 logical-design package under the synthetic-project scope. [Gate decision](docs/04-monitoring-and-control/g3-data-design-approval.md) references g3-closure-validation.md and g3-prerequisite-register.md. Updated gate/lifecycle records only. No physical design, generation, implementation, runtime/security results, production readiness, KPI achievement, UAT or publication readiness is implied. Separate authorization is required for post-G3 work. Material grain/cardinality/formula/security/retention/source-semantic changes require change control. No other gate approved; no staging, commit, push or remote contact.
+
+## WP-PD01 - 2026-09-17
+
+User-authorized physical architecture, exhaustive 109-entity/982-field proposed mapping, constraint/reference plan, temporal/publication, indexing, security, lifecycle and safe-cleanup documentation. Added foundation SQL limited to schemas, NOLOGIN roles, ownership/default privileges, extension declaration and migration ledger; static review only. G3 semantics unchanged; PD02 requires separate authorization. No execution, generated data, dependency installation or remote/Git publication. See [validation](docs/03-execution/sprint-03-physical-design/static-validation.md).
