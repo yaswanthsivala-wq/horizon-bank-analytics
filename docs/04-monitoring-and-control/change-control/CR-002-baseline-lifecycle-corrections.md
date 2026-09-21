@@ -50,3 +50,7 @@ The later documents attribute content to user-supplied approved material, but th
 The Git history establishes when these textual changes entered the repository. Dated approval statements remain in their original documents; no new sponsor, Risk or Compliance approval is asserted.
 
 Only this CR-002 record and its [Monitoring and Control inventory](../README.md) reference are added for this finding. Initiation, Planning and Sprint 1 files remain byte-identical to the R1 preflight.
+
+## Project-owner disposition — 2026-09-21
+
+The requesting user confirmed Option A for H01, H02 and H03 as intended reconciled documentation and clarified H05's historical G2 authority. See [project-owner decisions and Planning supplement traceability](CR-002-project-owner-decisions-2026-09-21.md). The G2 approval date remains 2026-09-09; this authority clarification is dated 2026-09-21. The original body, pending-confirmation statements and hunk classification above remain unchanged as historical evidence. No independent bank/persona approval, new gate approval or implementation authorization is asserted.

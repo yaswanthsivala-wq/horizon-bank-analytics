@@ -119,3 +119,9 @@ The requesting user approved the complete consolidated Sprint 2 logical package.
 ## Sprint 2 documentation remediation R1 — 2026-09-20
 
 Documentation remediation is prepared on isolated branch `remediation/sprint-02-r1`, **not merged to main**, and awaiting user review at the Section 7 approval stop. Status/history corrections, derived FK/dependency documentation, CR-001/CR-002, register mapping and source/objective clarification change no approval status or design decision. BO objective mapping and CR-002 content-hunk confirmation remain Pending confirmation. No implementation or Sprint 3 work is performed here; separately preserved WP-PD01 is outside this baseline.
+
+## CR-002 project-owner decisions documented — 2026-09-21
+
+H01–H03 Option A confirmations and H05 authority clarification are documented in the [dated decision record](docs/04-monitoring-and-control/change-control/CR-002-project-owner-decisions-2026-09-21.md), together with Planning README supplement traceability to existing approved evidence. Decision/clarification date: 2026-09-21; historical G2 approval date: 2026-09-09. No independent bank or persona review is asserted.
+
+The follow-up is on `docs/cr-002-sponsor-decisions`, based on R1 and not integrated into main. Validation and the explicit commit/push approval gate precede publication; integration requires separate authorization. WP-PD01 remains preserved. No requirements, design decisions, G3 status or other gate approvals change; no Sprint 3, PD02 or implementation authorization is added.

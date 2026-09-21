@@ -87,3 +87,9 @@ User-authorized fictional-project scope clarification replaces real-source verif
 ## G3 logical design approval - 2026-09-17
 
 The requesting user approved the complete consolidated Sprint 2 logical package. See [gate decision](g3-data-design-approval.md). This updates lifecycle status only: no real-source verification, production readiness, physical implementation, generated fixtures, executed reconciliation, implemented RLS/security, KPI achievement, UAT or publication readiness is claimed. All post-G3 work requires separate authorization; material design changes require change control. Dated prior statuses remain historical.
+
+## CR-002 project-owner decision record — 2026-09-21
+
+- [H01–H03 decisions, H05 authority clarification and Planning supplement traceability](change-control/CR-002-project-owner-decisions-2026-09-21.md): requesting-user documentary confirmations dated 2026-09-21; historical G2 date remains 2026-09-09. Independent persona reviews are not claimed. [CR-002](change-control/CR-002-baseline-lifecycle-corrections.md) retains its original historical body and links the disposition.
+
+This follow-up is not integrated into main. It changes no gate or approved design decision and authorizes no PD02 or implementation work.

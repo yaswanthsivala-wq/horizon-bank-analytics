@@ -2,6 +2,12 @@
 
 Record meaningful repository and documentation changes here. Entries describe actual work and explicitly recorded approvals.
 
+## CR-002 project-owner decision follow-up — 2026-09-21
+
+Recorded H01–H03 Option A confirmations of intended reconciled documentation and H05 authority clarification, dated 2026-09-21 while preserving G2's historical 2026-09-09 approval date. Added [decision evidence and Planning supplement traceability](docs/04-monitoring-and-control/change-control/CR-002-project-owner-decisions-2026-09-21.md); appended CR-002's disposition without rewriting its history; updated Monitoring and Control inventory and project status.
+
+No independent bank/stakeholder/persona approval is claimed. No protected baseline, approved design decision, KPI, requirement, G3 status or WP-PD01 content changes. No new gate, PD02 or implementation authorization. This follow-up is not integrated into main.
+
 ## Sprint 2 documentation remediation R1 — 2026-09-20
 
 Corrected current Sprint 2 status labels while preserving superseded history (A1); derived the relationship register and appended G3 link-count errata (A2); documented 41/109 ERD coverage and added five dependency views covering the other 68 entities (A3/B2). Added retrospective KPI/risk and baseline-change records CR-001/CR-002 (A4/A5), with content hunks Pending sponsor confirmation, and mapped Monitoring and Control registers (A6). Recorded the BO objective-order mismatch as Pending confirmation (B1); clarified the five source systems/domains (B3); reordered existing changelog entries without changing their text (B5).
