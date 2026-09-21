@@ -8,10 +8,15 @@ Status: Sprint 2 logical Data Design **approved**. Gate G3 approved by requestin
 
 The current user issued `/start sprint-2-data-design`; this authorization is recorded September 15, 2026. Sprint 1 approval and historical synchronization evidence are preserved. Existing untracked Sprint 2 drafts were present at inspection; their earlier start-date assertion is not independently verified. This authorizes data-design documentation. It does not approve the design or authorize ETL construction, data generation, database deployment, or other technical implementation.
 
+The [Planning baseline](../../02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md) and [Sprint 1 BA package](../sprint-01-business-analysis/README.md) remain the approved requirements. DD-01 through DD-12 record approved Sprint 2 design decisions (G3 approved 2026-09-17). Proposed physical aliases remain unconfirmed until authorized implementation; these decisions do not rewrite the approved requirements.
+
+### Historical status (superseded)
+
 The [Planning baseline](../../02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md) and [Sprint 1 BA package](../sprint-01-business-analysis/README.md) remain the approved requirements. DD-01 through DD-10 record approved Sprint 2 design decisions. Remaining choices are proposals unless explicitly approved; these decisions do not rewrite the approved requirements.
 
 ## Artifact inventory
 
+- [Relationship register](relationship-register.md): dictionary-derived declared FK references; no cardinality or physical-constraint assertion.
 - [Data model and ERD](data-model.md): grains, identity, history, relationships, and analytical model.
 - [Data dictionary and source mappings](data-dictionary-and-mappings.md): source-to-target navigation and links to authoritative contracts.
 - [Data-quality and reconciliation design](data-quality-and-reconciliation.md): blocking controls, reruns, and planned evidence.
@@ -29,6 +34,10 @@ The [Planning baseline](../../02-planning/Horizon_Community_Bank_Project_Plannin
 - [Security and masking](security-and-masking-design.md): role scopes, last-four masking, exports and retention.
 
 ## Progress and next gate
+
+Current status (2026-09-20): DD-01 through DD-12 and Gate G3 (logical design) are approved. No source schemas, DDL, generated data, ETL, Power BI model or test results exist; post-G3 work requires separate authorization.
+
+### Historical status as of 2026-09-15 (superseded)
 
 Design package expanded from the existing untracked drafts for review. DD-01 through DD-11 are approved at the decision level; exact source-contract content remains pending. No source schemas have been approved or implemented; no sample data, executable DDL, ETL, Power BI model, or test results were produced.
 

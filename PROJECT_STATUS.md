@@ -115,3 +115,7 @@ User-authorized fictional-project scope clarification replaces real-source verif
 ## G3 logical design approval - 2026-09-17
 
 The requesting user approved the complete consolidated Sprint 2 logical package. See [gate decision](docs/04-monitoring-and-control/g3-data-design-approval.md). This updates lifecycle status only: no real-source verification, production readiness, physical implementation, generated fixtures, executed reconciliation, implemented RLS/security, KPI achievement, UAT or publication readiness is claimed. All post-G3 work requires separate authorization; material design changes require change control. Dated prior statuses remain historical.
+
+## Sprint 2 documentation remediation R1 — 2026-09-20
+
+Documentation remediation is prepared on isolated branch `remediation/sprint-02-r1`, **not merged to main**, and awaiting user review at the Section 7 approval stop. Status/history corrections, derived FK/dependency documentation, CR-001/CR-002, register mapping and source/objective clarification change no approval status or design decision. BO objective mapping and CR-002 content-hunk confirmation remain Pending confirmation. No implementation or Sprint 3 work is performed here; separately preserved WP-PD01 is outside this baseline.

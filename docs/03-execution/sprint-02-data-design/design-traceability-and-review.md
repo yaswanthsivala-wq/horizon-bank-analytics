@@ -159,3 +159,7 @@ Requesting user approved 25 controlling decisions after read-only review. No bas
 ## G3 decision - 2026-09-17
 
 [Approval record](../../04-monitoring-and-control/g3-data-design-approval.md): requesting user approved the complete consolidated logical package using closure validation and prerequisite register evidence. Logical approval only, not real-source verification or runtime/production readiness. Separate authorization is required for all post-G3 work. Material grain, cardinality, formula, security, retention or source-semantics changes require change control. Earlier dated status entries remain historical.
+
+## Business objective identifier cross-reference — 2026-09-20
+
+Pending confirmation: the proposed statement "Sprint 1 RTM identifiers BO-01…BO-06 correspond to Planning §3 objectives 1–6 in order" does not hold for all rows. The [Sprint 1 RTM](../sprint-01-business-analysis/requirements-traceability-matrix.md#business-objective-ids) already defines BO-01…BO-06. BO-01…BO-04 align thematically with [Planning §3](../../02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md#3-business-objectives) objectives 1–4. BO-05 protects sensitive information (Planning objective 6); BO-06 enables management action/investigation (closest to Planning objective 5). This is a documentary observation, not an approved remapping. Sponsor confirmation of the cross-reference remains Pending confirmation; no Sprint 1 file is changed.

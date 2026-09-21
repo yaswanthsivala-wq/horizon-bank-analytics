@@ -10,6 +10,18 @@ Current artifacts:
 
 - [Sprint 2 control record](sprint-02-control-record.md): dated authorization, progress, open risks/issues, proposed decisions, change control and documentation validation.
 
+## Register map — 2026-09-20
+
+| Register | Where it currently lives |
+| --- | --- |
+| change-control/ | [CR-001](change-control/CR-001-kpi-and-risk-refinements.md); [CR-002](change-control/CR-002-baseline-lifecycle-corrections.md) |
+| Risks and issues | [Sprint 2 control record](sprint-02-control-record.md) and [Planning §15](../02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md#15-risk-register) |
+| Decisions | [Sprint 2 control record](sprint-02-control-record.md) and [design traceability decision register](../03-execution/sprint-02-data-design/design-traceability-and-review.md) |
+| Approvals | [Sprint 1 approval](sprint-01-approval-record.md); [G3 decision](g3-data-design-approval.md) |
+| quality-reviews/ and status-reports/ | No separate records; validation evidence is in the DD-07…DD-12 validation files and [g3-closure-validation.md](../03-execution/sprint-02-data-design/g3-closure-validation.md) |
+
+The other reserved register directories retain their placeholders. This map changes no approval status.
+
 Reserved artifact locations:
 
 - `status-reports/`: dated progress reports and confirmed measures.
@@ -20,6 +32,10 @@ Reserved artifact locations:
 
 Progress: Sprint 1 BA approval and September 14, 2026 synchronization evidence recorded. Sprint 2 draft design package is prepared under current authorization; G3 review is pending. Technical implementation has not started.
 Open questions: Sprint 2 DD-11 and DD-12 and remaining DD-01 contract details, named review owners and actual review evidence are Pending confirmation.
+Approval status: Sprint 1 BA approval recorded; Sprint 2 logical design and Gate G3 approved 2026-09-17 (logical design only); no other gate is approved; no separate Monitoring and Control baseline approval is asserted.
+
+### Historical status (superseded)
+
 Approval status: Sprint 1 BA user approval recorded; Sprint 2 design is Draft — not approved; no separate Monitoring and Control baseline approval is asserted.
 
 Maintain this inventory and status as work proceeds; follow the root AGENTS.md.

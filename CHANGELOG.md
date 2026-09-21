@@ -1,5 +1,33 @@
 # Changelog
 
+Record meaningful repository and documentation changes here. Entries describe actual work and explicitly recorded approvals.
+
+## Sprint 2 documentation remediation R1 — 2026-09-20
+
+Corrected current Sprint 2 status labels while preserving superseded history (A1); derived the relationship register and appended G3 link-count errata (A2); documented 41/109 ERD coverage and added five dependency views covering the other 68 entities (A3/B2). Added retrospective KPI/risk and baseline-change records CR-001/CR-002 (A4/A5), with content hunks Pending sponsor confirmation, and mapped Monitoring and Control registers (A6). Recorded the BO objective-order mismatch as Pending confirmation (B1); clarified the five source systems/domains (B3); reordered existing changelog entries without changing their text (B5).
+
+No approval status changed; no design decision changed; no implementation. R1 is on `remediation/sprint-02-r1`, not merged to main, and awaiting user review. The isolated R1 baseline excludes the separately preserved WP-PD01 work.
+
+Rationale for the Restricted classification of `rc01_comparison` fields: Pending confirmation.
+
+Deferred to Sprint 3 design: strategy for `typed entity reference` / `internal key` fields (F-13); sizing of ~4.38 M loan-position and up to 3.65 M complaint-snapshot rows against NFR-04 (F-14); enriching thin field definitions (F-10). Adding SSN, KYC or AML fields is not in scope; none added.
+
+## G3 approved - 2026-09-17
+
+Requesting user explicitly issued /approve G3 for the complete consolidated Sprint 2 logical-design package under the synthetic-project scope. [Gate decision](docs/04-monitoring-and-control/g3-data-design-approval.md) references g3-closure-validation.md and g3-prerequisite-register.md. Updated gate/lifecycle records only. No physical design, generation, implementation, runtime/security results, production readiness, KPI achievement, UAT or publication readiness is implied. Separate authorization is required for post-G3 work. Material grain/cardinality/formula/security/retention/source-semantic changes require change control. No other gate approved; no staging, commit, push or remote contact.
+
+## G3 synthetic prerequisite closure - 2026-09-16
+
+Requesting user authorized documentation-only gate-scope clarification: fictional sources and persona responsibilities, no real source/personnel validation. No conflict with protected baselines or approved business decisions found before edits. Finalized synthetic contract, temporal conventions, generation specification, expected controls, full entity/field trace and prerequisite register; reconciled current status while preserving history. G3 is not approved. No schemas, data, implementation, runtime tests, stage, commit, push or remote contact.
+
+## DD-12 approved logical attribution - 2026-09-16
+
+Approval evidence: requesting user explicitly approved the 25 controlling DD-12 decisions. Pre-edit review found no conflict with Planning, Sprint 1 or DD-01 through DD-11. Updated hierarchy/assignment versions, historical attribution, current authorization mapping, corrections, quality, retention and source prerequisites across the documentation. No verified source availability or actual owner review claimed. DD-01 through DD-12 logical decisions approved; source evidence, physical design and G3 pending. Documentation validation only; no staging, commit, push or implementation.
+
+## DD-11 approved logical payment design - 2026-09-16
+
+Approval evidence: requesting user explicitly approved DD-11 with 20 controlling decisions. Pre-edit compatibility review found no conflict with Planning, Sprint 1 or DD-01 through DD-10. Rationale: separate contractual obligations from actual payments; preserve immutable corrections and business adjustments; prevent guessed account links and financial fanout. Updated the authoritative inventory, models, logical source contracts/mappings, DD-09 controls, DD-10 schedule, traceability and current status. Source schemas/coverage, adjustment application timing and reviewed aliases remain prerequisites, not verified availability. Loan Operations Manager and Data Owner are review responsibilities, not claimed actual review evidence. DD-12 and G3 remain pending. Documentation validation only; no implementation, staging, commit, push or remote contact.
+
 ## DD-10 lifecycle policy approved - 2026-09-16
 
 - Recorded supplied retention/minimization/backup/hold/disposal policy and explicit narrow DD-08 supersession; no general Administrator deletion permission.
@@ -21,8 +49,6 @@
 - Extended the sole logical field inventory for scoped entitlements, independent governance reviews, export evidence and sanitized RC-01 investigation detail.
 - Synchronized lifecycle status, ownership, identity governance, traceability and DD-09/DD-10 dependencies. Documentation validation is recorded in dd08-validation.md.
 - No staging, commit, push, G3 approval or technical implementation.
-
-Record meaningful repository and documentation changes here. Entries describe actual work and explicitly recorded approvals.
 
 ## DD-07 logical field standard approved - 2026-09-16
 
@@ -138,19 +164,3 @@ Planning was explicitly approved by the user. Sprint 2 remains blocked until thi
 - Repository instructions, README, and project status document.
 - Reserved source, SQL, data, dashboard, test, and workflow directories.
 - Ignore rules for Python, VS Code, environment files, credentials, generated data, and temporary files.
-
-## DD-11 approved logical payment design - 2026-09-16
-
-Approval evidence: requesting user explicitly approved DD-11 with 20 controlling decisions. Pre-edit compatibility review found no conflict with Planning, Sprint 1 or DD-01 through DD-10. Rationale: separate contractual obligations from actual payments; preserve immutable corrections and business adjustments; prevent guessed account links and financial fanout. Updated the authoritative inventory, models, logical source contracts/mappings, DD-09 controls, DD-10 schedule, traceability and current status. Source schemas/coverage, adjustment application timing and reviewed aliases remain prerequisites, not verified availability. Loan Operations Manager and Data Owner are review responsibilities, not claimed actual review evidence. DD-12 and G3 remain pending. Documentation validation only; no implementation, staging, commit, push or remote contact.
-
-## DD-12 approved logical attribution - 2026-09-16
-
-Approval evidence: requesting user explicitly approved the 25 controlling DD-12 decisions. Pre-edit review found no conflict with Planning, Sprint 1 or DD-01 through DD-11. Updated hierarchy/assignment versions, historical attribution, current authorization mapping, corrections, quality, retention and source prerequisites across the documentation. No verified source availability or actual owner review claimed. DD-01 through DD-12 logical decisions approved; source evidence, physical design and G3 pending. Documentation validation only; no staging, commit, push or implementation.
-
-## G3 synthetic prerequisite closure - 2026-09-16
-
-Requesting user authorized documentation-only gate-scope clarification: fictional sources and persona responsibilities, no real source/personnel validation. No conflict with protected baselines or approved business decisions found before edits. Finalized synthetic contract, temporal conventions, generation specification, expected controls, full entity/field trace and prerequisite register; reconciled current status while preserving history. G3 is not approved. No schemas, data, implementation, runtime tests, stage, commit, push or remote contact.
-
-## G3 approved - 2026-09-17
-
-Requesting user explicitly issued /approve G3 for the complete consolidated Sprint 2 logical-design package under the synthetic-project scope. [Gate decision](docs/04-monitoring-and-control/g3-data-design-approval.md) references g3-closure-validation.md and g3-prerequisite-register.md. Updated gate/lifecycle records only. No physical design, generation, implementation, runtime/security results, production readiness, KPI achievement, UAT or publication readiness is implied. Separate authorization is required for post-G3 work. Material grain/cardinality/formula/security/retention/source-semantic changes require change control. No other gate approved; no staging, commit, push or remote contact.

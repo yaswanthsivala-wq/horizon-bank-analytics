@@ -1,5 +1,9 @@
 # Logical data model
 
+Status: **Sprint 2 logical design — approved; Gate G3 approved 2026-09-17 (logical design only)** — see [G3 decision](../../04-monitoring-and-control/g3-data-design-approval.md). Proposed physical aliases and domains remain unconfirmed until authorized implementation. The earlier "Draft — not approved" label reflects the state before DD-01–DD-12 and G3 approval and is retained in dated history. Complements the [conceptual model and ERD](data-model.md) and [field dictionary](field-level-dictionary.md). No database objects exist as a result of this design.
+
+### Historical status (superseded)
+
 Status: **Draft — not approved**. Complements the [conceptual model and ERD](data-model.md) and [field dictionary](field-level-dictionary.md). No database objects exist as a result of this design.
 
 ## Entity keys and grain
@@ -98,6 +102,8 @@ Separate transaction, alert, loan snapshot, payment, complaint snapshot and risk
 Propose aggregates by date/branch/status for summary performance; underlying transaction detail is separate. The 100-user assumption is retained without claiming capacity. Indexes, partitioning, storage sizing, actual Power BI relationships and performance tests are deferred to authorized implementation and review.
 
 ## Extended logical ER diagram
+
+ERD scope: the diagrams below depict 41 of the 109 logical entities (core ownership, event, snapshot and risk entities). The remaining 68 governance, publication, quality, retention, payment-schedule and organizational-history entities are defined only in the [authoritative inventory](field-level-dictionary.md); see also the [relationship register](relationship-register.md).
 
 ```mermaid
 erDiagram

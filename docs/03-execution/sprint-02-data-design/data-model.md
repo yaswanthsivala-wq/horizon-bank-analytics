@@ -1,5 +1,9 @@
 # Data model and ERD
 
+Status: **Sprint 2 logical design — approved; Gate G3 approved 2026-09-17 (logical design only)** — see [G3 decision](../../04-monitoring-and-control/g3-data-design-approval.md). Proposed physical aliases and domains remain unconfirmed until authorized implementation. The earlier "Draft — not approved" label reflects the state before DD-01–DD-12 and G3 approval and is retained in dated history.
+
+### Historical status (superseded)
+
 Status: **Draft — not approved**
 
 ## Approved basis
@@ -33,6 +37,8 @@ Five synthetic source systems, daily extracts, twenty-four months of history, Po
 All event and snapshot keys include source identity or canonical identity as appropriate. Duplicate source IDs across systems must not collide.
 
 ## Proposed conceptual relationships
+
+ERD scope: the diagrams below depict 41 of the 109 logical entities (core ownership, event, snapshot and risk entities). The remaining 68 governance, publication, quality, retention, payment-schedule and organizational-history entities are defined only in the [authoritative inventory](field-level-dictionary.md); see also the [relationship register](relationship-register.md).
 
 ```mermaid
 erDiagram
@@ -148,4 +154,166 @@ erDiagram
     BRANCH ||--o{ LOAN_BRANCH_ASSIGNMENT : services
     BRANCH ||--o{ COMPLAINT_BRANCH_ASSIGNMENT : receives
     BRANCH ||--o{ BRANCH_ATTRIBUTION : attributes
+```
+
+## Dependency diagrams for entities not shown above
+
+These five thematic views cover the 68 entities absent from the existing ERDs. Earlier supporting entities are grouped by subject, not asserted to originate in the named DD decision. Arrows run from child to parent and show only explicit declared FK references whose endpoints are in the same view, labelled by child FK column. Cross-view references and implicit/composite definitions remain in the [relationship register](relationship-register.md). Isolated nodes do not imply absence of external or implicit references. No cardinality or physical enforcement is asserted. Mermaid syntax not machine-validated.
+
+### Security and governance (DD-08)
+
+```mermaid
+flowchart LR
+    access_entitlement["access_entitlement"]
+    access_policy["access_policy"]
+    case_evidence_link["case_evidence_link"]
+    catalog_rule["catalog_rule"]
+    catalog_version["catalog_version"]
+    configuration_version["configuration_version"]
+    entitlement_scope["entitlement_scope"]
+    export_approval["export_approval"]
+    export_entitlement["export_entitlement"]
+    export_event["export_event"]
+    export_filter["export_filter"]
+    governance_action["governance_action"]
+    governance_review["governance_review"]
+    investigation_case["investigation_case"]
+    mapping_eligibility["mapping_eligibility"]
+    mapping_entry["mapping_entry"]
+    rc01_investigation_projection["rc01_investigation_projection"]
+    rule_config["rule_config"]
+    rule_version["rule_version"]
+    rule_config -->|"configuration_version"| configuration_version
+    export_event -->|"policy_version"| access_policy
+    catalog_version -->|"supersedes_version"| catalog_version
+    rule_version -->|"supersedes_version"| rule_version
+    rule_version -->|"configuration_version"| configuration_version
+    configuration_version -->|"supersedes_version"| configuration_version
+    catalog_rule -->|"catalog_version"| catalog_version
+    catalog_rule -->|"rule_version"| rule_version
+    export_filter -->|"event_key"| export_event
+    access_entitlement -->|"policy_version"| access_policy
+    access_entitlement -->|"approval_reference"| governance_action
+    entitlement_scope -->|"entitlement_id"| access_entitlement
+    case_evidence_link -->|"case_key"| investigation_case
+    governance_review -->|"action_id"| governance_action
+    export_entitlement -->|"event_key"| export_event
+    export_entitlement -->|"entitlement_id"| access_entitlement
+    export_approval -->|"event_key"| export_event
+    export_approval -->|"action_id"| governance_action
+    rc01_investigation_projection -->|"case_key"| investigation_case
+```
+
+### Publication and quality (DD-09)
+
+```mermaid
+flowchart LR
+    candidate_control["candidate_control"]
+    candidate_coverage["candidate_coverage"]
+    candidate_evidence["candidate_evidence"]
+    candidate_population["candidate_population"]
+    candidate_source["candidate_source"]
+    control_population["control_population"]
+    decision_participant["decision_participant"]
+    exclusion_impact["exclusion_impact"]
+    exclusion_record["exclusion_record"]
+    gate_rule["gate_rule"]
+    gate_ruleset["gate_ruleset"]
+    historical_coverage["historical_coverage"]
+    notification_recipient["notification_recipient"]
+    population_member["population_member"]
+    publication_candidate["publication_candidate"]
+    publication_decision["publication_decision"]
+    publication_notification["publication_notification"]
+    quality_exclusion["quality_exclusion"]
+    source_financial_control["source_financial_control"]
+    source_reference["source_reference"]
+    population_member -->|"population_key"| control_population
+    source_financial_control -->|"population_key"| control_population
+    gate_rule -->|"gate_ruleset_version"| gate_ruleset
+    publication_candidate -->|"gate_ruleset_version"| gate_ruleset
+    candidate_source -->|"candidate_id"| publication_candidate
+    candidate_control -->|"candidate_id"| publication_candidate
+    candidate_control -->|"population_key"| control_population
+    candidate_population -->|"candidate_id"| publication_candidate
+    candidate_population -->|"population_key"| control_population
+    candidate_coverage -->|"candidate_id"| publication_candidate
+    candidate_coverage -->|"population_key"| control_population
+    candidate_evidence -->|"candidate_id"| publication_candidate
+    quality_exclusion -->|"candidate_id"| publication_candidate
+    exclusion_record -->|"action_id"| quality_exclusion
+    exclusion_record -->|"source_reference_key"| source_reference
+    exclusion_impact -->|"action_id"| quality_exclusion
+    publication_decision -->|"candidate_id"| publication_candidate
+    decision_participant -->|"decision_id"| publication_decision
+    publication_notification -->|"candidate_id"| publication_candidate
+    publication_notification -->|"decision_id"| publication_decision
+    notification_recipient -->|"notification_id"| publication_notification
+```
+
+### Retention and lifecycle (DD-10)
+
+```mermaid
+flowchart LR
+    access_attempt["access_attempt"]
+    backup_copy["backup_copy"]
+    disposal_batch["disposal_batch"]
+    disposal_category_total["disposal_category_total"]
+    disposal_item["disposal_item"]
+    disposal_job["disposal_job"]
+    disposal_scope["disposal_scope"]
+    hold_review["hold_review"]
+    hold_scope["hold_scope"]
+    lifecycle_reference["lifecycle_reference"]
+    provenance_envelope["provenance_envelope"]
+    recalculation_customer["recalculation_customer"]
+    recalculation_impact["recalculation_impact"]
+    restore_validation["restore_validation"]
+    restricted_token_mapping["restricted_token_mapping"]
+    retention_hold["retention_hold"]
+    retention_item["retention_item"]
+    retention_schedule["retention_schedule"]
+    recalculation_customer -->|"impact_key"| recalculation_impact
+    retention_item -->|"envelope_id"| provenance_envelope
+    provenance_envelope -->|"deletion_evidence_id"| disposal_item
+    lifecycle_reference -->|"owner_envelope_id"| provenance_envelope
+    lifecycle_reference -->|"target_envelope_id"| provenance_envelope
+    restricted_token_mapping -->|"retention_item_id"| retention_item
+    hold_scope -->|"hold_id"| retention_hold
+    hold_review -->|"hold_id"| retention_hold
+    disposal_scope -->|"batch_id"| disposal_batch
+    disposal_scope -->|"item_id"| retention_item
+    disposal_job -->|"batch_id"| disposal_batch
+    disposal_item -->|"job_id"| disposal_job
+    disposal_item -->|"item_id"| retention_item
+    disposal_category_total -->|"job_id"| disposal_job
+    restore_validation -->|"backup_id"| backup_copy
+```
+
+### Loan schedule and payment (DD-11)
+
+```mermaid
+flowchart LR
+    loan_contract_publication["loan_contract_publication"]
+    loan_payment_publication["loan_payment_publication"]
+    transaction_publication["transaction_publication"]
+```
+
+### Organizational history (DD-12)
+
+```mermaid
+flowchart LR
+    account_restriction_state["account_restriction_state"]
+    complaint_history_event["complaint_history_event"]
+    date_dimension["date_dimension"]
+    fraud_alert_state["fraud_alert_state"]
+    organization_publication["organization_publication"]
+    organizational_successor["organizational_successor"]
+    scope_resolution["scope_resolution"]
+    successor_scope_mapping["successor_scope_mapping"]
+    account_restriction_state -->|"supersedes_state_version"| account_restriction_state
+    fraud_alert_state -->|"supersedes_state_version"| fraud_alert_state
+    organizational_successor -->|"supersedes_version"| organizational_successor
+    successor_scope_mapping -->|"supersedes_version"| successor_scope_mapping
+    scope_resolution -->|"scope_mapping_version"| successor_scope_mapping
 ```

@@ -1,5 +1,9 @@
 # Sprint 2 authorization, progress and control record
 
+Status: **Sprint 2 logical design — approved; Gate G3 approved 2026-09-17 (logical design only)** — see [G3 decision](g3-data-design-approval.md). Proposed physical aliases and domains remain unconfirmed until authorized implementation. The earlier "Draft — not approved" label reflects the state before DD-01–DD-12 and G3 approval and is retained in dated history.
+
+### Historical status (superseded)
+
 Recorded: 2026-09-15. Design status: **Draft — not approved**. G3: Pending confirmation.
 
 Current decision status (2026-09-16): DD-01 through DD-10 approved; DD-11 and DD-12 pending. G3 and implementation remain unapproved. Initial progress/decision entries retain their dated context; the latest approval and risk updates appear below.
@@ -20,7 +24,7 @@ Next: review [DD-01–DD-12](../03-execution/sprint-02-data-design/design-tracea
 
 | ID | Type / baseline link | Current issue or risk | Response / review role (assignment pending) |
 | --- | --- | --- | --- |
-| S2-I01 | Issue / R-03 | Full five-condition risk catalog absent; some KPI temporal/eligibility semantics unspecified | DD-04–DD-06; Risk Manager and business KPI owners |
+| S2-I01 | Issue / R-03 | Full five-condition risk catalog absent; some KPI temporal/eligibility semantics unspecified | DD-04–DD-06; Risk Manager and business KPI owners (Resolved 2026-09-15/16 by DD-04 through DD-06 approval — retained as history) |
 | S2-I02 | Issue / R-02 | DD-02 relationship policy approved; source identity mappings and related account references still unconfirmed | DD-02/DD-08/DD-11; Operations and Loan Operations |
 | S2-R01 | Risk / R-01 | Daily current-state extracts cannot supply historical snapshots or first-window 90-day context | DD-01/DD-03/DD-05; source owners review historical sufficiency |
 | S2-R02 | Risk / R-05 | Snapshot growth and multi-fact joins can distort totals or performance | Native grains, separate facts and later capacity/timing checks; Data Analyst / BA |
@@ -39,6 +43,8 @@ No probabilities, incurred losses, runtime defects or schedule variance are inve
 | S2-D02 / 2026-09-15 | Draft — not approved: effective dimensions, snapshot facts and versioned provenance | Preserve as-of history and reproducibility | Review owner Pending confirmation; no approval |
 | S2-D03 / 2026-09-15 | Draft — not approved: restricted detail boundary and scoped aggregate exports | Support baseline masking/access requirements | Compliance review Pending confirmation; no approval |
 | S2-C01 / 2026-09-15 | Design elaboration only; no approved baseline change | New names/types/defaults are proposals | Any policy/scope change must follow Planning section 17; none approved here |
+
+Status note 2026-09-20: rows S2-D01–S2-D03 were recorded as drafts on 2026-09-15 and are superseded by the approved DD-01–DD-12 decisions and the G3 decision; retained as history.
 
 Detailed alternatives and impacts are in DD-01–DD-12. Warm-up history and unrelated new source fields remain proposals. DD-02 now approves all co-borrower relationships for design; no data generation is authorized.
 

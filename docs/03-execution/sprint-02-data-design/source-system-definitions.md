@@ -2,6 +2,10 @@
 
 Current portfolio interpretation (2026-09-16): [G3 prerequisite register](g3-prerequisite-register.md) replaces real-source verification with finalized [synthetic contracts](synthetic-source-contract.md). Logical fields/policies remain approved; physical aliases are proposed until fixture implementation. Review roles are personas, not actual independent organizational approvals. Prior source-evidence prerequisites now mean synthetic contract/specification at G3 and executed fixture validation before publication. G3 remains unapproved.
 
+Status: **Sprint 2 logical design — approved; Gate G3 approved 2026-09-17 (logical design only)** — see [G3 decision](../../04-monitoring-and-control/g3-data-design-approval.md). Proposed physical aliases and domains remain unconfirmed until authorized implementation. The earlier "Draft — not approved" label reflects the state before DD-01–DD-12 and G3 approval and is retained in dated history. Reviewed against Planning sections 4, 5, 9 and 10 and US-08; no source discovery or connection occurred.
+
+### Historical status (superseded)
+
 Status: **Draft — not approved**. Reviewed against Planning sections 4, 5, 9 and 10 and US-08; no source discovery or connection occurred.
 
 ## DD-01 approval - 2026-09-15

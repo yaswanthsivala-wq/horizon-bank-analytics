@@ -1,5 +1,9 @@
 # KPI-to-data mappings
 
+Status: **Sprint 2 logical design — approved; Gate G3 approved 2026-09-17 (logical design only)** — see [G3 decision](../../04-monitoring-and-control/g3-data-design-approval.md). Proposed physical aliases and domains remain unconfirmed until authorized implementation. The earlier "Draft — not approved" label reflects the state before DD-01–DD-12 and G3 approval and is retained in dated history. Formulas below follow Planning section 8 except the DD-05/DD-06 refinements recorded in [CR-001](../../04-monitoring-and-control/change-control/CR-001-kpi-and-risk-refinements.md). K01–K10 are Sprint 2 cross-reference labels only. Field paths refer to proposed logical entities.
+
+### Historical status (superseded)
+
 Status: **Draft — not approved**. Formulas below preserve Planning section 8. K01–K10 are Sprint 2 cross-reference labels only. Field paths refer to proposed logical entities.
 
 | ID / approved KPI | Approved formula / DD-06 population | Grain and date | Controls |

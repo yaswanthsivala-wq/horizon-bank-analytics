@@ -32,7 +32,7 @@ Build a realistic, portfolio-grade analytics solution for a fictional community 
 
 ## Release 1 direction
 
-Release 1 will integrate five simulated daily source extracts covering customers/accounts, transactions, loans/payments, fraud alerts, complaints, and branch reference data. The planned solution uses Python, PostgreSQL, SQL, and Power BI with data-quality controls, reconciliation, explainable risk indicators, masking, role-based reporting, and 24 months of synthetic history.
+Release 1 will integrate daily extracts from five simulated systems: Core Banking (customers, accounts, holders and transactions), Loan Servicing (loans, borrowers, daily positions and payments), Fraud Monitoring (fraud alerts), CRM (complaints), and Branch Reference (effective branch/region hierarchy), as defined in the [source-system definitions](docs/03-execution/sprint-02-data-design/source-system-definitions.md). The planned solution uses Python, PostgreSQL, SQL, and Power BI with data-quality controls, reconciliation, explainable risk indicators, masking, role-based reporting, and 24 months of synthetic history.
 
 ## Repository safeguards
 
@@ -59,3 +59,7 @@ User-authorized fictional-project scope clarification replaces real-source verif
 ## G3 logical design approval - 2026-09-17
 
 The requesting user approved the complete consolidated Sprint 2 logical package. See [gate decision](docs/04-monitoring-and-control/g3-data-design-approval.md). This updates lifecycle status only: no real-source verification, production readiness, physical implementation, generated fixtures, executed reconciliation, implemented RLS/security, KPI achievement, UAT or publication readiness is claimed. All post-G3 work requires separate authorization; material design changes require change control. Dated prior statuses remain historical.
+
+## Historical status (superseded)
+
+Release 1 will integrate five simulated daily source extracts covering customers/accounts, transactions, loans/payments, fraud alerts, complaints, and branch reference data. The planned solution uses Python, PostgreSQL, SQL, and Power BI with data-quality controls, reconciliation, explainable risk indicators, masking, role-based reporting, and 24 months of synthetic history.

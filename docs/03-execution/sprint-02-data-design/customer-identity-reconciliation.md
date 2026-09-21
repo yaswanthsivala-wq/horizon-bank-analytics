@@ -1,5 +1,9 @@
 # Customer-identity reconciliation rules
 
+Status: **Sprint 2 logical design — approved; Gate G3 approved 2026-09-17 (logical design only)** — see [G3 decision](../../04-monitoring-and-control/g3-data-design-approval.md). Proposed physical aliases and domains remain unconfirmed until authorized implementation. The earlier "Draft — not approved" label reflects the state before DD-01–DD-12 and G3 approval and is retained in dated history. Supports FR-03, FR-04, US-08 and baseline risk R-02.
+
+### Historical status (superseded)
+
 Status: **Draft — not approved**. Supports FR-03, FR-04, US-08 and baseline risk R-02.
 
 | Rule | Proposed ordered behavior | Retained evidence / exception |

@@ -25,3 +25,7 @@ Sprint 2 logical Data Design is approved; implementation has not started. Next a
 ## Approval-record documentation validation
 
 Local documentation checks passed: 312 Markdown links resolve; inventory remains 109 entities/982 fields with 109/109 retention coverage; 32 AC rows, 14 FR/9 NFR identifiers and 17 quality rules preserved. Nine protected baseline hashes match prior evidence. Table/fence/whitespace checks and git diff --check passed. Branch main; index empty; no remote contact. Approved design artifacts and prior validation records are unchanged; edits are limited to gate, lifecycle, prerequisite and control/changelog records. These are documentation checks, not runtime tests.
+
+## Errata — 2026-09-20 (documentation clarification; the approval decision is unchanged)
+
+The "300" figure in `g3-closure-validation.md` counts local Markdown links (300 at closure, 312 at approval), not entity relationships. Declared foreign-key references are listed in [relationship-register.md](../03-execution/sprint-02-data-design/relationship-register.md) (N1 = 203 explicit FK references; N2 = 195 distinct child→parent entity pairs; N3 = 240 FK-mentioning field rows). Earlier records retain their historical wording.
