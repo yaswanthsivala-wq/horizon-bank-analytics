@@ -1,8 +1,25 @@
 # Project status
 
+## Current integration disposition — 2026-09-21
+
+| Workstream | Current candidate state |
+| --- | --- |
+| Sprint 2/G3 | DD-01 through DD-12 and G3 logical design remain approved as recorded September 17 |
+| R1 | Published at `50f4b3796752b49d82d8693dec9af4bd16f61edc`; documentation corrections retained |
+| CR-002 | Published at `d8bd6d275bd2f4a93cc882004e4e6ee7f804f9f6`; H01–H03 confirmations and H05 authority clarification recorded September 21; historical G2 date remains September 9 |
+| WP-PD01 | Preserved at `6fed2d70906b91418e6d4f710c43d15c8697baa5`; authored physical-design package and foundation SQL retained, not executed |
+| Integration | Candidate branch `integration/r1-cr002-wp-pd01`, based on CR-002; unstaged and uncommitted; not published or integrated into main |
+| PD02 and later gates | PD02 not started/not authorized; no G4 or other new gate approval |
+
+Next action: review the [fresh combined-tree validation](docs/04-monitoring-and-control/quality-reviews/integration-r1-cr002-wp-pd01-validation-2026-09-21.md) and candidate diff, then obtain explicit integration-candidate approval before staging, committing or pushing. Main remains at the approved G3 baseline. No database inspection, execution, generated fixtures, deployment or runtime tests are authorized by this integration.
+
+The dated records below remain historical, including old awaiting-review and not-integrated statements. Today's disposition supersedes their use as current status, without rewriting their evidence. BO objective mapping and the Restricted-classification rationale remain Pending confirmation; CR-002 H01–H03 confirmations are recorded, not independent persona approvals.
+
+## Historical status snapshot — 2026-09-17
+
 Last updated: 2026-09-17
 
-## Current state
+### State recorded before WP-PD01
 
 Current design decisions: DD-01 through DD-12 and G3 logical Data Design approved 2026-09-17. Physical design, generation and implementation require separate authorization.
 
@@ -50,7 +67,7 @@ Real-person assignments, actual source-owner review records, implementation and 
 
 Sprint 1 BA user approval was received through `/approve sprint-1-ba`. The successful push and subsequent verification on September 14, 2026 confirmed local main, HEAD, and origin/main at `b44fc5be7bbbc3ead6b9252a0077ec244e1352e8`, zero ahead/behind, and a clean working tree and index. See the [approval and synchronization record](docs/04-monitoring-and-control/sprint-01-approval-record.md). This evidence applies to that published commit, before this approval-record update.
 
-## Next gate
+## Historical next gate before WP-PD01
 
 G3 logical Data Design is approved September 17, 2026. Obtain separate explicit authorization for any physical design, fixture generation or implementation. No other gate is approved; material changes to approved design require change control.
 
@@ -125,3 +142,13 @@ Documentation remediation is prepared on isolated branch `remediation/sprint-02-
 H01–H03 Option A confirmations and H05 authority clarification are documented in the [dated decision record](docs/04-monitoring-and-control/change-control/CR-002-project-owner-decisions-2026-09-21.md), together with Planning README supplement traceability to existing approved evidence. Decision/clarification date: 2026-09-21; historical G2 approval date: 2026-09-09. No independent bank or persona review is asserted.
 
 The follow-up is on `docs/cr-002-sponsor-decisions`, based on R1 and not integrated into main. Validation and the explicit commit/push approval gate precede publication; integration requires separate authorization. WP-PD01 remains preserved. No requirements, design decisions, G3 status or other gate approvals change; no Sprint 3, PD02 or implementation authorization is added.
+
+## WP-PD01 authorized delivery - 2026-09-17
+
+G3 remains approved. The user authorized only physical-design documentation and foundation SQL authorship/static review. WP-PD01 documents all 109 logical entities/982 fields and proposed enforcement; no database inspection or execution, dependency installation, fixtures or runtime tests. PD02 and all executable work require separate authorization. Earlier statements that no physical design was authorized are historical to G3 approval. No approved business semantics changed.
+
+[WP-PD01 package](docs/03-execution/sprint-03-physical-design/README.md).
+
+### WP-PD01 recorded authorization boundary
+
+WP-PD01 documentation and static foundation SQL are authorized and delivered. Review its static-validation record, then obtain separate explicit PD02 authorization before local-version inspection, connection, installation, SQL execution or runtime tests. G3 remains approved; G4 and all other later gates remain unapproved.

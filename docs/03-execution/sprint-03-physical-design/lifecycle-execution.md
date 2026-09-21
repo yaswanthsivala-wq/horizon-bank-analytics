@@ -1,0 +1,11 @@
+# Retention, holds and disposal execution design
+
+DD-10 schedules remain authoritative: 24-month analytics on original anchors; active/required organization/assignment state then original effective-end plus24 months or retained-child dependency, whichever later; minimized audit seven years; configured hold and backup/temporary-copy limits unchanged. Correcting, moving, copying or republication never resets original anchors.
+
+Propose a dry-run eligibility planner using schedule version, original anchor, current holds, complete dependency graph and exact approved batch membership. Compliance and independent Data Owner remain simulated governance personas; no real appointments/approvals are claimed. Separate requester/reviewer/executor identities in simulated workflow. The application Administrator operates only the authorized exact batch and cannot expand it or change evidence.
+
+At execution recheck each item's expiry, hold state, dependency clearance and approved scope under locks consistent with hold creation. A concurrent new hold must prevent deletion. Failure stops the affected item and records failure, not silent skip-success. Delete analytical children/membership only when eligible, then unneeded payload/parents. Migrate permitted retained audit links to verified provenance envelopes before payload deletion; never null mandatory links or retain raw Restricted data just to satisfy an audit FK. Active analytical children require live parents.
+
+Record batch/approvers/executor/ruleset/start/end/counts/categories/hold-dependency exclusions and verification. Disposal evidence begins its own seven-year clock and cannot be deleted by its creating job. Implement restricted reversible mappings only for valid dependency/hold need. Independent evidence protection applies even to operational administrators.
+
+Partition removal is a possible optimization only if every item is eligible and no hold/dependency blocks. Daily encrypted backups and bounded 35-day expiration need filesystem/backup metadata evidence, not an assumption that deleting rows deletes backups. Restore remains isolated; reapply deletion/revocation/holds before access, then dispose temporary copies within approved bounds. Keep downloaded-export limitations explicit. None of these operations is implemented or executed by PD01.

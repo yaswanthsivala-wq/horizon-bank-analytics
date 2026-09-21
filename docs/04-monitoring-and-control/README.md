@@ -1,5 +1,20 @@
 # Monitoring and Control
 
+## Current integration disposition — 2026-09-21
+
+R1 and CR-002 follow-up are published on their own branches and retained here. H01–H03 documentary confirmations and H05 authority clarification are recorded; no independent bank/persona review is claimed. The preserved WP-PD01 physical-design documentation and authored foundation SQL are included for integration only. PD02 is not started/not authorized; G3 remains logical-design approval only, with no G4 or other new gate approval. Main has not been updated.
+
+Current integration evidence and controls:
+
+- [Fresh combined-tree validation](quality-reviews/integration-r1-cr002-wp-pd01-validation-2026-09-21.md): this candidate's actual static checks and limits.
+- [CR-002 project-owner decisions](change-control/CR-002-project-owner-decisions-2026-09-21.md): September 21 confirmations and authority clarification.
+- [WP-PD01 control record](wp-pd01-control-record.md): preserved historical authorization and static-delivery scope.
+- [WP-PD01 package](../03-execution/sprint-03-physical-design/README.md): preserved physical-design inventory.
+
+The September 20 register map below is historical: quality-reviews now holds the new integration record; status-reports still has no separate record. Prior Sprint 2 and WP-PD01 counts/hashes/branch statements remain evidence for their original snapshots, not fresh validation of this combined tree. The candidate is unstaged, uncommitted and awaiting explicit integration-candidate approval.
+
+### Historical Sprint 2 status — 2026-09-17
+
 Current Sprint 2 decision status (2026-09-17): DD-01 through DD-12 and G3 logical Data Design approved. Physical design, generation and implementation require separate authorization.
 
 Purpose: track project progress and controls throughout every phase.
@@ -29,6 +44,8 @@ Reserved artifact locations:
 - `change-control/`: change requests, impact assessments, and approvals.
 - `decision-log/`: dated decisions, rationale, and approval evidence.
 - `quality-reviews/`: review findings, corrective actions, and follow-up evidence.
+
+## Historical progress snapshot (superseded by current disposition)
 
 Progress: Sprint 1 BA approval and September 14, 2026 synchronization evidence recorded. Sprint 2 draft design package is prepared under current authorization; G3 review is pending. Technical implementation has not started.
 Open questions: Sprint 2 DD-11 and DD-12 and remaining DD-01 contract details, named review owners and actual review evidence are Pending confirmation.
@@ -93,3 +110,9 @@ The requesting user approved the complete consolidated Sprint 2 logical package.
 - [H01–H03 decisions, H05 authority clarification and Planning supplement traceability](change-control/CR-002-project-owner-decisions-2026-09-21.md): requesting-user documentary confirmations dated 2026-09-21; historical G2 date remains 2026-09-09. Independent persona reviews are not claimed. [CR-002](change-control/CR-002-baseline-lifecycle-corrections.md) retains its original historical body and links the disposition.
 
 This follow-up is not integrated into main. It changes no gate or approved design decision and authorizes no PD02 or implementation work.
+
+## WP-PD01 authorized delivery - 2026-09-17
+
+G3 remains approved. The user authorized only physical-design documentation and foundation SQL authorship/static review. WP-PD01 documents all 109 logical entities/982 fields and proposed enforcement; no database inspection or execution, dependency installation, fixtures or runtime tests. PD02 and all executable work require separate authorization. Earlier statements that no physical design was authorized are historical to G3 approval. No approved business semantics changed.
+
+[WP-PD01 package](../03-execution/sprint-03-physical-design/README.md).

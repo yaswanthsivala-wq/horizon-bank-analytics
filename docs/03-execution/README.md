@@ -71,3 +71,9 @@ User-authorized fictional-project scope clarification replaces real-source verif
 ## G3 logical design approval - 2026-09-17
 
 The requesting user approved the complete consolidated Sprint 2 logical package. See [gate decision](../04-monitoring-and-control/g3-data-design-approval.md). This updates lifecycle status only: no real-source verification, production readiness, physical implementation, generated fixtures, executed reconciliation, implemented RLS/security, KPI achievement, UAT or publication readiness is claimed. All post-G3 work requires separate authorization; material design changes require change control. Dated prior statuses remain historical.
+
+## WP-PD01 authorized delivery - 2026-09-17
+
+G3 remains approved. The user authorized only physical-design documentation and foundation SQL authorship/static review. WP-PD01 documents all 109 logical entities/982 fields and proposed enforcement; no database inspection or execution, dependency installation, fixtures or runtime tests. PD02 and all executable work require separate authorization. Earlier statements that no physical design was authorized are historical to G3 approval. No approved business semantics changed.
+
+[WP-PD01 package](sprint-03-physical-design/README.md).

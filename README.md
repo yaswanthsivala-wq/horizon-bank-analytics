@@ -1,12 +1,24 @@
 # Horizon Community Bank
 
+## Integration candidate — current disposition 2026-09-21
+
+This isolated candidate combines approved Sprint 2/G3 logical design, published R1 remediation, the September 21 CR-002 project-owner decisions, and the preserved WP-PD01 delivery. WP-PD01 comprises authored physical-design documentation and foundation SQL for static review only; it is not runtime validation or a later gate approval. PD02 is not started and not authorized. Main has not been updated; the candidate is unstaged, uncommitted and awaiting explicit integration-candidate approval.
+
+- [CR-002 project-owner decisions](docs/04-monitoring-and-control/change-control/CR-002-project-owner-decisions-2026-09-21.md)
+- [WP-PD01 package](docs/03-execution/sprint-03-physical-design/README.md)
+- [Fresh combined-tree validation](docs/04-monitoring-and-control/quality-reviews/integration-r1-cr002-wp-pd01-validation-2026-09-21.md)
+
+Earlier dated status/validation entries describe their original scope and time; they are not current combined-tree validation. The original R1, CR-002 and WP-PD01 branches/commits remain preserved. No policy or business requirement is changed.
+
+### Historical Sprint 2 status — 2026-09-17
+
 Current Sprint 2 decision status (2026-09-17): DD-01 through DD-12 and G3 logical Data Design approved. Physical design, generation and implementation require separate authorization.
 
 ## Banking Operations & Customer Risk Analytics
 
 This repository is the permanent source of truth for a fictional, synthetic-data portfolio project covering the full Data Analyst and Business Analyst lifecycle. It documents requirements, process analysis, data design, engineering, SQL analysis, Power BI reporting, testing, monitoring, and closure without using real bank or customer data.
 
-## Current status
+## Historical status snapshot — 2026-09-17
 
 Initiation is approved. Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis was approved by the user; required synchronization was verified September 14, 2026. Sprint 2 logical Data Design and Gate G3 were approved by the user September 17, 2026 under the synthetic-project scope. Technical implementation has not started.
 
@@ -16,7 +28,7 @@ Initiation is approved. Planning was approved by the user September 9, 2026. Spr
 - [Sprint 02 data design](docs/03-execution/sprint-02-data-design/README.md)
 - [Changelog](CHANGELOG.md)
 
-## Project lifecycle
+## Project lifecycle — historical snapshot before WP-PD01
 
 | Phase | Location | Status |
 | --- | --- | --- |
@@ -63,3 +75,9 @@ The requesting user approved the complete consolidated Sprint 2 logical package.
 ## Historical status (superseded)
 
 Release 1 will integrate five simulated daily source extracts covering customers/accounts, transactions, loans/payments, fraud alerts, complaints, and branch reference data. The planned solution uses Python, PostgreSQL, SQL, and Power BI with data-quality controls, reconciliation, explainable risk indicators, masking, role-based reporting, and 24 months of synthetic history.
+
+## WP-PD01 authorized delivery - 2026-09-17
+
+G3 remains approved. The user authorized only physical-design documentation and foundation SQL authorship/static review. WP-PD01 documents all 109 logical entities/982 fields and proposed enforcement; no database inspection or execution, dependency installation, fixtures or runtime tests. PD02 and all executable work require separate authorization. Earlier statements that no physical design was authorized are historical to G3 approval. No approved business semantics changed.
+
+[WP-PD01 package](docs/03-execution/sprint-03-physical-design/README.md).

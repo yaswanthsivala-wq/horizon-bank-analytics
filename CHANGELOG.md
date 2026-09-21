@@ -2,6 +2,12 @@
 
 Record meaningful repository and documentation changes here. Entries describe actual work and explicitly recorded approvals.
 
+## Combined integration candidate prepared — 2026-09-21
+
+Prepared an unstaged candidate on `integration/r1-cr002-wp-pd01` from the published CR-002 follow-up, retaining R1 and transferring the preserved WP-PD01 delta. Reconciled the four overlapping current-status/history documents without changing approved design or WP-PD01 physical-design/SQL content. Historical entries remain intact and dated; added [fresh combined-tree validation](docs/04-monitoring-and-control/quality-reviews/integration-r1-cr002-wp-pd01-validation-2026-09-21.md). Removed the quality-reviews placeholder because that directory now contains substantive evidence.
+
+No main update, commit, push, independent review, runtime/deployment validation, PD02 work or new gate approval. Original source commits and branches remain unchanged; candidate approval is pending.
+
 ## CR-002 project-owner decision follow-up — 2026-09-21
 
 Recorded H01–H03 Option A confirmations of intended reconciled documentation and H05 authority clarification, dated 2026-09-21 while preserving G2's historical 2026-09-09 approval date. Added [decision evidence and Planning supplement traceability](docs/04-monitoring-and-control/change-control/CR-002-project-owner-decisions-2026-09-21.md); appended CR-002's disposition without rewriting its history; updated Monitoring and Control inventory and project status.
@@ -17,6 +23,10 @@ No approval status changed; no design decision changed; no implementation. R1 is
 Rationale for the Restricted classification of `rc01_comparison` fields: Pending confirmation.
 
 Deferred to Sprint 3 design: strategy for `typed entity reference` / `internal key` fields (F-13); sizing of ~4.38 M loan-position and up to 3.65 M complaint-snapshot rows against NFR-04 (F-14); enriching thin field definitions (F-10). Adding SSN, KYC or AML fields is not in scope; none added.
+
+## WP-PD01 - 2026-09-17
+
+User-authorized physical architecture, exhaustive 109-entity/982-field proposed mapping, constraint/reference plan, temporal/publication, indexing, security, lifecycle and safe-cleanup documentation. Added foundation SQL limited to schemas, NOLOGIN roles, ownership/default privileges, extension declaration and migration ledger; static review only. G3 semantics unchanged; PD02 requires separate authorization. No execution, generated data, dependency installation or remote/Git publication. See [validation](docs/03-execution/sprint-03-physical-design/static-validation.md).
 
 ## G3 approved - 2026-09-17
 

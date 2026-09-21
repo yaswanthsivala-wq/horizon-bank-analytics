@@ -1,0 +1,24 @@
+# Sprint 3 physical design - WP-PD01
+
+Authorized by requesting user 2026-09-17: physical-design documentation and foundation SQL for static review only. G3 remains approved. PD02 and all executable work require separate authorization. Status: PD01 authored, static validation recorded separately; no database inspection/execution, dependencies installed, fixtures or runtime results.
+
+## Artifact inventory
+
+- [Architecture](physical-architecture.md)
+- [109-entity/982-field mapping](logical-to-physical-map.md)
+- [Constraints and typed references](constraint-matrix.md)
+- [Versions and publication](versioning-and-publication.md)
+- [Indexes and partitions](indexing-and-partitioning.md)
+- [Security enforcement](security-enforcement.md)
+- [Lifecycle execution](lifecycle-execution.md)
+- [Safe cleanup](development-cleanup.md)
+- [Foundation SQL](../../../sql/migrations/0001_foundation.sql)
+- [Static validation](static-validation.md)
+
+Approved input: [G3 decision](../../04-monitoring-and-control/g3-data-design-approval.md), [authoritative inventory](../sprint-02-data-design/field-level-dictionary.md), [synthetic contract](../sprint-02-data-design/synthetic-source-contract.md) and all DD-01 through DD-12. No logical decisions reopened or changed. Physical helpers are proposed representations, not new logical banking entities.
+
+## PD02 prerequisites
+
+Separate explicit user authorization must specify permitted local environment inspection, database target/bootstrap credential mechanism, dependency/extension installation if needed, SQL execution, disposable test scope and cleanup. Inspect installed PostgreSQL version only then; proposed target is PostgreSQL 18, not confirmed installed. Review role/schema name collisions and required bootstrap privileges. Pin driver/test/timezone dependencies and decide exact authorized next migration scope. Complete target-specific typed binding schemas and semantic triggers before loading their referencing records. Foundation SQL alone does not implement business integrity, RLS or publication.
+
+Next lifecycle gate remains G4 Analytics Validation; neither PD01 nor a successful migration approves it.
