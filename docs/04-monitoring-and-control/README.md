@@ -10,6 +10,8 @@ Current artifacts:
 
 - [Sprint 3 contract reconciliation control](sprint-03-contract-reconciliation-control.md): G3 authority comparison, unresolved physical decisions and validation scope.
 
+- [Sprint 3 PD-01 through PD-07 decision package](../03-execution/sprint-03-physical-design/physical-design-decision-package.md) and [approval/control record](sprint-03-pd01-pd07-design-rule-approval.md): seven design rules approved; physical annexes Pending confirmation, Sprint 3 not approved and PD02 unauthorized.
+
 - [Sprint 1 BA approval and synchronization record](sprint-01-approval-record.md): received user approval, dated evidence, scope, and next authorization.
 
 - [Sprint 2 control record](sprint-02-control-record.md): dated authorization, progress, open risks/issues, proposed decisions, change control and documentation validation.

@@ -1,5 +1,15 @@
 # Changelog
 
+## Sprint 3 PD-01 through PD-07 design rules approved - 2026-09-21
+
+- Recorded requesting-user approval of seven physical design rules with exact scope and evidence in the decision package and dedicated control record. Literal headers, versions, manifest schema/vocabulary, applicability, financial matrix, mappings and timezone runtime mechanism remain Pending confirmation and fail closed.
+- Updated lifecycle navigation/status only. Sprint 3 is not approved; no PD02, PostgreSQL, dataset generation, pipeline-code change, push or merge is authorized by this decision.
+
+## Sprint 3 physical decision package drafted - 2026-09-21
+
+- Prepared PD-01 through PD-07 questions with approved G3 authority, implementation constraints, derived details and pending evidence. Added lifecycle links/status without changing approved baselines or pipeline code.
+- No decision approval, PD02, database work, synthetic dataset generation, commit, push or merge is claimed for this increment.
+
 ## Sprint 3 offline contract reconciliation - 2026-09-21
 
 - Reconciled the offline validator and its illustrative tests against approved G3 source/model/dictionary/KPI/risk/quality/traceability artifacts; classified approved, derived and pending contract items without changing any Sprint 2 baseline.

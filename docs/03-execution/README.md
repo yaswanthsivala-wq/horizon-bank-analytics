@@ -8,6 +8,8 @@ Purpose: document authorized delivery activities and their evidence.
 
 - [Sprint 03 — physical design and offline intake](sprint-03-physical-design/README.md): preserved WP-PD01 package and the first offline Data Engineering increment. Runtime database work remains Pending confirmation.
 
+  The [PD-01 through PD-07 decision package](sprint-03-physical-design/physical-design-decision-package.md) records **Approved — Design Rule** for seven rules; physical annexes remain Pending confirmation. Sprint 3 is not approved and PD02 database work is unauthorized.
+
 - [Sprint 01 — Business Analysis](sprint-01-business-analysis/README.md): user stories, acceptance criteria, current/future process flows, role-access flow, customer-risk flow, and requirements traceability.
 
 - [Sprint 02 - Data Design](sprint-02-data-design/README.md): proposed source contracts, models/ERD, field dictionary/mappings, identity, quality, KPI mappings, security and traceability.

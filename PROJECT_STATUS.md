@@ -10,6 +10,8 @@ Controlled continuation: proposed [physical manifest contract](docs/03-execution
 
 Offline [contract reconciliation](docs/03-execution/sprint-03-physical-design/contract-reconciliation.md) covers 27 required source sections and 333 logical target field rows. The current test header/version is illustrative only. No approved G3 artifact changed and no implementation change was warranted by unconfirmed physical aliases. Seven physical decision categories remain Pending confirmation; Sprint 3 is not approved.
 
+The [Sprint 3 PD-01 through PD-07 decision package](docs/03-execution/sprint-03-physical-design/physical-design-decision-package.md) states each question, G3 authority, implementation boundaries and required evidence. The requesting user approved all seven **design rules** on 2026-09-21; [approval/control record](docs/04-monitoring-and-control/sprint-03-pd01-pd07-design-rule-approval.md). Exact physical annexes remain Pending confirmation and missing required annexes fail closed. Sprint 3 is started but not approved; PD02 database work remains unauthorized. This documentation decision adds no pipeline functionality or new gate approval. Earlier pending-decision statements above describe the pre-approval reconciliation state.
+
 ## Current state
 
 Current design decisions: DD-01 through DD-12 and G3 logical Data Design approved 2026-09-17. Physical design, generation and implementation require separate authorization.

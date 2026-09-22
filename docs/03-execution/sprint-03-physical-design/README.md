@@ -8,6 +8,8 @@ The [proposed offline manifest contract](offline-manifest-contract.md) records t
 
 The [contract reconciliation](contract-reconciliation.md) and [27-section field inventory](source-field-inventory.md) distinguish approved G3 logical fields from proposed physical aliases and illustrative tests. Sprint 3 remains a working draft.
 
+The [PD-01 through PD-07 decision package](physical-design-decision-package.md) now records all seven as **Approved — Design Rule** by the requesting user on 2026-09-21. Their literal physical annexes remain **Pending confirmation**; see the [approval/control record](../../04-monitoring-and-control/sprint-03-pd01-pd07-design-rule-approval.md). Sprint 3 is started but not approved; PD02 database work is unauthorized. No missing annex may be assumed to pass intake.
+
 Authorized by requesting user 2026-09-17: physical-design documentation and foundation SQL for static review only. G3 remains approved. PD02 and all executable work require separate authorization. Status: PD01 authored, static validation recorded separately; no database inspection/execution, dependencies installed, fixtures or runtime results.
 
 ## Artifact inventory
