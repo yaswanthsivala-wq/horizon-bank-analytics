@@ -10,6 +10,10 @@ The [contract reconciliation](contract-reconciliation.md) and [27-section field 
 
 The [PD-01 through PD-07 decision package](physical-design-decision-package.md) now records all seven as **Approved — Design Rule** by the requesting user on 2026-09-21. Their literal physical annexes remain **Pending confirmation**; see the [approval/control record](../../04-monitoring-and-control/sprint-03-pd01-pd07-design-rule-approval.md). Sprint 3 is started but not approved; PD02 database work is unauthorized. No missing annex may be assumed to pass intake.
 
+### Physical Contract Annex Increment 1 — 2026-09-22
+
+Project Owner reviewed Increment 1 on 2026-09-22; see [approval record](../../04-monitoring-and-control/sprint-03-physical-contract-annex-1-approval.md). [PD-01 header annex](pd01-physical-header-annex.md): **Approved structure — Physical header values pending confirmation** for all 27 sections; unresolved headers fail closed. [PD-02 version annex](pd02-schema-version-annex.md): **Approved convention — Activation pending approved physical header contract**; 27 initial candidate IDs remain inactive. [PD-03 manifest specification](pd03-manifest-json-specification.md): **Approved — Physical manifest contract**, with [one-row](pd03-manifest-normal-example.md) and [zero-row](pd03-manifest-zero-row-example.md) approved structural examples only. [Cross-contract dependency model](pd01-pd03-cross-contract-validation.md) is approved; static evidence and limits remain. PD-04 through PD-07 annex values remain separate pending work; no Python, SQL or dataset implementation occurred. Sprint 3 remains in progress and not approved; PD02 database work remains unauthorized.
+
 Authorized by requesting user 2026-09-17: physical-design documentation and foundation SQL for static review only. G3 remains approved. PD02 and all executable work require separate authorization. Status: PD01 authored, static validation recorded separately; no database inspection/execution, dependencies installed, fixtures or runtime results.
 
 ## Artifact inventory

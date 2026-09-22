@@ -1,6 +1,10 @@
 # Project status
 
-Last updated: 2026-09-21
+Last updated: 2026-09-22
+
+## Physical Contract Annex Increment 1 — 2026-09-22
+
+Project Owner approved [Increment 1](docs/04-monitoring-and-control/sprint-03-physical-contract-annex-1-approval.md) with distinct scopes: PD-01 **structure approved; physical header values pending**, PD-02 **convention approved; activation pending approved header contracts**, and PD-03 **physical manifest contract approved** with structural examples. The [cross-contract dependency model](docs/03-execution/sprint-03-physical-design/pd01-pd03-cross-contract-validation.md) is approved. All 27 exact received headers remain Pending confirmation/fail closed; 27 candidate schema IDs are inactive. PD-04 through PD-07 annex values remain pending. Sprint 3 remains in progress and unapproved; PD02/PostgreSQL, full synthetic data generation and publication remain unauthorized.
 
 ## Sprint 3 Data Engineering start - 2026-09-21
 

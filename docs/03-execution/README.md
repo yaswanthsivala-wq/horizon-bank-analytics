@@ -10,6 +10,8 @@ Purpose: document authorized delivery activities and their evidence.
 
   The [PD-01 through PD-07 decision package](sprint-03-physical-design/physical-design-decision-package.md) records **Approved — Design Rule** for seven rules; physical annexes remain Pending confirmation. Sprint 3 is not approved and PD02 database work is unauthorized.
 
+  [Physical Contract Annex Increment 1](sprint-03-physical-design/README.md) has Project Owner approval for PD-01 structure, PD-02 convention and PD-03 manifest contract only; missing exact headers remain fail closed and candidate schema IDs remain inactive.
+
 - [Sprint 01 — Business Analysis](sprint-01-business-analysis/README.md): user stories, acceptance criteria, current/future process flows, role-access flow, customer-risk flow, and requirements traceability.
 
 - [Sprint 02 - Data Design](sprint-02-data-design/README.md): proposed source contracts, models/ERD, field dictionary/mappings, identity, quality, KPI mappings, security and traceability.

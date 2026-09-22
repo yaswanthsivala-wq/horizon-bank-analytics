@@ -1,5 +1,15 @@
 # Changelog
 
+## Sprint 3 Physical Contract Annex Increment 1 reviewed - 2026-09-22
+
+- Recorded Project Owner approval of PD-01 annex structure (headers pending), PD-02 deterministic section-schema convention (candidate IDs inactive), PD-03 physical manifest contract/structural examples, and cross-contract dependency rules in a dedicated control record.
+- Preserved fail-closed missing annex behavior and PD-04 through PD-07 pending values. Sprint 3 is not approved; no Python/SQL implementation, dataset generation, push or merge is authorized by this decision.
+
+## Sprint 3 Physical Contract Annex Increment 1 drafted - 2026-09-22
+
+- Prepared all-27-section PD-01 header annex with explicit fail-closed pending headers, 27 proposed inactive per-section PD-02 schema IDs, and candidate PD-03 manifest JSON/package rules with structural one-row and zero-row examples.
+- Added static cross-contract evidence and lifecycle links/status. No approved source annex, PD-04 through PD-07 resolution, Python/SQL implementation, dataset generation, commit, push or merge is claimed.
+
 ## Sprint 3 PD-01 through PD-07 design rules approved - 2026-09-21
 
 - Recorded requesting-user approval of seven physical design rules with exact scope and evidence in the decision package and dedicated control record. Literal headers, versions, manifest schema/vocabulary, applicability, financial matrix, mappings and timezone runtime mechanism remain Pending confirmation and fail closed.

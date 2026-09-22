@@ -12,6 +12,8 @@ Current artifacts:
 
 - [Sprint 3 PD-01 through PD-07 decision package](../03-execution/sprint-03-physical-design/physical-design-decision-package.md) and [approval/control record](sprint-03-pd01-pd07-design-rule-approval.md): seven design rules approved; physical annexes Pending confirmation, Sprint 3 not approved and PD02 unauthorized.
 
+- [Physical Contract Annex Increment 1 approval](sprint-03-physical-contract-annex-1-approval.md) and [PD-01–PD-03 validation](../03-execution/sprint-03-physical-design/pd01-pd03-cross-contract-validation.md): distinct approved structure/convention/manifest scopes, pending physical values, fail-closed limits and local static evidence.
+
 - [Sprint 1 BA approval and synchronization record](sprint-01-approval-record.md): received user approval, dated evidence, scope, and next authorization.
 
 - [Sprint 2 control record](sprint-02-control-record.md): dated authorization, progress, open risks/issues, proposed decisions, change control and documentation validation.
