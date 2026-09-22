@@ -1,5 +1,10 @@
 # Changelog
 
+## Sprint 3 Physical Contract Annex Increment 3 framework approved - 2026-09-22
+
+- Project Owner approved the PD-05/06 frameworks, PD-07 specification, cross-contract documentary model and 13-row open register. Seven financial candidates, 23 mapping groups and 15 future temporal cases remain physically pending; no runtime rule activated.
+- Updated Sprint 3, execution, monitoring and project-status navigation. Documentation-only; Sprint 3/PD02 remain unapproved/unauthorized and no push or database work is claimed.
+
 ## Sprint 3 PD-04 applicability framework approved - 2026-09-22
 
 - Project Owner reviewed and approved the PD-04 conditional source-cell framework, state and completeness rules, and predicate governance; 51 logical C-field candidates across 22 sections retain Pending confirmation physical bindings and zero active predicates. Recorded fail-closed PD-01/02/03 dependencies and left PD-05/06/07 unresolved.
