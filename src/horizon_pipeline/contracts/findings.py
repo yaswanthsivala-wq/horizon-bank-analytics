@@ -13,10 +13,11 @@ from enum import Enum
 class FindingSeverity(str, Enum):
     """Controlled severity levels for contract and data findings."""
 
-    FATAL = "FATAL"      # Package-level failure: delivery must be rejected
-    ERROR = "ERROR"      # Record/field-level failure: causes quarantine or rejection
-    WARNING = "WARNING"  # Advisory observation
-    INFO = "INFO"        # Informational trace
+    FATAL = "FATAL"        # Package-level failure: delivery must be rejected
+    CRITICAL = "CRITICAL"  # DD-09 publication-blocking failure
+    ERROR = "ERROR"        # Record/field-level failure: causes quarantine or rejection
+    WARNING = "WARNING"    # Advisory observation
+    INFO = "INFO"          # Informational trace
 
 
 class Disposition(str, Enum):

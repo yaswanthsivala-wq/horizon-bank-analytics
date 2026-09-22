@@ -16,7 +16,9 @@ Purpose: document authorized delivery activities and their evidence.
 
   [Physical Contract Annex Increment 3](sprint-03-physical-design/README.md) has Project Owner approval for PD-05/06 frameworks, PD-07 specification, cross-contract documentary model and the open-item register. No unresolved physical control, mapping or timezone runtime is active.
 
-  [Executable Implementation Package 1](sprint-03-physical-design/executable-implementation-package-01.md): local implementation of offline contract engine, PD-01 through PD-07 validation, and synthetic banking data foundation; 85 passing tests; 27 sections / 333 logical field rows reconciled; production contracts fail closed as PENDING; Sprint 3 not approved and PD02 unauthorized.
+  [Executable Implementation Package 1](sprint-03-physical-design/executable-implementation-package-01.md): local implementation of offline contract engine, PD-01 through PD-07 validation, and synthetic banking data foundation; approved by Project Owner; 90 passing tests; 27 sections / 333 logical field rows reconciled; production contracts fail closed as PENDING.
+
+  [Executable Implementation Package 2](sprint-03-physical-design/executable-implementation-package-02.md): Project Owner approved the audited offline transformation, data quality (DQ-D01..DQ-D13), quarantine, lineage, replay, reconciliation, and deterministic-output implementation through `/approve sprint-3-package-2`; 135 tests pass. Sprint 3 remains not approved; PD02 and Package 3 remain unauthorized.
 
 - [Sprint 01 — Business Analysis](sprint-01-business-analysis/README.md): user stories, acceptance criteria, current/future process flows, role-access flow, customer-risk flow, and requirements traceability.
 

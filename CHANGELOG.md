@@ -1,5 +1,26 @@
 # Changelog
 
+## Sprint 3 Executable Implementation Package 2 approved - 2026-09-22
+
+- Implemented offline transformation, data quality, quarantine, lineage, and curated processing pipeline under `src/horizon_pipeline/processing/` across 10 modules (`records.py`, `transform.py`, `quality.py`, `quarantine.py`, `identity.py`, `replay.py`, `lineage.py`, `reconciliation.py`, `writer.py`, `engine.py`).
+- Conducted evidence-level audit of all operational rules against Sprint 1, Sprint 2, G3, and Sprint 3 physical design baselines, demoting unapproved assumptions and establishing strict fail-closed production boundaries.
+- Audited DD-08 data masking engine: fixed mask + final 4 framework approved; concrete physical masking algorithms fail closed in `ExecutionMode.PRODUCTION` with `PendingContractError` (DD-08 lines 37, 41-42); synthetic masking logic isolated to `ExecutionMode.FIXTURE`.
+- Audited DD-09 data quality engine: ISO 4217 3-letter currency format is approved production rule; USD-only assumption removed; production currency whitelist remains PENDING; fixture mode supports approved fixture currencies `{"USD", "EUR"}` without cross-currency netting.
+- Audited DD-10 retention classifications: quarantined raw row payloads follow `RetentionCategory.ANALYTICAL_24M` (DD-10 line 69); execution metadata, lineage records, and quality summary logs follow `RetentionCategory.AUDIT_7Y` (DD-10 lines 45, 70).
+- Audited natural key deduplication: composite keys enforced across all 27 sections matching baseline logical dictionary (`scripts/reconcile_source_fields.py`); in `ExecutionMode.PRODUCTION`, column extraction fails closed with `DQ-D02` CRITICAL because PD-01 headers remain PENDING.
+- Implemented DD-09 exact row reconciliation (`RC-D01`: `received = accepted + quarantined + approved_excluded`) and exact financial reconciliation (`RC-D02`: `source_total = accepted + quarantined + approved_excluded`) using exact scale-4 Decimal arithmetic.
+- Implemented publication gating (`PUB-D01`): blocks delivery on CRITICAL/FATAL findings, incomplete required cells, or reconciliation residuals.
+- Implemented DD-11 loan servicing entities: payments, schedules, obligations, unapplied funds, allocations, and adjustments.
+- Implemented DD-12 branch attribution: organizational units, regions, branches, and effective-dated branch assignments.
+- Implemented dual execution modes: strict `ExecutionMode.PRODUCTION` (binds strictly to `MasterProductionRegistry`, failing closed on pending contracts) and `ExecutionMode.FIXTURE` (isolated test fixture contracts with exact-zero financial tolerance).
+- Implemented deterministic output artifact generation (`accepted/*.json`, `quarantine/*.json`, `lineage/*.json`, `dq_summary.json`, `reconciliation_summary.json`, `manifest.json`) with verified SHA-256 digests.
+- Added 45 new unit and integration tests across records, transforms, quality rules, quarantine ledger, identity deduplication, batch replay state tracking, lineage tracing, reconciliation arithmetic, artifact writer, and full end-to-end flows (135/135 tests pass total).
+- Preserved baseline intake tests (`test_intake.py`: 11/11 pass) and source field inventory (`scripts/reconcile_source_fields.py`: 27 sections, 333 logical target field rows).
+- Critical safety guards verified: all 27 production headers, 27 production schemas, 51 candidate predicates, 7 candidate financial controls (with unresolved production tolerance), 23 domain mapping groups, and runtime tzdb 2026a verification remain PENDING and fail closed; registry isolation verified.
+- Documented implementation and evidence audit matrix in `docs/03-execution/sprint-03-physical-design/executable-implementation-package-02.md` and control record `docs/04-monitoring-and-control/sprint-03-executable-package-02-control.md`.
+- Scoped future Package 3 strictly to approved RC-01 through RC-05 condition evaluation, KPI computation, and analytical marts (avoiding unapproved composite "Customer Risk Scoring").
+- Project Owner approved Package 2 through `/approve sprint-3-package-2` for a controlled local checkpoint commit. Sprint 3 remains in progress and not approved; PD02/PostgreSQL and Package 3 remain unauthorized; no push or merge is authorized.
+
 ## Sprint 3 Executable Implementation Package 1 approved and locally committed - 2026-09-22
 
 - Implemented offline contract engine and synthetic banking data foundation locally under local authorization; added modules under `src/horizon_pipeline/contracts/`, `src/horizon_pipeline/synthetic/`, and `src/horizon_pipeline/pipeline.py`.

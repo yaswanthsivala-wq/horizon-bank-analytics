@@ -109,6 +109,10 @@ class FinancialControlEngine:
             raise ValueError(f"Financial control already registered for {key}")
         self._controls[key] = control
 
+    def all_controls(self) -> tuple[FinancialControlContract, ...]:
+        """Return all registered financial control contracts."""
+        return tuple(self._controls.values())
+
     def get(
         self,
         source: str,
