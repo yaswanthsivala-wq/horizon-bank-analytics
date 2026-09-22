@@ -52,6 +52,7 @@ class SyntheticBankingDataGenerator:
         num_accounts_per_cust: int = 2,
         num_transactions: int = 50,
         num_loans: int = 10,
+        include_risk_scenarios: bool = False,
     ) -> SyntheticDataset:
         """Generate logical records for all 27 mandatory sections."""
         # Initialize dictionary for all 27 mandatory sections
@@ -319,5 +320,39 @@ class SyntheticBankingDataGenerator:
             "branch_role": "RESPONSIBLE",
             "effective_start": "2024-09-01",
         })
+
+        # Optional additive risk fixtures. Default output remains byte-compatible.
+        if include_risk_scenarios:
+            restricted_account = accounts[0]
+            sections[("SRC-01", "account_restriction_state")].append({
+                "account_id": restricted_account["account_id"],
+                "restriction_status": "FROZEN",
+                "effective_start": f"{self.business_date.isoformat()}T08:00:00.000000Z",
+            })
+            sections[("SRC-03", "fraud_alert_state")].append({
+                "alert_id": alert_id,
+                "case_status": "CLOSED",
+                "effective_start": f"{self.business_date.isoformat()}T18:00:00.000000Z",
+            })
+            sections[("SRC-04", "complaint_snapshot")].append({
+                "complaint_id": comp_id,
+                "business_date": self.business_date.isoformat(),
+                "complaint_status": "REOPENED",
+                "priority": "Medium",
+            })
+            sections[("SRC-04", "complaint_history_event")].extend([
+                {
+                    "event_id": f"EVT-{comp_id}-02",
+                    "complaint_id": comp_id,
+                    "event_type": "CLOSED",
+                    "event_at": f"{self.business_date.isoformat()}T14:00:00.000000Z",
+                },
+                {
+                    "event_id": f"EVT-{comp_id}-03",
+                    "complaint_id": comp_id,
+                    "event_type": "REOPENED",
+                    "event_at": f"{self.business_date.isoformat()}T16:00:00.000000Z",
+                },
+            ])
 
         return SyntheticDataset(business_date=self.business_date, seed=self.seed, sections=sections)

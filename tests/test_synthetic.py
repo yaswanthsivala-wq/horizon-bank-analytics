@@ -7,6 +7,7 @@ from horizon_pipeline.intake import REQUIRED_SECTIONS
 from horizon_pipeline.synthetic import (
     SyntheticBankingDataGenerator,
     build_serialized_fixture_package,
+    build_test_fixture_registries,
 )
 
 
@@ -71,6 +72,29 @@ class SyntheticDataTests(unittest.TestCase):
         branch_ids = {b["branch_id"] for b in dataset.sections[("SRC-05", "branches")]}
         for cust in dataset.sections[("SRC-01", "customers")]:
             self.assertIn(cust["primary_branch_id"], branch_ids)
+
+    def test_risk_scenarios_are_additive_and_default_output_is_unchanged(self):
+        args = dict(num_customers=5, num_transactions=10, num_loans=2)
+        default = SyntheticBankingDataGenerator(seed=77).generate(**args)
+        explicit_default = SyntheticBankingDataGenerator(seed=77).generate(**args, include_risk_scenarios=False)
+        enriched = SyntheticBankingDataGenerator(seed=77).generate(**args, include_risk_scenarios=True)
+        self.assertEqual(default.sections, explicit_default.sections)
+        self.assertEqual(len(enriched.sections[("SRC-01", "account_restriction_state")]), len(default.sections[("SRC-01", "account_restriction_state")]) + 1)
+        self.assertEqual(len(enriched.sections[("SRC-03", "fraud_alert_state")]), len(default.sections[("SRC-03", "fraud_alert_state")]) + 1)
+        self.assertEqual(len(enriched.sections[("SRC-04", "complaint_snapshot")]), len(default.sections[("SRC-04", "complaint_snapshot")]) + 1)
+        self.assertEqual(len(enriched.sections[("SRC-04", "complaint_history_event")]), len(default.sections[("SRC-04", "complaint_history_event")]) + 2)
+
+    def test_risk_scenario_generation_is_deterministic(self):
+        first = SyntheticBankingDataGenerator(seed=88).generate(include_risk_scenarios=True)
+        second = SyntheticBankingDataGenerator(seed=88).generate(include_risk_scenarios=True)
+        self.assertEqual(first.sections, second.sections)
+
+    def test_risk_fixture_mappings_are_isolated_and_resolvable(self):
+        _, _, _, mappings, _ = build_test_fixture_registries()
+        resolved, findings = mappings.resolve("SRC-03", "fraud_severity", "FIXTURE_MAP_V1", "HIGH")
+        self.assertTrue(resolved.is_resolved)
+        self.assertEqual(resolved.canonical_value, "HIGH")
+        self.assertEqual(findings, [])
 
 
 if __name__ == "__main__":

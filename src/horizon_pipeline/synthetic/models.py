@@ -135,3 +135,41 @@ class SyntheticComplaint:
     status: str                 # OPEN, IN_PROGRESS, CLOSED
     branch_id: str
     created_at_utc: str
+
+
+@dataclass(frozen=True)
+class SyntheticFraudAlertState:
+    """SRC-03 effective fraud-alert state fixture evidence."""
+
+    alert_id: str
+    case_status: str
+    effective_start_utc: str
+
+
+@dataclass(frozen=True)
+class SyntheticComplaintSnapshot:
+    """SRC-04 complaint state as-of a business date."""
+
+    complaint_id: str
+    business_date: date
+    complaint_status: str
+    priority_at_creation: str
+
+
+@dataclass(frozen=True)
+class SyntheticComplaintHistoryEvent:
+    """SRC-04 immutable complaint history evidence."""
+
+    event_id: str
+    complaint_id: str
+    event_type: str
+    event_at_utc: str
+
+
+@dataclass(frozen=True)
+class SyntheticAccountRestrictionState:
+    """SRC-01 effective account restriction fixture evidence."""
+
+    account_id: str
+    restriction_status: str
+    effective_start_utc: str

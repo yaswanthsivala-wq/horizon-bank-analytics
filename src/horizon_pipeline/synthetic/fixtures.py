@@ -149,6 +149,25 @@ def build_test_fixture_registries() -> tuple[
             )
         )
 
+    # Fixture-only mappings needed by RC-02 through RC-05 evaluation.
+    risk_domains = {
+        ("SRC-02", "loan_status"): ("ACTIVE", "DELINQUENT_ACTIVE", "FORBEARANCE_ACTIVE", "PAID_OFF", "CLOSED", "CHARGED_OFF"),
+        ("SRC-03", "fraud_case_status"): ("OPEN", "CLOSED"),
+        ("SRC-03", "fraud_severity"): ("LOW", "MEDIUM", "HIGH", "CRITICAL"),
+        ("SRC-04", "complaint_status"): ("OPEN", "IN_PROGRESS", "REOPENED", "CLOSED"),
+        ("SRC-04", "complaint_priority"): ("Critical", "High", "Medium", "Low"),
+        ("SRC-01", "restriction_status"): ("NONE", "RESTRICTED", "FROZEN", "BLOCKED"),
+    }
+    for (source, domain), values in risk_domains.items():
+        mappings.register_version(source, domain, FIXTURE_MAPPING_VERSION, ContractState.ACTIVE)
+        for value in values:
+            mappings.register_entry(MappingEntry(
+                source_system=source, domain_code=domain,
+                mapping_version=FIXTURE_MAPPING_VERSION, raw_value=value,
+                canonical_value=value, state=ContractState.ACTIVE,
+                is_fixture=True, evidence_reference="G3 synthetic fixture vocabulary",
+            ))
+
     # 5. Fixture financial control: SRC-01 transactions USD flow control
     s_ver_tx = f"{FIXTURE_SCHEMA_PREFIX}SRC-01.transactions.v001"
     financial.register(
