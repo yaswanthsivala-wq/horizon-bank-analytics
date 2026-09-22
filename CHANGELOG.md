@@ -1,5 +1,20 @@
 # Changelog
 
+## Sprint 3 offline contract reconciliation - 2026-09-21
+
+- Reconciled the offline validator and its illustrative tests against approved G3 source/model/dictionary/KPI/risk/quality/traceability artifacts; classified approved, derived and pending contract items without changing any Sprint 2 baseline.
+- Added a reproducible 27-section/333-logical-field inventory, rule traceability, status/control updates and explicit physical mapping/version decisions. No PD02, fixture generation or Git publication.
+
+## Sprint 3 offline intake contract continuation - 2026-09-21
+
+- Proposed a physical manifest package and documented per-section schema-version rules and pending physical aliases without changing approved Sprint 2 artifacts.
+- Extended offline intake with injected reviewed field contracts, required/header/type checks and manifest row-identity consistency. Missing contract registries fail closed; no production registry or PD02 work was introduced.
+
+## Sprint 3 offline Data Engineering start - 2026-09-21
+
+- Added a dependency-free Python intake validator for required synthetic section presence, exact-byte SHA-256, CSV framing, revision/date/row-count controls, and explicit zero-row sections.
+- Added four passing unit tests and an execution record with scope, limits and next decisions. PD02 database actions remain Pending confirmation.
+
 ## DD-10 lifecycle policy approved - 2026-09-16
 
 - Recorded supplied retention/minimization/backup/hold/disposal policy and explicit narrow DD-08 supersession; no general Administrator deletion permission.

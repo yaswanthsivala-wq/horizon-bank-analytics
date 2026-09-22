@@ -1,5 +1,13 @@
 # Sprint 3 physical design - WP-PD01
 
+## Data Engineering start - 2026-09-21
+
+The user authorized Sprint 3 Data Engineering and selected offline pipeline work first. [The intake increment](data-engineering-intake.md) implements and tests limited section presence and byte-level validation. Status: Draft — not approved. PD02 database execution remains Pending confirmation.
+
+The [proposed offline manifest contract](offline-manifest-contract.md) records the physical package shape, schema-version rules and unresolved source mappings. The intake validator now accepts reviewed section field contracts and fails closed when one is missing.
+
+The [contract reconciliation](contract-reconciliation.md) and [27-section field inventory](source-field-inventory.md) distinguish approved G3 logical fields from proposed physical aliases and illustrative tests. Sprint 3 remains a working draft.
+
 Authorized by requesting user 2026-09-17: physical-design documentation and foundation SQL for static review only. G3 remains approved. PD02 and all executable work require separate authorization. Status: PD01 authored, static validation recorded separately; no database inspection/execution, dependencies installed, fixtures or runtime results.
 
 ## Artifact inventory

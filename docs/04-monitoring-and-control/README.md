@@ -6,6 +6,10 @@ Purpose: track project progress and controls throughout every phase.
 
 Current artifacts:
 
+- [Sprint 3 offline intake record](../03-execution/sprint-03-physical-design/data-engineering-intake.md): authorized local increment, test evidence, limits and open implementation decisions.
+
+- [Sprint 3 contract reconciliation control](sprint-03-contract-reconciliation-control.md): G3 authority comparison, unresolved physical decisions and validation scope.
+
 - [Sprint 1 BA approval and synchronization record](sprint-01-approval-record.md): received user approval, dated evidence, scope, and next authorization.
 
 - [Sprint 2 control record](sprint-02-control-record.md): dated authorization, progress, open risks/issues, proposed decisions, change control and documentation validation.

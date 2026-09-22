@@ -1,6 +1,14 @@
 # Project status
 
-Last updated: 2026-09-17
+Last updated: 2026-09-21
+
+## Sprint 3 Data Engineering start - 2026-09-21
+
+The requesting user authorized starting Data Engineering and chose offline pipeline work first. A limited Python intake validator and four passing unit tests now check mandatory synthetic sections and byte-level CSV/manifest controls. See [increment record](docs/03-execution/sprint-03-physical-design/data-engineering-intake.md). This is Draft — not approved; no database inspection, connection, migration, fixture generation, reconciliation or publication occurred. Physical manifest packaging and PD02 target/actions remain Pending confirmation. Earlier dated statements that technical implementation had not started describe their historical state.
+
+Controlled continuation: proposed [physical manifest contract](docs/03-execution/sprint-03-physical-design/offline-manifest-contract.md) and extended offline field/schema validation are recorded. Actual per-section version identifiers and physical headers remain Pending confirmation; the validator fails closed without a reviewed registry. Sprint 3 remains unapproved and PD02 unauthorized.
+
+Offline [contract reconciliation](docs/03-execution/sprint-03-physical-design/contract-reconciliation.md) covers 27 required source sections and 333 logical target field rows. The current test header/version is illustrative only. No approved G3 artifact changed and no implementation change was warranted by unconfirmed physical aliases. Seven physical decision categories remain Pending confirmation; Sprint 3 is not approved.
 
 ## Current state
 
