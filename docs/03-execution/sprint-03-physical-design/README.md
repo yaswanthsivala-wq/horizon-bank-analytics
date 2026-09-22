@@ -22,10 +22,15 @@ The [conditional applicability annex](pd04-conditional-applicability-annex.md) i
 
 [PD-05 financial controls](pd05-financial-control-annex.md): **Approved framework — Physical financial controls pending confirmation**. [PD-06 mappings](pd06-status-mapping-annex.md): **Approved framework — Physical mapping rows and mapping-version IDs pending confirmation**. [PD-07 Chicago runtime](pd07-chicago-time-runtime-annex.md): **Approved specification — Runtime/tzdb verification and executable boundary evidence pending confirmation**. The [cross-contract review](pd05-pd07-cross-contract-validation.md) is an **Approved documentary consistency model — Runtime dependencies remain fail closed**; the 13-row [master pending register](physical-contract-pending-register.md) is an **Approved control register — Open items remain unresolved**. [Project Owner review record](../../04-monitoring-and-control/sprint-03-physical-contract-annex-3-control.md). Seven financial candidates, 23 mapping groups and 15 future executable temporal cases are documented; zero physical control/mapping/predicate rows or timezone runtimes are active. Sprint 3 remains not approved and PD02/PostgreSQL unauthorized.
 
+### Executable Implementation Package 1 — 2026-09-22
+
+The offline contract engine and synthetic banking data foundation are implemented and validated locally under local authorization; see [implementation record](executable-implementation-package-01.md) and [control record](../../04-monitoring-and-control/sprint-03-executable-package-01-control.md). Status: **Sprint 3 Executable Implementation Package 1 — Implemented locally — Pending Project Owner Review**. Implements the contract state model, PD-03 manifest validation, PD-01 header registry, PD-02 schema registry, PD-04 applicability engine, PD-06 status mapping engine, PD-07 Chicago temporal engine with tzdb proof interface, PD-05 exact-decimal financial control engine, and standard-library synthetic banking data generator. All 27 production physical headers, 27 production schemas, 51 candidate predicates, 7 candidate financial controls, 23 domain mapping groups, and runtime tzdb 2026a verification remain PENDING and fail closed; 85 unit tests pass (including 11 original intake baseline tests and 15 PD-07 temporal cases); baseline inventory remains 27 sections / 333 logical target field rows. Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized.
+
 Authorized by requesting user 2026-09-17: physical-design documentation and foundation SQL for static review only. G3 remains approved. PD02 and all executable work require separate authorization. Status: PD01 authored, static validation recorded separately; no database inspection/execution, dependencies installed, fixtures or runtime results.
 
 ## Artifact inventory
 
+- [Executable Implementation Package 1 Record](executable-implementation-package-01.md)
 - [Architecture](physical-architecture.md)
 - [109-entity/982-field mapping](logical-to-physical-map.md)
 - [Constraints and typed references](constraint-matrix.md)

@@ -18,6 +18,8 @@ Current artifacts:
 
 - [Physical Contract Annex Increment 3 approval/control](sprint-03-physical-contract-annex-3-control.md): PD-05/06 frameworks, PD-07 specification, cross-contract model and 13-row open register approved at documentary level; no physical activation or Sprint 3 approval.
 
+- [Sprint 3 Executable Implementation Package 1 control record](sprint-03-executable-package-01-control.md): local implementation of offline contract engine and synthetic banking data foundation, 85 unit tests passing, production contracts fail closed, Sprint 3 not approved and PD02 unauthorized.
+
 - [Sprint 1 BA approval and synchronization record](sprint-01-approval-record.md): received user approval, dated evidence, scope, and next authorization.
 
 - [Sprint 2 control record](sprint-02-control-record.md): dated authorization, progress, open risks/issues, proposed decisions, change control and documentation validation.

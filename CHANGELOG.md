@@ -1,5 +1,14 @@
 # Changelog
 
+## Sprint 3 Executable Implementation Package 1 approved and locally committed - 2026-09-22
+
+- Implemented offline contract engine and synthetic banking data foundation locally under local authorization; added modules under `src/horizon_pipeline/contracts/`, `src/horizon_pipeline/synthetic/`, and `src/horizon_pipeline/pipeline.py`.
+- Preserved existing intake behavior and 11 baseline intake tests (`test_intake.py`: 11/11 pass).
+- Added 79 new unit and integration tests across contract states, safety guards, headers, schemas, manifests, applicability, mappings, financial controls, temporal engine (15 PD-07 cases), synthetic data foundation, PD-05 tolerance boundary regression guards, and end-to-end flows (90/90 tests pass total).
+- Reconciled source fields: 27 mandatory sections, 333 logical target field rows preserved.
+- Critical safety guards verified: all 27 production headers, 27 production schemas, 51 candidate predicates, 7 candidate financial controls (with production tolerance modeled as PENDING, never defaulted to 0.0000, failing closed when unresolved; exact-zero tolerance restricted strictly to isolated test fixtures), 23 domain mapping groups, and runtime tzdb 2026a verification remain PENDING and fail closed.
+- Documented implementation in `executable-implementation-package-01.md` and control record `sprint-03-executable-package-01-control.md`. Approved by Project Owner and committed locally on `checkpoint/sprint-03-offline-contract-reconciliation`; Sprint 3 remains in progress and not approved; PD02/PostgreSQL unauthorized; no push or merge performed.
+
 ## Sprint 3 Physical Contract Annex Increment 3 framework approved - 2026-09-22
 
 - Project Owner approved the PD-05/06 frameworks, PD-07 specification, cross-contract documentary model and 13-row open register. Seven financial candidates, 23 mapping groups and 15 future temporal cases remain physically pending; no runtime rule activated.
