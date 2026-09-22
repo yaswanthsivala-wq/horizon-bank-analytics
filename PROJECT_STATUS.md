@@ -2,6 +2,10 @@
 
 Last updated: 2026-09-22
 
+## PD-04 Physical Contract Annex Increment 2 — 2026-09-22
+
+The Project Owner reviewed the [PD-04 conditional applicability annex](docs/03-execution/sprint-03-physical-design/pd04-conditional-applicability-annex.md): **Approved framework — Physical predicates pending confirmation**. Its deterministic predicate, distinct source-cell state and DD-09 completeness framework is approved. The 51 logical conditional target-field candidates span 22 sections; none is an active physical predicate or approved received CSV column. PD-01 exact headers remain pending, and dependent required validation fails closed. [Approval/control record](docs/04-monitoring-and-control/sprint-03-pd04-annex-control.md). PD-05 through PD-07 annexes remain separate and unresolved. Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized.
+
 ## Physical Contract Annex Increment 1 — 2026-09-22
 
 Project Owner approved [Increment 1](docs/04-monitoring-and-control/sprint-03-physical-contract-annex-1-approval.md) with distinct scopes: PD-01 **structure approved; physical header values pending**, PD-02 **convention approved; activation pending approved header contracts**, and PD-03 **physical manifest contract approved** with structural examples. The [cross-contract dependency model](docs/03-execution/sprint-03-physical-design/pd01-pd03-cross-contract-validation.md) is approved. All 27 exact received headers remain Pending confirmation/fail closed; 27 candidate schema IDs are inactive. PD-04 through PD-07 annex values remain pending. Sprint 3 remains in progress and unapproved; PD02/PostgreSQL, full synthetic data generation and publication remain unauthorized.

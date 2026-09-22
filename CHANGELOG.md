@@ -1,5 +1,10 @@
 # Changelog
 
+## Sprint 3 PD-04 applicability framework approved - 2026-09-22
+
+- Project Owner reviewed and approved the PD-04 conditional source-cell framework, state and completeness rules, and predicate governance; 51 logical C-field candidates across 22 sections retain Pending confirmation physical bindings and zero active predicates. Recorded fail-closed PD-01/02/03 dependencies and left PD-05/06/07 unresolved.
+- Updated execution, status and approval/control navigation. No protected baseline, production Python/SQL or dataset change is claimed; Sprint 3 and PD02 remain unapproved/unauthorized.
+
 ## Sprint 3 Physical Contract Annex Increment 1 reviewed - 2026-09-22
 
 - Recorded Project Owner approval of PD-01 annex structure (headers pending), PD-02 deterministic section-schema convention (candidate IDs inactive), PD-03 physical manifest contract/structural examples, and cross-contract dependency rules in a dedicated control record.

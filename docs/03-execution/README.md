@@ -12,6 +12,8 @@ Purpose: document authorized delivery activities and their evidence.
 
   [Physical Contract Annex Increment 1](sprint-03-physical-design/README.md) has Project Owner approval for PD-01 structure, PD-02 convention and PD-03 manifest contract only; missing exact headers remain fail closed and candidate schema IDs remain inactive.
 
+  [PD-04 Applicability Annex Increment 2](sprint-03-physical-design/pd04-conditional-applicability-annex.md) has an approved framework, with all physical predicates Pending confirmation; no source-cell predicate is active.
+
 - [Sprint 01 — Business Analysis](sprint-01-business-analysis/README.md): user stories, acceptance criteria, current/future process flows, role-access flow, customer-risk flow, and requirements traceability.
 
 - [Sprint 02 - Data Design](sprint-02-data-design/README.md): proposed source contracts, models/ERD, field dictionary/mappings, identity, quality, KPI mappings, security and traceability.

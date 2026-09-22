@@ -14,6 +14,8 @@ Current artifacts:
 
 - [Physical Contract Annex Increment 1 approval](sprint-03-physical-contract-annex-1-approval.md) and [PD-01–PD-03 validation](../03-execution/sprint-03-physical-design/pd01-pd03-cross-contract-validation.md): distinct approved structure/convention/manifest scopes, pending physical values, fail-closed limits and local static evidence.
 
+- [PD-04 applicability annex approval/control](sprint-03-pd04-annex-control.md): Project Owner approved framework, with 51 logical C-field candidates across 22 sections, zero active physical predicates and fail-closed dependencies.
+
 - [Sprint 1 BA approval and synchronization record](sprint-01-approval-record.md): received user approval, dated evidence, scope, and next authorization.
 
 - [Sprint 2 control record](sprint-02-control-record.md): dated authorization, progress, open risks/issues, proposed decisions, change control and documentation validation.
