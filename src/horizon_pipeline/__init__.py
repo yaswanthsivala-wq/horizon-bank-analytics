@@ -98,6 +98,10 @@ from .processing import (
     parse_scale4_decimal,
     transform_record,
 )
+from .orchestration import (
+    ConsolidatedPipelineRunner,
+    ConsolidatedRunResult,
+)
 from .synthetic import (
     FIXTURE_MAPPING_VERSION,
     FIXTURE_SCHEMA_PREFIX,
@@ -129,6 +133,8 @@ __all__ = [
     "BatchStateTracker",
     "CellState",
     "CompletenessMetrics",
+    "ConsolidatedPipelineRunner",
+    "ConsolidatedRunResult",
     "ContractError",
     "ContractState",
     "ContractValidationError",

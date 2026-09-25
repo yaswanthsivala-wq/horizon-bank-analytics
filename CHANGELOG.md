@@ -1,5 +1,16 @@
 # Changelog
 
+## Sprint 3 Package 3 Increment 4 implemented — 2026-09-25
+
+- Implemented consolidated offline pipeline orchestration and packaging in `src/horizon_pipeline/orchestration/runner.py` via `ConsolidatedPipelineRunner` and `ConsolidatedRunResult`.
+- Implemented customer risk orchestrator in `src/horizon_pipeline/analytics/risk_orchestrator.py` via `CustomerRiskOrchestrator` and `build_default_fixture_risk_catalog()`, evaluating RC-01 through RC-05 across curated domain entities.
+- Enhanced `OutputArtifactWriter` in `src/horizon_pipeline/processing/writer.py` to write `risk/customer_risk_assessments.json`, four dimensional analytical marts under `marts/`, companion `manifest.json.sha256` for every written manifest, and enforce diagnostic-only artifact scoping when a package is quarantined (strictly omitting `accepted/`, `risk/`, and `marts/`), while strictly excluding `manifest.json` from its own checksum dictionary.
+- Implemented and verified AC-ORCH-01 through AC-ORCH-08: end-to-end fixture execution, production fail-closed zero-output isolation, package-level PUB-D01 gating, K06 currency-cohort candidate gating isolation (defective currencies block K06 candidate without quarantining the package or suppressing other marts), exact $t/u$ risk classification rules with incomplete evidence segregation and non-additive exposure, batch replay conflict and stale revision detection, and deterministic run_id and created_at_utc derivation.
+- Added 13 new unit and acceptance tests across 5 modules (`test_orchestration_runner.py`, `test_orchestration_mode_isolation.py`, `test_orchestration_gating.py`, `test_orchestration_risk_flow.py`, `test_orchestration_replay.py`), bringing the full test suite to 236 passed tests and 36 subtests in 1.69s with 100% preservation of 223 baseline tests.
+- Reconciled source fields: preserved invariant at exactly 27 sections and 333 logical target field rows.
+- Documented implementation review in `docs/03-execution/sprint-03-physical-design/executable-implementation-package-03-increment-04-review.md` and control record in `docs/04-monitoring-and-control/sprint-03-package-03-increment-04-control.md`.
+- Package 3 offline implementation complete; Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized.
+
 ## Sprint 3 Package 3 Increment 3 implemented — 2026-09-25
 
 - Implemented deterministic computation of Core Banking KPIs (K01–K10) in pure offline fixture mode under `src/horizon_pipeline/analytics/kpi.py` governed by DD-06 approved KPI policy and DD-09 data quality rules.

@@ -30,6 +30,10 @@ from .risk_conditions import (
     RiskConditionEvaluator,
     RiskConditionResult,
 )
+from .risk_orchestrator import (
+    CustomerRiskOrchestrator,
+    build_default_fixture_risk_catalog,
+)
 from ..contracts.risk import RiskRuleCatalogContract, RiskRuleCatalogRegistry
 
 __all__ = [
@@ -40,6 +44,7 @@ __all__ = [
     "ConditionState",
     "CustomerRiskKPIResult",
     "CustomerRiskMartRecord",
+    "CustomerRiskOrchestrator",
     "EvidenceState",
     "KPIEngine",
     "KPIPublicationStatus",
@@ -56,5 +61,6 @@ __all__ = [
     "RiskRuleCatalogRegistry",
     "TransactionKPIResult",
     "TransactionMartRecord",
+    "build_default_fixture_risk_catalog",
     "write_analytical_marts",
 ]
