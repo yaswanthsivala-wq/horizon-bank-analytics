@@ -1,5 +1,16 @@
 # Changelog
 
+## Sprint 3 Package 3 offline scope — consolidated closure documentation prepared — 2026-09-25
+
+- Prepared master consolidated completion review and monitoring/control records documenting verified completion of the Sprint 3 Package 3 offline scope under Project Owner authorization (`/approve sprint-3-package-3-closure-documentation`) on branch `checkpoint/sprint-03-offline-contract-reconciliation` up to commit `c1eee6637aa88ae6cf6417984b44c79b9c1c2d6d`.
+- Synthesized full package delivery across Increment 1 (`46caef7`, RC-01–RC-05 risk conditions), Increment 2 (`0ee1055`, DD-04 customer risk classification hierarchy), Risk Hardening (`472f126`, strict execution mode typing, publication evidence, immutability, and production controls), Increment 3 (`ac42d27`, Core Banking KPIs K01–K10 and four dimensional analytical marts), and Increment 4 (`c1eee66`, consolidated pipeline orchestration, PUB-D01 defect quarantine, K06 candidate cohort isolation, exact $t/u$ risk rules, replay tracking, and companion `manifest.json.sha256`).
+- Reconciled Increment 4 test counts across the five dedicated test modules: verified exactly 13 tests delivered (3 runner, 3 mode isolation, 2 gating, 2 risk flow, 3 replay), fully satisfying AC-ORCH-01 through AC-ORCH-08 with zero gaps.
+- Full regression test suite passing: 236 passed tests and 36 subtests in 1.30s across 16 test modules with 100% preservation of all baseline tests.
+- Preserved source-to-target field reconciliation invariant at exactly 27 mandatory sections and 333 logical target field rows.
+- Authored master consolidated completion review in `docs/03-execution/sprint-03-physical-design/sprint-03-package-03-consolidated-completion-review.md` and master consolidated monitoring and control record in `docs/04-monitoring-and-control/sprint-03-package-03-consolidated-control.md`.
+- Added historical context annotations to the intermediate 2026-09-24 Package 3 review and control records (`executable-implementation-package-03-completion-review.md` and `sprint-03-package-03-completion-review-control.md`).
+- Package 3 offline scope verified complete and closure documentation prepared for acceptance; Sprint 3 remains in progress and not approved; production physical contracts remain pending (fail-closed); PD02/PostgreSQL remains strictly unauthorized.
+
 ## Sprint 3 Package 3 Increment 4 implemented — 2026-09-25
 
 - Implemented consolidated offline pipeline orchestration and packaging in `src/horizon_pipeline/orchestration/runner.py` via `ConsolidatedPipelineRunner` and `ConsolidatedRunResult`.

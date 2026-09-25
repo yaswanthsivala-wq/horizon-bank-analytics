@@ -2,6 +2,9 @@
 
 Status: **Completion review — Risk increments and hardening complete; Package 3 remains open** (2026-09-24). This review covers committed Increment 1 `46caef7586c8b951fb8816538fe11419a9703fd3`, Increment 2 `0ee1055d207bbe0e6b88081d60bd3ed2d459b2ca`, and risk-evaluation/production-control hardening checkpoint `472f1269169cc9bb35cd8177ec6e5367fd191693`. It does not approve Sprint 3, activate production contracts, authorize PD02/PostgreSQL, or close the remaining Package 3 scope.
 
+> [!NOTE] Historical Checkpoint Record (2026-09-24)
+> This review documents the intermediate completion status of Package 3 Increments 1–2 and hardening as of commit `95002d1` on 2026-09-24. The remaining Package 3 scope (Core Banking KPIs K01–K10, dimensional analytical marts, and pipeline orchestration) was subsequently delivered under Increment 3 (`ac42d27`) and Increment 4 (`c1eee66`). For the final consolidated review covering all four increments, see the [Package 3 Consolidated Completion Review](sprint-03-package-03-consolidated-completion-review.md).
+
 ## Reviewed authority
 
 The review used the approved Sprint 2 [customer-risk catalog](../sprint-02-data-design/customer-risk-catalog.md), [KPI policy](../sprint-02-data-design/kpi-policy-dd06.md), [field dictionary](../sprint-02-data-design/field-level-dictionary.md), applicable DD-07 through DD-12 policies, and the approved Sprint 3 PD-01 through PD-07 framework/annex records. No approved baseline was modified.
@@ -30,9 +33,11 @@ No composite numeric risk score, automated lending/fraud decision, production pu
   - Hardening checkpoint (`472f126`): committed 9 files / 1032 insertions and 116 deletions.
 - Existing Package 1 and Package 2 regressions (135 tests) remain fully included in the passing 187-test suite.
 
-## Remaining Package 3 scope
+## Remaining Package 3 scope (Historical as of 2026-09-24)
 
 Package 2 recorded Package 3 as three work areas: RC-01 through RC-05 condition evaluation, K01 through K10 deterministic KPI computation, and dimensional analytical marts. The first area, including customer-level classification, is complete. **K01 through K10 computation and analytical marts are not implemented and remain separate future increments requiring explicit scope/design authorization.** Package 3 therefore remains open and is not formally closed by this review.
+
+*(Historical note: K01–K10 computation and analytical marts were subsequently authorized and implemented under Increment 3 on 2026-09-25; consolidated pipeline orchestration was delivered under Increment 4 on 2026-09-25. See the [Consolidated Completion Review](sprint-03-package-03-consolidated-completion-review.md) for final package status.)*
 
 ## Production activation blockers
 

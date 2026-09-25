@@ -28,6 +28,8 @@ Current artifacts:
 
 - [Sprint 3 Package 3 Increment 4 control record](sprint-03-package-03-increment-04-control.md): Consolidated Pipeline Orchestration & Packaging verified complete (236 passed tests, 36 subtests passed in 1.69s); source reconciliation invariant at 27 sections / 333 rows; end-to-end execution, companion `manifest.json.sha256`, diagnostic-only quarantine scoping, and K06 candidate cohort isolation verified; Package 3 offline implementation complete.
 
+- [Sprint 3 Package 3 consolidated control record](sprint-03-package-03-consolidated-control.md): consolidated control record documenting verified completion of Package 3 offline scope across Increments 1, 2, Risk Hardening, Increment 3, and Increment 4, prepared under Project Owner authorization (`/approve sprint-3-package-3-closure-documentation`); 236 passed tests, 36 subtests; 27 sections / 333 rows invariant; production contracts remain pending fail-closed; Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized.
+
 - [Sprint 1 BA approval and synchronization record](sprint-01-approval-record.md): received user approval, dated evidence, scope, and next authorization.
 
 - [Sprint 2 control record](sprint-02-control-record.md): dated authorization, progress, open risks/issues, proposed decisions, change control and documentation validation.
@@ -40,7 +42,7 @@ Reserved artifact locations:
 - `decision-log/`: dated decisions, rationale, and approval evidence.
 - `quality-reviews/`: review findings, corrective actions, and follow-up evidence.
 
-Progress: Sprint 1 BA approval recorded September 14, 2026; Sprint 2 logical Data Design and G3 approved September 17, 2026. (Earlier statements that Sprint 2 design was draft, G3 pending, or technical implementation not started describe their historical state prior to September 17, 2026 and subsequent Sprint 3 offline implementation packages). Sprint 3 offline intake, Packages 1–2, and Package 3 Increments 1–4 (risk conditions, customer classification, K01–K10 KPI engine, dimensional analytical marts, and pipeline orchestration/packaging; 236 passed tests + 36 subtests) are implemented under local checkpoints. Package 3 offline implementation complete; Sprint 3 remains in progress and not approved; PD02 remains unauthorized.
+Progress: Sprint 1 BA approval recorded September 14, 2026; Sprint 2 logical Data Design and G3 approved September 17, 2026. (Earlier statements that Sprint 2 design was draft, G3 pending, or technical implementation not started describe their historical state prior to September 17, 2026 and subsequent Sprint 3 offline implementation packages). Sprint 3 offline intake, Packages 1–2, and Package 3 Increments 1–4 (risk conditions, customer classification, K01–K10 KPI engine, dimensional analytical marts, and pipeline orchestration/packaging; 236 passed tests + 36 subtests) are implemented under local checkpoints. Package 3 offline scope verified complete and closure documentation prepared under authorization; Sprint 3 remains in progress and not approved; PD02 remains unauthorized.
 Open questions: Physical contract annexes, production headers, schemas, mappings, predicates and financial controls remain Pending confirmation.
 Approval status: Sprint 1 BA approved; Sprint 2 logical Data Design and G3 approved September 17, 2026; Sprint 3 in progress — not approved.
 
