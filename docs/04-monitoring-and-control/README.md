@@ -20,7 +20,9 @@ Current artifacts:
 
 - [Sprint 3 Executable Implementation Package 1 control record](sprint-03-executable-package-01-control.md): local implementation of offline contract engine and synthetic banking data foundation; approved by Project Owner; 90 unit tests passing, production contracts fail closed, Sprint 3 not approved and PD02 unauthorized.
 
-- [Sprint 3 Executable Implementation Package 2 approval/control record](sprint-03-executable-package-02-control.md): Project Owner approved the audited offline transformation, data quality, quarantine, lineage, replay, reconciliation, and processing pipeline; 135 tests pass. Sprint 3 remains not approved; PD02 and Package 3 remain unauthorized.
+- [Sprint 3 Executable Implementation Package 2 approval/control record](sprint-03-executable-package-02-control.md): Project Owner approved the audited offline transformation, data quality, quarantine, lineage, replay, reconciliation, and processing pipeline; 135 tests pass. Sprint 3 remains not approved; PD02 remains unauthorized; Package 3 unauthorized status is historical as of 2026-09-22 and superseded by 2026-09-24 review (risk increments complete; KPI/mart scope remains unauthorized).
+
+- [Sprint 3 Package 3 completion-review control](sprint-03-package-03-completion-review-control.md): risk increments and hardening checkpoint verified complete (168 tests historically in 0.75s for Increments 1–2; initial hardening checkpoint passed 187 in 0.93s; earlier Phase 2 verification passed 187 and 36 subtests in 1.32s; subsequent final QA passed 187 and 36 subtests in 0.86s); KPI and mart work remains, production dependencies fail closed, and Package 3 remains open.
 
 - [Sprint 1 BA approval and synchronization record](sprint-01-approval-record.md): received user approval, dated evidence, scope, and next authorization.
 
@@ -34,9 +36,9 @@ Reserved artifact locations:
 - `decision-log/`: dated decisions, rationale, and approval evidence.
 - `quality-reviews/`: review findings, corrective actions, and follow-up evidence.
 
-Progress: Sprint 1 BA approval and September 14, 2026 synchronization evidence recorded. Sprint 2 draft design package is prepared under current authorization; G3 review is pending. Technical implementation has not started.
-Open questions: Sprint 2 DD-11 and DD-12 and remaining DD-01 contract details, named review owners and actual review evidence are Pending confirmation.
-Approval status: Sprint 1 BA user approval recorded; Sprint 2 design is Draft — not approved; no separate Monitoring and Control baseline approval is asserted.
+Progress: Sprint 1 BA approval recorded September 14, 2026; Sprint 2 logical Data Design and G3 approved September 17, 2026. (Earlier statements that Sprint 2 design was draft, G3 pending, or technical implementation not started describe their historical state prior to September 17, 2026 and subsequent Sprint 3 offline implementation packages). Sprint 3 offline intake, Packages 1–2, and Package 3 risk increments are implemented under local checkpoints.
+Open questions: Physical contract annexes, production headers, schemas, mappings, predicates and financial controls remain Pending confirmation.
+Approval status: Sprint 1 BA approved; Sprint 2 logical Data Design and G3 approved September 17, 2026; Sprint 3 in progress — not approved.
 
 Maintain this inventory and status as work proceeds; follow the root AGENTS.md.
 
