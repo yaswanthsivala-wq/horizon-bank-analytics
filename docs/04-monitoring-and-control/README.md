@@ -22,7 +22,9 @@ Current artifacts:
 
 - [Sprint 3 Executable Implementation Package 2 approval/control record](sprint-03-executable-package-02-control.md): Project Owner approved the audited offline transformation, data quality, quarantine, lineage, replay, reconciliation, and processing pipeline; 135 tests pass. Sprint 3 remains not approved; PD02 remains unauthorized; Package 3 unauthorized status is historical as of 2026-09-22 and superseded by 2026-09-24 review (risk increments complete; KPI/mart scope remains unauthorized).
 
-- [Sprint 3 Package 3 completion-review control](sprint-03-package-03-completion-review-control.md): risk increments and hardening checkpoint verified complete (168 tests historically in 0.75s for Increments 1–2; initial hardening checkpoint passed 187 in 0.93s; earlier Phase 2 verification passed 187 and 36 subtests in 1.32s; subsequent final QA passed 187 and 36 subtests in 0.86s); KPI and mart work remains, production dependencies fail closed, and Package 3 remains open.
+- [Sprint 3 Package 3 completion-review control](sprint-03-package-03-completion-review-control.md): risk increments and hardening checkpoint verified complete (168 tests historically in 0.75s for Increments 1–2; initial hardening checkpoint passed 187 in 0.93s; earlier Phase 2 verification passed 187 and 36 subtests in 1.32s; subsequent final QA passed 187 and 36 subtests in 0.86s); KPI and mart work remained open at that time.
+
+- [Sprint 3 Package 3 Increment 3 control record](sprint-03-package-03-increment-03-control.md): Core Banking KPIs (K01–K10) and four dimensional analytical marts verified complete (223 passed tests, 36 subtests passed in 1.14s); source reconciliation invariant at 27 sections / 333 rows; fail-closed production controls and non-additive exposure enforced; Package 3 remains open for pipeline coordination and final packaging.
 
 - [Sprint 1 BA approval and synchronization record](sprint-01-approval-record.md): received user approval, dated evidence, scope, and next authorization.
 
@@ -36,7 +38,7 @@ Reserved artifact locations:
 - `decision-log/`: dated decisions, rationale, and approval evidence.
 - `quality-reviews/`: review findings, corrective actions, and follow-up evidence.
 
-Progress: Sprint 1 BA approval recorded September 14, 2026; Sprint 2 logical Data Design and G3 approved September 17, 2026. (Earlier statements that Sprint 2 design was draft, G3 pending, or technical implementation not started describe their historical state prior to September 17, 2026 and subsequent Sprint 3 offline implementation packages). Sprint 3 offline intake, Packages 1–2, and Package 3 risk increments are implemented under local checkpoints.
+Progress: Sprint 1 BA approval recorded September 14, 2026; Sprint 2 logical Data Design and G3 approved September 17, 2026. (Earlier statements that Sprint 2 design was draft, G3 pending, or technical implementation not started describe their historical state prior to September 17, 2026 and subsequent Sprint 3 offline implementation packages). Sprint 3 offline intake, Packages 1–2, and Package 3 Increments 1–3 (risk conditions, customer classification, K01–K10 KPI engine, and dimensional analytical marts; 223 passed tests + 36 subtests) are implemented under local checkpoints. Package 3 remains open; Sprint 3 remains in progress and not approved; PD02 remains unauthorized.
 Open questions: Physical contract annexes, production headers, schemas, mappings, predicates and financial controls remain Pending confirmation.
 Approval status: Sprint 1 BA approved; Sprint 2 logical Data Design and G3 approved September 17, 2026; Sprint 3 in progress — not approved.
 

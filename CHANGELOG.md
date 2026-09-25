@@ -1,5 +1,19 @@
 # Changelog
 
+## Sprint 3 Package 3 Increment 3 implemented — 2026-09-25
+
+- Implemented deterministic computation of Core Banking KPIs (K01–K10) in pure offline fixture mode under `src/horizon_pipeline/analytics/kpi.py` governed by DD-06 approved KPI policy and DD-09 data quality rules.
+- Implemented K01 transaction volume with terminal status filtering and half-open `[period_start, period_end)` intervals; K02 and K03 success/failure rates with 4-status eligible denominator (`SUCCESSFUL`, `POSTED`, `FAILED`, `DECLINED`) and scale-8 ratio precision; K04 fraud-alert rate with eligible 4-status cohort filtering and alert deduplication.
+- Implemented K05 loan delinquency rate on active loans with strict `DPD > 30` boundary; K06 delinquent outstanding principal across all statuses with currency separation and DD-09 gating (`PRINCIPAL_MISSING` and quarantined `PRINCIPAL_NEGATIVE` block candidate publication for that currency cohort).
+- Implemented K07 customer risk aggregation strictly counting `PROVISIONAL_HIGH_RISK` ($t \ge 2$) while reporting `INCOMPLETE_EVIDENCE` and `UNAVAILABLE` as separate unknown populations, never conflated with confirmed not-high-risk customers; enforced DD-02 non-additive relationship exposure.
+- Implemented K08 average complaint resolution time on continuous 24/7 calendar clock; K09 open complaints count; K10 SLA breach rate with priority SLAs, strict `>` breach inequality, continuous elapsed clocks without reset for reopened complaints, and quarantine of contradictory timestamps.
+- Implemented four conformed dimensional analytical marts in `src/horizon_pipeline/analytics/marts.py`: `mart_transaction_kpis`, `mart_loan_delinquency_kpis`, `mart_customer_risk_kpis`, and `mart_complaint_kpis`, with deterministic dimensional fallbacks, star-schema grains, and deterministic JSON serialization (`write_analytical_marts`) producing verifiable SHA-256 digests.
+- Enforced strict fail-closed production boundaries: `ExecutionMode.PRODUCTION` immediately raises `PendingContractError` across all KPI engine methods and mart builders.
+- Added 36 new unit and acceptance tests across 6 modules (`test_kpi_transactions.py`, `test_kpi_loans.py`, `test_kpi_customer_risk.py`, `test_kpi_complaints.py`, `test_kpi_mode_isolation.py`, `test_analytical_marts.py`), bringing full test suite to 223 passed tests and 36 subtests in 1.14s with 100% preservation of 187 baseline tests.
+- Reconciled source fields: preserved invariant at exactly 27 sections and 333 logical target field rows.
+- Documented implementation review in `docs/03-execution/sprint-03-physical-design/executable-implementation-package-03-increment-03-review.md` and control record in `docs/04-monitoring-and-control/sprint-03-package-03-increment-03-control.md`.
+- Package 3 remains open; Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized.
+
 ## Sprint 3 Package 3 completion review prepared - 2026-09-24
 
 - Reviewed committed risk-condition Increment 1 (`46caef7`), customer-classification Increment 2 (`0ee1055`), and risk-evaluation/production-control hardening checkpoint (`472f126`) against the approved customer-risk catalog and field contracts.
