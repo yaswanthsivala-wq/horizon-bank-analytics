@@ -87,6 +87,31 @@ class StatusMappingRegistry:
         """Look up mapping entry."""
         return self._entries.get((source_system, domain_code, mapping_version, raw_value))
 
+    def version_state(
+        self, source_system: str, domain_code: str, mapping_version: str
+    ) -> ContractState | None:
+        """Return registered lifecycle state without treating it as execution approval."""
+        return self._versions.get((source_system, domain_code, mapping_version))
+
+    def version_has_only_fixture_entries(
+        self, source_system: str, domain_code: str, mapping_version: str
+    ) -> bool:
+        entries = [
+            entry for key, entry in self._entries.items()
+            if key[:3] == (source_system, domain_code, mapping_version)
+        ]
+        return bool(entries) and all(entry.is_fixture for entry in entries)
+
+    def version_has_active_production_entries(
+        self, source_system: str, domain_code: str, mapping_version: str
+    ) -> bool:
+        return any(
+            key[:3] == (source_system, domain_code, mapping_version)
+            and entry.state == ContractState.ACTIVE
+            and not entry.is_fixture
+            for key, entry in self._entries.items()
+        )
+
     def resolve(
         self,
         source_system: str,

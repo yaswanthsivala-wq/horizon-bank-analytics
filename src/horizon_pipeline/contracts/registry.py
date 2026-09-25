@@ -25,6 +25,7 @@ from .financial import FinancialControlContract, FinancialControlEngine
 from .headers import HeaderRegistry, PhysicalHeaderContract
 from .mapping import MappingEntry, StatusMappingRegistry
 from .schemas import SchemaContract, SchemaRegistry
+from .risk import RiskRuleCatalogRegistry
 from .states import ContractState
 from .temporal import get_tzdb_runtime_proof
 
@@ -142,6 +143,9 @@ class MasterProductionRegistry:
         self.applicability = ApplicabilityRegistry()
         self.financial = FinancialControlEngine()
         self.mappings = StatusMappingRegistry()
+        # No production catalog is registered until an approved, versioned
+        # catalog and approval reference exist.
+        self.risk_catalogs = RiskRuleCatalogRegistry()
         self._init_production_registries()
 
     def _init_production_registries(self) -> None:

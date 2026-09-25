@@ -9,8 +9,11 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import date, datetime
 from enum import Enum
-from typing import Mapping, Sequence
+from typing import Sequence
 
+from ..contracts.risk import RiskRuleCatalogRegistry
+from ..contracts.registry import MasterProductionRegistry
+from ..processing.records import ExecutionMode
 from .risk_conditions import ConditionState, RiskConditionResult
 
 
@@ -60,7 +63,7 @@ class RiskClassificationEngine:
         cls, *, assessment_id: str, customer_id: str, business_date: date,
         assessment_at: datetime, reason: str, catalog_version: str | None,
         classification_rule_version: str | None, lineage_references: Sequence[str],
-        publication_version: str | None, fixture_mode: bool,
+        publication_version: str | None, execution_mode: ExecutionMode,
     ) -> RiskAssessment:
         return RiskAssessment(
             assessment_id=assessment_id, customer_id=customer_id,
@@ -72,7 +75,7 @@ class RiskClassificationEngine:
             catalog_version=catalog_version, condition_results=(),
             lineage_references=cls._deduplicate(lineage_references),
             publication_version=publication_version,
-            unavailable_reason=reason, is_fixture=fixture_mode,
+            unavailable_reason=reason, is_fixture=execution_mode == ExecutionMode.FIXTURE,
         )
 
     @classmethod
@@ -80,27 +83,39 @@ class RiskClassificationEngine:
         cls, *, assessment_id: str, customer_id: str, business_date: date,
         assessment_at: datetime, condition_results: Sequence[RiskConditionResult],
         catalog_version: str | None, classification_rule_version: str | None,
-        expected_condition_versions: Mapping[str, str] | None,
+        catalog_registry: RiskRuleCatalogRegistry,
         lineage_references: Sequence[str] = (), publication_version: str | None = None,
-        fixture_mode: bool = False, catalog_is_fixture: bool = False,
+        execution_mode: ExecutionMode,
     ) -> RiskAssessment:
         """Classify once, preserving exact catalog, condition, and lineage evidence."""
+        if type(execution_mode) is not ExecutionMode:
+            raise TypeError("execution_mode must be an ExecutionMode enum member")
         common = dict(
             assessment_id=assessment_id, customer_id=customer_id,
             business_date=business_date, assessment_at=assessment_at,
             catalog_version=catalog_version,
             classification_rule_version=classification_rule_version,
             lineage_references=lineage_references,
-            publication_version=publication_version, fixture_mode=fixture_mode,
+            publication_version=publication_version, execution_mode=execution_mode,
         )
         if not catalog_version:
             return cls._unavailable(reason="MISSING_CATALOG_VERSION", **common)
         if not classification_rule_version:
             return cls._unavailable(reason="MISSING_CLASSIFICATION_RULE_VERSION", **common)
-        if expected_condition_versions is None:
-            return cls._unavailable(reason="MISSING_CATALOG_RULE_MEMBERS", **common)
-        if catalog_is_fixture and not fixture_mode:
-            return cls._unavailable(reason="FIXTURE_CATALOG_PROHIBITED_IN_PRODUCTION", **common)
+        # Production authority is repository-owned. A caller-created registry,
+        # ACTIVE flag, or approval-reference string cannot authorize execution.
+        authoritative_registry = (
+            MasterProductionRegistry().risk_catalogs
+            if execution_mode is ExecutionMode.PRODUCTION
+            else catalog_registry
+        )
+        contract, resolution_error = authoritative_registry.resolve(catalog_version, execution_mode)
+        if resolution_error:
+            return cls._unavailable(reason=resolution_error, **common)
+        assert contract is not None
+        if classification_rule_version != contract.classification_rule_version:
+            return cls._unavailable(reason="CLASSIFICATION_RULE_VERSION_MISMATCH", **common)
+        expected_condition_versions = contract.condition_versions
 
         expected_ids = set(cls.CONDITION_IDS)
         if set(expected_condition_versions) != expected_ids:
@@ -137,5 +152,5 @@ class RiskClassificationEngine:
             catalog_version=catalog_version, condition_results=ordered,
             lineage_references=cls._deduplicate(combined_lineage),
             publication_version=publication_version, unavailable_reason=None,
-            is_fixture=fixture_mode,
+            is_fixture=execution_mode == ExecutionMode.FIXTURE,
         )

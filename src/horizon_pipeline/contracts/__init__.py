@@ -26,6 +26,7 @@ from .manifests import (
 )
 from .mapping import MappingEntry, MappingResolution, StatusMappingRegistry
 from .registry import MasterProductionRegistry
+from .risk import RiskRuleCatalogContract, RiskRuleCatalogRegistry
 from .schemas import SchemaContract, SchemaRegistry
 from .states import (
     ContractError,
@@ -71,6 +72,8 @@ __all__ = [
     "PendingContractError",
     "PhysicalHeaderContract",
     "ReconciliationResult",
+    "RiskRuleCatalogContract",
+    "RiskRuleCatalogRegistry",
     "SchemaContract",
     "SchemaRegistry",
     "StatusMappingRegistry",
