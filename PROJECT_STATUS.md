@@ -2,6 +2,10 @@
 
 Last updated: 2026-09-25
 
+## Sprint 3 offline implementation scope formally approved and closed — 2026-09-25
+
+The Project Owner formally accepted and approved the completed offline implementation scope of Sprint 3 via `/approve sprint-3-closure`, based on the [Sprint 3 Retrospective](docs/04-monitoring-and-control/sprint-03-retrospective.md) and overall closure review published at checkpoint `b2eba35ddc1dc7ada9aab071d05358e7325c63ee`. See the formal [Approval and Governance Record](docs/04-monitoring-and-control/sprint-03-closure-approval.md). This approval covers WP-PD01, Package 1 (offline contract engine), Package 2 (curated processing pipeline), and Package 3 (risk conditions RC-01..05, customer risk classification, core banking KPIs K01–K10, four dimensional analytical marts, and consolidated offline orchestration runner). Quality evidence verified: **236 passed unit tests and 36 passed subtests** across exactly 34 test modules; **27 mandatory source sections and 333 logical target field rows** invariant; **0 broken links** across 97 Markdown files repository-wide. Status: **Sprint 3 offline implementation scope approved and closed**. Physical production contracts PD-01 through PD-07 remain PENDING (fail-closed); PostgreSQL / PD02 execution remains UNAUTHORIZED; no merge into main.
+
 ## Sprint 3 retrospective and overall closure review prepared — 2026-09-25
 
 The [Sprint 3 Retrospective](docs/04-monitoring-and-control/sprint-03-retrospective.md) and [Sprint 3 Overall Closure Review & Approval Record](docs/04-monitoring-and-control/sprint-03-closure-approval.md) were prepared under Project Owner authorization (`/start sprint-3-closure-documentation-preparation`) to document the complete synthesis of Sprint 3 across WP-PD01 and Packages 1–3. Reconciled actual test modules: exactly 34 test modules in `tests/`, 236 unit tests passed, 36 subtests passed in 1.72s. Reconciled repository-wide Markdown links: corrected link target in Increment 3 review to `logical-data-model.md`, achieving 0 broken links across 95 files and 671 links. Source-field reconciliation invariant confirmed at 27 sections / 333 logical target field rows. Status: **Draft — prepared for Project Owner review and formal approval**. Sprint 3 remains in progress and not approved; production physical contracts remain pending fail-closed; PD02/PostgreSQL remains unauthorized.
@@ -58,7 +62,7 @@ The [Sprint 3 PD-01 through PD-07 decision package](docs/03-execution/sprint-03-
 
 ## Current state
 
-Current design decisions: DD-01 through DD-12 and G3 logical Data Design approved 2026-09-17. Physical design, generation and implementation require separate authorization.
+Current design decisions: DD-01 through DD-12 and G3 logical Data Design approved 2026-09-17; Sprint 3 offline implementation scope approved 2026-09-25. Physical design contracts PD-01..07 pending fail-closed; database execution unauthorized.
 
 Initiation is approved. Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis was approved by the user; required synchronization was verified September 14, 2026. Sprint 2 logical Data Design and Gate G3 were approved by the user September 17, 2026 under the synthetic-project scope. Earlier statement that technical implementation has not started is historical to September 17, 2026; authorized local offline pipeline and risk implementation executed under Sprint 3 Packages 1–3 checkpoints. The published Planning baseline and Sprint 1 BA package are documented below.
 
@@ -66,8 +70,8 @@ Initiation is approved. Planning was approved by the user September 9, 2026. Spr
 | --- | --- |
 | Initiation | Approved; baseline documentation corrected |
 | Planning | Approved September 9, 2026; master baseline published |
-| Execution | Sprint 1 BA approved; synchronization verified September 14, 2026; Sprint 2 logical design and G3 approved September 17, 2026; offline implementation Packages 1–3 approved and closed locally (Package 3 offline scope approved across Increments 1–4; 236 passed tests + 36 subtests across 34 test modules); Sprint 3 retrospective and overall closure review prepared as drafts; Sprint 3 in progress (not approved); production physical contracts pending (fail-closed); PD02 unauthorized |
-| Monitoring and Control | Sprint 1 evidence preserved; Sprint 2 authorization, risks, decisions and documentation checks recorded; Sprint 3 Package 3 offline closure approval record published; Sprint 3 retrospective and overall closure review draft published |
+| Execution | Sprint 1 BA approved; synchronization verified September 14, 2026; Sprint 2 logical design and G3 approved September 17, 2026; Sprint 3 offline implementation scope approved and closed September 25, 2026 (WP-PD01, Packages 1–3, 236 passed tests + 36 subtests across 34 test modules); physical contracts PD-01..07 pending fail-closed; PD02 unauthorized |
+| Monitoring and Control | Sprint 1 evidence preserved; Sprint 2 authorization, risks, decisions and documentation checks recorded; Sprint 3 Package 3 offline closure approval record published; Sprint 3 retrospective published; Sprint 3 offline closure approval record published and approved |
 | Closure | Not started |
 
 ## Sprint 1 delivered artifacts

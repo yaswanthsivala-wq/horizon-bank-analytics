@@ -32,9 +32,9 @@ Current artifacts:
 
 - [Sprint 3 Package 3 offline closure approval record](sprint-03-package-03-offline-closure-approval.md): Project Owner formal acceptance and approval record for Package 3 offline scope (`/approve sprint-3-package-3-offline-closure`) based on checkpoint `1dc7a24c5f182659e8f37b307837e53747300d31`; Sprint 3 remains in progress and not approved; PD02/PostgreSQL unauthorized.
 
-- [Sprint 3 Retrospective](sprint-03-retrospective.md): comprehensive sprint retrospective synthesizing delivery across WP-PD01 and Packages 1–3, verified quality evidence (34 test modules, 236 passed tests, 36 subtests; 27 sections / 333 rows invariant), lessons learned, technical debt, and Sprint 4 recommendations. Status: Draft — prepared for Project Owner review.
+- [Sprint 3 Retrospective](sprint-03-retrospective.md): comprehensive sprint retrospective synthesizing delivery across WP-PD01 and Packages 1–3, verified quality evidence (34 test modules, 236 passed tests, 36 subtests; 27 sections / 333 rows invariant), lessons learned, technical debt, and Sprint 4 recommendations. Status: Complete.
 
-- [Sprint 3 Overall Closure Review & Approval Record](sprint-03-closure-approval.md): formal overall completion review, gate validation evidence, deferred production scope (PD-01..07 fail-closed, PD02/PostgreSQL unauthorized), and approval recommendation for Sprint 3. Status: Draft — awaiting Project Owner formal approval.
+- [Sprint 3 Overall Closure Approval Record](sprint-03-closure-approval.md): Project Owner formal closure approval and governance record for Sprint 3 offline scope (`/approve sprint-3-closure`), gate validation evidence, deferred production scope (PD-01..07 fail-closed, PD02/PostgreSQL unauthorized), and Sprint 4 entry criteria. Status: Approved and closed (offline scope).
 
 - [Sprint 1 BA approval and synchronization record](sprint-01-approval-record.md): received user approval, dated evidence, scope, and next authorization.
 
@@ -48,9 +48,9 @@ Reserved artifact locations:
 - `decision-log/`: dated decisions, rationale, and approval evidence.
 - `quality-reviews/`: review findings, corrective actions, and follow-up evidence.
 
-Progress: Sprint 1 BA approval recorded September 14, 2026; Sprint 2 logical Data Design and G3 approved September 17, 2026. (Earlier statements that Sprint 2 design was draft, G3 pending, or technical implementation not started describe their historical state prior to September 17, 2026 and subsequent Sprint 3 offline implementation packages). Sprint 3 offline intake, Packages 1–2, and Package 3 Increments 1–4 (risk conditions, customer classification, K01–K10 KPI engine, dimensional analytical marts, and pipeline orchestration/packaging; 236 passed tests + 36 subtests across 34 test modules) are implemented under local checkpoints. Package 3 offline scope is formally closed and approved; Sprint 3 retrospective and overall closure documentation are prepared as drafts awaiting formal approval; Sprint 3 remains in progress and not approved; PD02 remains unauthorized.
+Progress: Sprint 1 BA approval recorded September 14, 2026; Sprint 2 logical Data Design and G3 approved September 17, 2026. (Earlier statements that Sprint 2 design was draft, G3 pending, or technical implementation not started describe their historical state prior to September 17, 2026 and subsequent Sprint 3 offline implementation packages). Sprint 3 offline intake, Packages 1–2, and Package 3 Increments 1–4 (risk conditions, customer classification, K01–K10 KPI engine, dimensional analytical marts, and pipeline orchestration/packaging; 236 passed tests + 36 subtests across 34 test modules) are implemented under local checkpoints. Sprint 3 offline implementation scope is formally approved and closed by Project Owner on September 25, 2026 (`/approve sprint-3-closure`); PD-01 through PD-07 physical production contracts remain pending fail-closed; PD02/PostgreSQL remains unauthorized.
 Open questions: Physical contract annexes, production headers, schemas, mappings, predicates and financial controls remain Pending confirmation.
-Approval status: Sprint 1 BA approved; Sprint 2 logical Data Design and G3 approved September 17, 2026; Sprint 3 in progress — not approved.
+Approval status: Sprint 1 BA approved; Sprint 2 logical Data Design and G3 approved September 17, 2026; Sprint 3 offline implementation scope approved and closed September 25, 2026 (physical contracts PD-01..07 pending fail-closed; PD02 unauthorized).
 
 Maintain this inventory and status as work proceeds; follow the root AGENTS.md.
 
