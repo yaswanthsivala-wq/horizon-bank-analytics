@@ -1,41 +1,31 @@
 # Horizon Community Bank
 
-## Integration candidate — current disposition 2026-09-21
+## Current status — 2026-09-25
 
-This isolated candidate combines approved Sprint 2/G3 logical design, published R1 remediation, the September 21 CR-002 project-owner decisions, and the preserved WP-PD01 delivery. WP-PD01 comprises authored physical-design documentation and foundation SQL for static review only; it is not runtime validation or a later gate approval. PD02 is not started and not authorized. Main has not been updated; the candidate is unstaged, uncommitted and awaiting explicit integration-candidate approval.
+Sprint 3 offline implementation scope formally approved and closed on September 25, 2026 (/approve sprint-3-closure) based on the published Sprint 3 retrospective and overall closure review. Implements offline contract engine, curated processing pipeline, risk conditions RC-01..05, customer risk classification, core banking KPIs K01–K10, four dimensional analytical marts, and offline orchestration runner in pure fixture mode. Full regression passes 236 tests and 36 subtests across 34 test modules; 27 sections / 333 rows invariant; 0 broken links. Physical production contracts PD-01 through PD-07 remain pending fail-closed; PostgreSQL / PD02 remains unauthorized.
 
+- [Sprint 3 closure approval](docs/04-monitoring-and-control/sprint-03-closure-approval.md)
+- [Sprint 3 retrospective](docs/04-monitoring-and-control/sprint-03-retrospective.md)
+- [Sprint 3 physical design and pipeline](docs/03-execution/sprint-03-physical-design/README.md)
 - [CR-002 project-owner decisions](docs/04-monitoring-and-control/change-control/CR-002-project-owner-decisions-2026-09-21.md)
-- [WP-PD01 package](docs/03-execution/sprint-03-physical-design/README.md)
-- [Fresh combined-tree validation](docs/04-monitoring-and-control/quality-reviews/integration-r1-cr002-wp-pd01-validation-2026-09-21.md)
-
-Earlier dated status/validation entries describe their original scope and time; they are not current combined-tree validation. The original R1, CR-002 and WP-PD01 branches/commits remain preserved. No policy or business requirement is changed.
-
-### Historical Sprint 2 status — 2026-09-17
-
-Current Sprint 2 decision status (2026-09-17): DD-01 through DD-12 and G3 logical Data Design approved. Physical design, generation and implementation require separate authorization.
-
-## Banking Operations & Customer Risk Analytics
-
-This repository is the permanent source of truth for a fictional, synthetic-data portfolio project covering the full Data Analyst and Business Analyst lifecycle. It documents requirements, process analysis, data design, engineering, SQL analysis, Power BI reporting, testing, monitoring, and closure without using real bank or customer data.
-
-## Historical status snapshot — 2026-09-17
-
-Initiation is approved. Planning was approved by the user September 9, 2026. Sprint 1 Business Analysis was approved by the user; required synchronization was verified September 14, 2026. Sprint 2 logical Data Design and Gate G3 were approved by the user September 17, 2026 under the synthetic-project scope. Technical implementation has not started.
-
 - [Project status](PROJECT_STATUS.md)
 - [Planning baseline](docs/02-planning/Horizon_Community_Bank_Project_Planning_Baseline.md)
 - [Sprint 01 business analysis](docs/03-execution/sprint-01-business-analysis/README.md)
 - [Sprint 02 data design](docs/03-execution/sprint-02-data-design/README.md)
 - [Changelog](CHANGELOG.md)
 
-## Project lifecycle — historical snapshot before WP-PD01
+## Banking Operations & Customer Risk Analytics
+
+This repository is the permanent source of truth for a fictional, synthetic-data portfolio project covering the full Data Analyst and Business Analyst lifecycle. It documents requirements, process analysis, data design, engineering, SQL analysis, Power BI reporting, testing, monitoring, and closure without using real bank or customer data.
+
+## Project lifecycle
 
 | Phase | Location | Status |
 | --- | --- | --- |
 | Initiation | [01-initiation](docs/01-initiation/README.md) | Approved; baseline documentation corrected |
 | Planning | [02-planning](docs/02-planning/README.md) | Approved September 9, 2026; baseline published |
-| Execution | [03-execution](docs/03-execution/README.md) | Sprint 1 BA approved; synchronization verified September 14, 2026; Sprint 2 logical design and G3 approved September 17, 2026; technical implementation not started |
-| Monitoring and Control | [04-monitoring-and-control](docs/04-monitoring-and-control/README.md) | Sprint 1 evidence preserved; Sprint 2 controls recorded |
+| Execution | [03-execution](docs/03-execution/README.md) | Sprint 1 BA approved; synchronization verified September 14, 2026; Sprint 2 logical design and G3 approved September 17, 2026; R1, CR-002 and WP-PD01 reconciled; Sprint 3 offline scope approved and closed September 25, 2026 (WP-PD01, Packages 1–3, 236 passed tests + 36 subtests across 34 test modules); physical contracts PD-01..07 pending fail-closed; PD02 unauthorized |
+| Monitoring and Control | [04-monitoring-and-control](docs/04-monitoring-and-control/README.md) | Sprint 1 evidence preserved; Sprint 2 controls recorded; CR-002 decisions recorded; Sprint 3 package controls and closure approval record published |
 | Closure | [05-closure](docs/05-closure/README.md) | Not started |
 
 ## Approved business context
@@ -48,7 +38,7 @@ Release 1 will integrate daily extracts from five simulated systems: Core Bankin
 
 ## Repository safeguards
 
-- GitHub `main` and the local folder `C:\Users\yaswa\OneDrive\Desktop\horizon-bank-analytics` are the permanent source of truth.
+- GitHub main and the local folder C:\Users\yaswa\OneDrive\Desktop\horizon-bank-analytics are the permanent source of truth.
 - Preserve the approved Initiation business baseline; the authorized documentation correction records that baseline and reconciles lifecycle status.
 - Real customer information, credentials, environment files, and generated data must not be committed.
 - Risk indicators support human review and do not represent confirmed fraud or automated lending decisions.
@@ -71,10 +61,6 @@ User-authorized fictional-project scope clarification replaces real-source verif
 ## G3 logical design approval - 2026-09-17
 
 The requesting user approved the complete consolidated Sprint 2 logical package. See [gate decision](docs/04-monitoring-and-control/g3-data-design-approval.md). This updates lifecycle status only: no real-source verification, production readiness, physical implementation, generated fixtures, executed reconciliation, implemented RLS/security, KPI achievement, UAT or publication readiness is claimed. All post-G3 work requires separate authorization; material design changes require change control. Dated prior statuses remain historical.
-
-## Historical status (superseded)
-
-Release 1 will integrate five simulated daily source extracts covering customers/accounts, transactions, loans/payments, fraud alerts, complaints, and branch reference data. The planned solution uses Python, PostgreSQL, SQL, and Power BI with data-quality controls, reconciliation, explainable risk indicators, masking, role-based reporting, and 24 months of synthetic history.
 
 ## WP-PD01 authorized delivery - 2026-09-17
 

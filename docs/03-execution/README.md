@@ -6,6 +6,30 @@ Purpose: document authorized delivery activities and their evidence.
 
 ## Current work
 
+- [Sprint 03 — physical design and offline intake](sprint-03-physical-design/README.md): preserved WP-PD01 package and the first offline Data Engineering increment. Runtime database work remains Pending confirmation.
+
+  The [PD-01 through PD-07 decision package](sprint-03-physical-design/physical-design-decision-package.md) records **Approved — Design Rule** for seven rules; physical annexes remain Pending confirmation. Sprint 3 is not approved and PD02 database work is unauthorized.
+
+  [Physical Contract Annex Increment 1](sprint-03-physical-design/README.md) has Project Owner approval for PD-01 structure, PD-02 convention and PD-03 manifest contract only; missing exact headers remain fail closed and candidate schema IDs remain inactive.
+
+  [PD-04 Applicability Annex Increment 2](sprint-03-physical-design/pd04-conditional-applicability-annex.md) has an approved framework, with all physical predicates Pending confirmation; no source-cell predicate is active.
+
+  [Physical Contract Annex Increment 3](sprint-03-physical-design/README.md) has Project Owner approval for PD-05/06 frameworks, PD-07 specification, cross-contract documentary model and the open-item register. No unresolved physical control, mapping or timezone runtime is active.
+
+  [Executable Implementation Package 1](sprint-03-physical-design/executable-implementation-package-01.md): local implementation of offline contract engine, PD-01 through PD-07 validation, and synthetic banking data foundation; approved by Project Owner; 90 passing tests; 27 sections / 333 logical field rows reconciled; production contracts fail closed as PENDING.
+
+  [Executable Implementation Package 2](sprint-03-physical-design/executable-implementation-package-02.md): Project Owner approved the audited offline transformation, data quality (DQ-D01..DQ-D13), quarantine, lineage, replay, reconciliation, and deterministic-output implementation through `/approve sprint-3-package-2`; 135 tests pass. Sprint 3 remains not approved; PD02 remains unauthorized; Package 3 unauthorized status is historical as of 2026-09-22 and superseded by 2026-09-24 review (risk increments complete; KPI/mart scope remains unauthorized).
+
+  [Package 3 completion review](sprint-03-physical-design/executable-implementation-package-03-completion-review.md): risk conditions, customer classification, and hardening checkpoint (`472f126`) verified complete (168 tests historically in 0.75s for Increments 1–2; initial hardening checkpoint passed 187 in 0.93s; earlier Phase 2 verification passed 187 and 36 subtests in 1.32s; subsequent final QA passed 187 and 36 subtests in 0.86s); KPI and mart scope remained open at that time.
+
+  [Package 3 Increment 3 completion review](sprint-03-physical-design/executable-implementation-package-03-increment-03-review.md): Core Banking KPIs (K01–K10) and four dimensional analytical marts (`mart_transaction_kpis`, `mart_loan_delinquency_kpis`, `mart_customer_risk_kpis`, `mart_complaint_kpis`) verified complete in offline fixture mode; 223 passed tests and 36 subtests passed in 1.14s; source reconciliation invariant at 27 sections / 333 rows; non-additive exposure, loan publication gating, and fail-closed production controls enforced; Package 3 remains open for pipeline coordination and packaging.
+
+  [Package 3 Increment 4 completion review](sprint-03-physical-design/executable-implementation-package-03-increment-04-review.md): Consolidated Pipeline Orchestration & Packaging verified complete; end-to-end fixture execution produces curated entities, risk assessments, and four dimensional analytical marts; production fail-closed zero-output isolation verified; package-level PUB-D01 diagnostic-only scoping, companion `manifest.json.sha256`, K06 candidate cohort isolation, exact $t/u$ risk classification, and replay tracking enforced; 236 passed tests and 36 subtests passed in 1.69s; source reconciliation invariant at 27 sections / 333 rows; Package 3 offline implementation complete.
+
+  [Package 3 consolidated completion review](sprint-03-physical-design/sprint-03-package-03-consolidated-completion-review.md): formally closes and approves the offline scope of Package 3 across Increments 1, 2, Risk Hardening, Increment 3, and Increment 4; formally accepted and approved by Project Owner on 2026-09-25 (`/approve sprint-3-package-3-offline-closure`; see [approval record](../04-monitoring-and-control/sprint-03-package-03-offline-closure-approval.md)); 236 passed tests, 36 subtests passed across 34 test modules; source reconciliation invariant at 27 sections / 333 rows; production contracts remain pending fail-closed; Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized.
+
+  [Sprint 3 Retrospective](../04-monitoring-and-control/sprint-03-retrospective.md) and [Sprint 3 Overall Closure Approval Record](../04-monitoring-and-control/sprint-03-closure-approval.md): comprehensive retrospective and formal overall closure approval record documenting Project Owner acceptance of Sprint 3 offline scope (`/approve sprint-3-closure`); reconciles 34 test modules, 236 unit tests, 36 subtests, and 0 broken links; physical contracts PD-01..07 remain pending fail-closed; PD02/PostgreSQL remains unauthorized.
+
 - [Sprint 01 — Business Analysis](sprint-01-business-analysis/README.md): user stories, acceptance criteria, current/future process flows, role-access flow, customer-risk flow, and requirements traceability.
 
 - [Sprint 02 - Data Design](sprint-02-data-design/README.md): proposed source contracts, models/ERD, field dictionary/mappings, identity, quality, KPI mappings, security and traceability.
@@ -20,9 +44,9 @@ Purpose: document authorized delivery activities and their evidence.
 
 ## Status
 
-Execution Sprint 1 business-analysis documentation is published and approved by the user. Synchronization was verified September 14, 2026; see the [approval record](../04-monitoring-and-control/sprint-01-approval-record.md). Sprint 2 logical documentation and G3 are approved by the user September 17, 2026 under the synthetic-project scope. Technical implementation has not started.
+Execution Sprint 1 business-analysis documentation is published and approved by the user. Synchronization was verified September 14, 2026; see the [approval record](../04-monitoring-and-control/sprint-01-approval-record.md). Sprint 2 logical documentation and G3 are approved by the user September 17, 2026 under the synthetic-project scope. Earlier statement that technical implementation has not started describes its historical state prior to authorized Sprint 3 local offline implementation packages; offline intake, Packages 1–2, and Package 3 Increments 1–4 (risk conditions, customer classification, K01–K10 KPI engine, dimensional analytical marts, and pipeline orchestration/packaging; 236 passed tests + 36 subtests across 34 test modules) have since been implemented locally. Sprint 3 offline implementation scope is formally approved and closed by Project Owner on September 25, 2026 (`/approve sprint-3-closure`); physical contracts PD-01..07 remain pending fail-closed; PD02 remains unauthorized.
 
-Open questions: DD-11 and DD-12 and remaining DD-01 contract details in the Sprint 2 review register. Approval status: Sprint 1 approved; Sprint 2 Draft — not approved.
+Open questions: Physical contract annexes, production headers, schemas, mappings, predicates and financial controls remain Pending confirmation. Approval status: Sprint 1 BA approved; Sprint 2 logical Data Design and G3 approved September 17, 2026; Sprint 3 offline implementation scope approved and closed September 25, 2026 (physical contracts PD-01..07 pending fail-closed; PD02 unauthorized).
 
 ## DD-01 approval update - 2026-09-15
 

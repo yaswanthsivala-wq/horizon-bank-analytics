@@ -1,8 +1,8 @@
 # Monitoring and Control
 
-## Current integration disposition — 2026-09-21
+## Current integration disposition — 2026-09-25
 
-R1 and CR-002 follow-up are published on their own branches and retained here. H01–H03 documentary confirmations and H05 authority clarification are recorded; no independent bank/persona review is claimed. The preserved WP-PD01 physical-design documentation and authored foundation SQL are included for integration only. PD02 is not started/not authorized; G3 remains logical-design approval only, with no G4 or other new gate approval. Main has not been updated.
+R1 and CR-002 follow-up are published on their own branches and integrated here alongside the approved Sprint 3 offline scope. H01–H03 documentary confirmations and H05 authority clarification are recorded; no independent bank/persona review is claimed. The preserved WP-PD01 physical-design documentation and authored foundation SQL are included for integration only. PD02 is not started/not authorized; G3 remains logical-design approval only, with no G4 or other new gate approval. Sprint 3 offline implementation scope across WP-PD01 and Packages 1, 2, and 3 was formally approved and closed by the Project Owner on September 25, 2026 (`/approve sprint-3-closure`). PD-01 through PD-07 physical production contracts remain pending fail-closed; PD02/PostgreSQL remains unauthorized.
 
 Current integration evidence and controls:
 
@@ -10,8 +10,10 @@ Current integration evidence and controls:
 - [CR-002 project-owner decisions](change-control/CR-002-project-owner-decisions-2026-09-21.md): September 21 confirmations and authority clarification.
 - [WP-PD01 control record](wp-pd01-control-record.md): preserved historical authorization and static-delivery scope.
 - [WP-PD01 package](../03-execution/sprint-03-physical-design/README.md): preserved physical-design inventory.
+- [Sprint 3 Overall Closure Approval Record](sprint-03-closure-approval.md): Project Owner formal closure approval for Sprint 3 offline scope.
+- [Sprint 3 Retrospective](sprint-03-retrospective.md): comprehensive synthesis of Sprint 3 delivery, verified test results, and Sprint 4 entry criteria.
 
-The September 20 register map below is historical: quality-reviews now holds the new integration record; status-reports still has no separate record. Prior Sprint 2 and WP-PD01 counts/hashes/branch statements remain evidence for their original snapshots, not fresh validation of this combined tree. The candidate is unstaged, uncommitted and awaiting explicit integration-candidate approval.
+The September 20 register map below is historical: quality-reviews now holds the new integration record; status-reports still has no separate record. Prior Sprint 2 and WP-PD01 counts/hashes/branch statements remain evidence for their original snapshots, not fresh validation of this combined tree.
 
 ### Historical Sprint 2 status — 2026-09-17
 
@@ -20,6 +22,36 @@ Current Sprint 2 decision status (2026-09-17): DD-01 through DD-12 and G3 logica
 Purpose: track project progress and controls throughout every phase.
 
 Current artifacts:
+
+- [Sprint 3 offline intake record](../03-execution/sprint-03-physical-design/data-engineering-intake.md): authorized local increment, test evidence, limits and open implementation decisions.
+
+- [Sprint 3 contract reconciliation control](sprint-03-contract-reconciliation-control.md): G3 authority comparison, unresolved physical decisions and validation scope.
+
+- [Sprint 3 PD-01 through PD-07 decision package](../03-execution/sprint-03-physical-design/physical-design-decision-package.md) and [approval/control record](sprint-03-pd01-pd07-design-rule-approval.md): seven design rules approved; physical annexes Pending confirmation, Sprint 3 not approved and PD02 unauthorized.
+
+- [Physical Contract Annex Increment 1 approval](sprint-03-physical-contract-annex-1-approval.md) and [PD-01–PD-03 validation](../03-execution/sprint-03-physical-design/pd01-pd03-cross-contract-validation.md): distinct approved structure/convention/manifest scopes, pending physical values, fail-closed limits and local static evidence.
+
+- [PD-04 applicability annex approval/control](sprint-03-pd04-annex-control.md): Project Owner approved framework, with 51 logical C-field candidates across 22 sections, zero active physical predicates and fail-closed dependencies.
+
+- [Physical Contract Annex Increment 3 approval/control](sprint-03-physical-contract-annex-3-control.md): PD-05/06 frameworks, PD-07 specification, cross-contract model and 13-row open register approved at documentary level; no physical activation or Sprint 3 approval.
+
+- [Sprint 3 Executable Implementation Package 1 control record](sprint-03-executable-package-01-control.md): local implementation of offline contract engine and synthetic banking data foundation; approved by Project Owner; 90 unit tests passing, production contracts fail closed, Sprint 3 not approved and PD02 unauthorized.
+
+- [Sprint 3 Executable Implementation Package 2 approval/control record](sprint-03-executable-package-02-control.md): Project Owner approved the audited offline transformation, data quality, quarantine, lineage, replay, reconciliation, and processing pipeline; 135 tests pass. Sprint 3 remains not approved; PD02 remains unauthorized; Package 3 unauthorized status is historical as of 2026-09-22 and superseded by 2026-09-24 review (risk increments complete; KPI/mart scope remains unauthorized).
+
+- [Sprint 3 Package 3 completion-review control](sprint-03-package-03-completion-review-control.md): risk increments and hardening checkpoint verified complete (168 tests historically in 0.75s for Increments 1–2; initial hardening checkpoint passed 187 in 0.93s; earlier Phase 2 verification passed 187 and 36 subtests in 1.32s; subsequent final QA passed 187 and 36 subtests in 0.86s); KPI and mart work remained open at that time.
+
+- [Sprint 3 Package 3 Increment 3 control record](sprint-03-package-03-increment-03-control.md): Core Banking KPIs (K01–K10) and four dimensional analytical marts verified complete (223 passed tests, 36 subtests passed in 1.14s); source reconciliation invariant at 27 sections / 333 rows; fail-closed production controls and non-additive exposure enforced; Package 3 remains open for pipeline coordination and final packaging.
+
+- [Sprint 3 Package 3 Increment 4 control record](sprint-03-package-03-increment-04-control.md): Consolidated Pipeline Orchestration & Packaging verified complete (236 passed tests, 36 subtests passed in 1.69s); source reconciliation invariant at 27 sections / 333 rows; end-to-end execution, companion `manifest.json.sha256`, diagnostic-only quarantine scoping, and K06 candidate cohort isolation verified; Package 3 offline implementation complete.
+
+- [Sprint 3 Package 3 consolidated control record](sprint-03-package-03-consolidated-control.md): consolidated control record documenting formal closure of Package 3 offline scope across Increments 1, 2, Risk Hardening, Increment 3, and Increment 4, formally approved by Project Owner (`/approve sprint-3-package-3-offline-closure`); 236 passed tests, 36 subtests; 27 sections / 333 rows invariant; production contracts remain pending fail-closed; Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized.
+
+- [Sprint 3 Package 3 offline closure approval record](sprint-03-package-03-offline-closure-approval.md): Project Owner formal acceptance and approval record for Package 3 offline scope (`/approve sprint-3-package-3-offline-closure`) based on checkpoint `1dc7a24c5f182659e8f37b307837e53747300d31`; Sprint 3 remains in progress and not approved; PD02/PostgreSQL unauthorized.
+
+- [Sprint 3 Retrospective](sprint-03-retrospective.md): comprehensive sprint retrospective synthesizing delivery across WP-PD01 and Packages 1–3, verified quality evidence (34 test modules, 236 passed tests, 36 subtests; 27 sections / 333 rows invariant), lessons learned, technical debt, and Sprint 4 recommendations. Status: Complete.
+
+- [Sprint 3 Overall Closure Approval Record](sprint-03-closure-approval.md): Project Owner formal closure approval and governance record for Sprint 3 offline scope (`/approve sprint-3-closure`), gate validation evidence, deferred production scope (PD-01..07 fail-closed, PD02/PostgreSQL unauthorized), and Sprint 4 entry criteria. Status: Approved and closed (offline scope).
 
 - [Sprint 1 BA approval and synchronization record](sprint-01-approval-record.md): received user approval, dated evidence, scope, and next authorization.
 
@@ -45,15 +77,12 @@ Reserved artifact locations:
 - `decision-log/`: dated decisions, rationale, and approval evidence.
 - `quality-reviews/`: review findings, corrective actions, and follow-up evidence.
 
-## Historical progress snapshot (superseded by current disposition)
+## Current progress summary
 
-Progress: Sprint 1 BA approval and September 14, 2026 synchronization evidence recorded. Sprint 2 draft design package is prepared under current authorization; G3 review is pending. Technical implementation has not started.
-Open questions: Sprint 2 DD-11 and DD-12 and remaining DD-01 contract details, named review owners and actual review evidence are Pending confirmation.
-Approval status: Sprint 1 BA approval recorded; Sprint 2 logical design and Gate G3 approved 2026-09-17 (logical design only); no other gate is approved; no separate Monitoring and Control baseline approval is asserted.
+Progress: Sprint 1 BA approval recorded September 14, 2026; Sprint 2 logical Data Design and G3 approved September 17, 2026. (Earlier statements that Sprint 2 design was draft, G3 pending, or technical implementation not started describe their historical state prior to September 17, 2026 and subsequent Sprint 3 offline implementation packages). Sprint 3 offline intake, Packages 1–2, and Package 3 Increments 1–4 (risk conditions, customer classification, K01–K10 KPI engine, dimensional analytical marts, and pipeline orchestration/packaging; 236 passed tests + 36 subtests across 34 test modules) are implemented under local checkpoints. Sprint 3 offline implementation scope is formally approved and closed by Project Owner on September 25, 2026 (`/approve sprint-3-closure`); PD-01 through PD-07 physical production contracts remain pending fail-closed; PD02/PostgreSQL remains unauthorized.
+Open questions: Physical contract annexes, production headers, schemas, mappings, predicates and financial controls remain Pending confirmation.
+Approval status: Sprint 1 BA approved; Sprint 2 logical Data Design and G3 approved September 17, 2026; Sprint 3 offline implementation scope approved and closed September 25, 2026 (physical contracts PD-01..07 pending fail-closed; PD02 unauthorized).
 
-### Historical status (superseded)
-
-Approval status: Sprint 1 BA user approval recorded; Sprint 2 design is Draft — not approved; no separate Monitoring and Control baseline approval is asserted.
 
 Maintain this inventory and status as work proceeds; follow the root AGENTS.md.
 
@@ -109,7 +138,7 @@ The requesting user approved the complete consolidated Sprint 2 logical package.
 
 - [H01–H03 decisions, H05 authority clarification and Planning supplement traceability](change-control/CR-002-project-owner-decisions-2026-09-21.md): requesting-user documentary confirmations dated 2026-09-21; historical G2 date remains 2026-09-09. Independent persona reviews are not claimed. [CR-002](change-control/CR-002-baseline-lifecycle-corrections.md) retains its original historical body and links the disposition.
 
-This follow-up is not integrated into main. It changes no gate or approved design decision and authorizes no PD02 or implementation work.
+This follow-up is integrated into this branch. It changes no gate or approved design decision and authorizes no PD02 or implementation work.
 
 ## WP-PD01 authorized delivery - 2026-09-17
 
