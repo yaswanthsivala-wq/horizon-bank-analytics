@@ -9,7 +9,7 @@ Status: **Completion review — Core Banking KPIs (K01–K10) & Dimensional Anal
    - DD-06 Approved KPI and Canonical Mapping Policy: [`docs/03-execution/sprint-02-data-design/kpi-policy-dd06.md`](../sprint-02-data-design/kpi-policy-dd06.md)
    - DD-04 Customer Risk Catalog & Ordered Classification Hierarchy: [`docs/03-execution/sprint-02-data-design/customer-risk-catalog.md`](../sprint-02-data-design/customer-risk-catalog.md)
    - DD-09 Data Quality & Reconciliation Policy: [`docs/03-execution/sprint-02-data-design/data-quality-and-reconciliation.md`](../sprint-02-data-design/data-quality-and-reconciliation.md)
-   - DD-02 Non-Additive Relationship Exposure Rule: [`docs/03-execution/sprint-02-data-design/logical-model.md`](../sprint-02-data-design/logical-model.md)
+   - DD-02 Non-Additive Relationship Exposure Rule: [`docs/03-execution/sprint-02-data-design/logical-data-model.md`](../sprint-02-data-design/logical-data-model.md)
 2. **Strict Scope Boundaries:**
    - **No Database Execution (PD02 Unauthorized):** All marts and KPI engines are implemented exclusively in standard-library Python in-memory structures and deterministic JSON serialization. No PostgreSQL connection, migrations, or database inspection occurred.
    - **No Composite Risk Scoring:** Adheres strictly to DD-04/DD-05/DD-06. No machine-learning, probabilistic scoring, or automated lending/fraud decisioning was introduced.
