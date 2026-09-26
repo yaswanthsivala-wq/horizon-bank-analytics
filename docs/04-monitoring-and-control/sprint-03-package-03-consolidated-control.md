@@ -1,8 +1,8 @@
 # Sprint 3 Package 3 Consolidated Monitoring & Control Record — 2026-09-25
 
-Status: **Consolidated control record — Package 3 offline scope verified complete; closure documentation prepared under Project Owner authorization (`/approve sprint-3-package-3-closure-documentation`); Sprint 3 In Progress — NOT Approved; PD02/PostgreSQL Unauthorized**.
+Status: **Package 3 Closed & Approved (Offline Scope Only); Sprint 3 In Progress — NOT Approved; PD02/PostgreSQL Unauthorized**.
 
-The [Package 3 Consolidated Completion Review](../03-execution/sprint-03-physical-design/sprint-03-package-03-consolidated-completion-review.md) provides the formal synthesis of the completed and verified offline Package 3 scope across Increments 1, 2, Risk Hardening, Increment 3, and Increment 4 on branch `checkpoint/sprint-03-offline-contract-reconciliation` up to commit `c1eee6637aa88ae6cf6417984b44c79b9c1c2d6d`. Project Owner authorization under `/approve sprint-3-package-3-closure-documentation` approves the preparation and staging of these consolidated closure records, documenting readiness for formal Package 3 closure at the closure checkpoint commit.
+The [Package 3 Consolidated Completion Review](../03-execution/sprint-03-physical-design/sprint-03-package-03-consolidated-completion-review.md) provides the formal synthesis of the completed and verified offline Package 3 scope across Increments 1, 2, Risk Hardening, Increment 3, and Increment 4 on branch `checkpoint/sprint-03-offline-contract-reconciliation` up to commit `1dc7a24c5f182659e8f37b307837e53747300d31`. Formal acceptance and approval was granted by the Project Owner via `/approve sprint-3-package-3-offline-closure`; see the [Approval Record](sprint-03-package-03-offline-closure-approval.md).
 
 ---
 
@@ -43,7 +43,7 @@ Static and regression testing confirmed zero regressions, zero policy conflicts,
 
 ## 4. Disposition & Sign-Off
 
-- **Package 3 Offline Scope:** **VERIFIED COMPLETE — Closure documentation prepared under Project Owner authorization (`/approve sprint-3-package-3-closure-documentation`); formal package closure submitted for acceptance**.
+- **Package 3 Offline Scope:** **APPROVED & CLOSED** (Formally accepted and approved by Project Owner on 2026-09-25 via `/approve sprint-3-package-3-offline-closure`; see [Approval Record](sprint-03-package-03-offline-closure-approval.md)).
 - **Sprint 3 Overall Status:** **IN PROGRESS — NOT APPROVED**.
 - **Production Activation:** **BLOCKED (Fail-Closed)**.
 - **PostgreSQL Execution:** **UNAUTHORIZED**.
