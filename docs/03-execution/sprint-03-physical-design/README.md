@@ -1,84 +1,90 @@
-# Sprint 3 physical design - WP-PD01
+# Sprint 03 — Physical Design & Pipeline Implementation
 
-## Data Engineering start - 2026-09-21
+[Execution](../README.md) > [Sprint 02: Data Design](../sprint-02-data-design/README.md) < **Sprint 03: Physical Design & Pipeline** | Next: [Phase 04: Monitoring](../../04-monitoring-and-control/README.md) >>
 
-The user authorized Sprint 3 Data Engineering and selected offline pipeline work first. [The intake increment](data-engineering-intake.md) implements and tests limited section presence and byte-level validation. Status: Draft — not approved. PD02 database execution remains Pending confirmation.
+---
 
-The [proposed offline manifest contract](offline-manifest-contract.md) records the physical package shape, schema-version rules and unresolved source mappings. The intake validator now accepts reviewed section field contracts and fails closed when one is missing.
+## Purpose & Lifecycle Status
 
-The [contract reconciliation](contract-reconciliation.md) and [27-section field inventory](source-field-inventory.md) distinguish approved G3 logical fields from proposed physical aliases and illustrative tests. Sprint 3 remains a working draft.
+**Purpose:** Document the physical data architecture, physical contract annexes (PD-01..07), static foundation DDL, offline intake engine, curated data quality and reconciliation pipeline, risk classification engine, Core Banking KPIs, dimensional analytical marts, and pipeline orchestration runner.
 
-The [PD-01 through PD-07 decision package](physical-design-decision-package.md) now records all seven as **Approved — Design Rule** by the requesting user on 2026-09-21. Their literal physical annexes remain **Pending confirmation**; see the [approval/control record](../../04-monitoring-and-control/sprint-03-pd01-pd07-design-rule-approval.md). Sprint 3 is started but not approved; PD02 database work is unauthorized. No missing annex may be assumed to pass intake.
+**Current Lifecycle Status (2026-09-25):** **Offline Implementation Scope Approved and Closed.**<br/>
+The offline implementation scope of Sprint 3 across WP-PD01 and Executable Packages 1, 2, and 3 was formally accepted and approved by the Project Owner on September 25, 2026 (`/approve sprint-3-closure`) based on the published [Sprint 3 Retrospective](../../04-monitoring-and-control/sprint-03-retrospective.md) and overall closure review.
 
-### Physical Contract Annex Increment 1 — 2026-09-22
+- **Automated Verification:** Exactly 236 passed unit tests and 36 subtests across 34 test modules in `tests/` (0 failures, 0 errors, 0 warnings).
+- **Source Reconciliation Invariant:** Verified invariant at 27 mandatory sections and 333 logical target field rows via `scripts/reconcile_source_fields.py`.
+- **Link Integrity:** 0 broken Markdown links repository-wide.
+- **Strict Governance Boundaries:**
+  - Physical production contracts PD-01 through PD-07 remain **PENDING (Fail-Closed)**.
+  - Database deployment / **PostgreSQL / PD02 execution remains UNAUTHORIZED**.
+  - Untracked baseline test transcript `package2-test-results.txt` is preserved untouched.
 
-Project Owner reviewed Increment 1 on 2026-09-22; see [approval record](../../04-monitoring-and-control/sprint-03-physical-contract-annex-1-approval.md). [PD-01 header annex](pd01-physical-header-annex.md): **Approved structure — Physical header values pending confirmation** for all 27 sections; unresolved headers fail closed. [PD-02 version annex](pd02-schema-version-annex.md): **Approved convention — Activation pending approved physical header contract**; 27 initial candidate IDs remain inactive. [PD-03 manifest specification](pd03-manifest-json-specification.md): **Approved — Physical manifest contract**, with [one-row](pd03-manifest-normal-example.md) and [zero-row](pd03-manifest-zero-row-example.md) approved structural examples only. [Cross-contract dependency model](pd01-pd03-cross-contract-validation.md) is approved; static evidence and limits remain. PD-04 through PD-07 annex values remain separate pending work; no Python, SQL or dataset implementation occurred. Sprint 3 remains in progress and not approved; PD02 database work remains unauthorized.
+---
 
-### Physical Contract Annex Increment 2 — PD-04
+## Chronological Delivery Progression
 
-The [conditional applicability annex](pd04-conditional-applicability-annex.md) is **Approved framework — Physical predicates pending confirmation** after Project Owner review on 2026-09-22. It defines predicate governance and cell/completeness semantics, with 51 logical C-field candidates across 22 sections. No physical predicate is active because PD-01 received headers remain unresolved; dependent required validation fails closed. [Approval/control record](../../04-monitoring-and-control/sprint-03-pd04-annex-control.md). At that review, PD-05 through PD-07 annexes had not started; Sprint 3 was not approved and PD02/PostgreSQL was unauthorized.
+### 1. WP-PD01: Static Physical Architecture & Foundation SQL (2026-09-17)
+- **Scope:** Static translation of 109 logical entities and 982 fields into PostgreSQL 18 physical tables, schemas, constraints, typed foreign keys, and indexes.
+- **Key Artifacts:** [Physical Architecture](physical-architecture.md), [Logical-to-Physical Map](logical-to-physical-map.md), [Constraint Matrix](constraint-matrix.md), [Indexing & Partitioning](indexing-and-partitioning.md), [Foundation SQL (0001_foundation.sql)](../../../sql/migrations/0001_foundation.sql), and [Static Validation](static-validation.md).
+- **Boundary:** Static review only; zero database connections or executions.
 
-### Physical Contract Annex Increment 3 — PD-05 through PD-07
+### 2. Sprint 3 Data Engineering Start & Offline Intake Validator (2026-09-21)
+- **Scope:** Initial offline intake validator enforcing mandatory section presence, exact-byte SHA-256 checks, CSV framing, revision tracking, and zero-row sections without database dependencies.
+- **Key Artifacts:** [Data Engineering Intake](data-engineering-intake.md) and [Offline Manifest Contract](offline-manifest-contract.md).
 
-[PD-05 financial controls](pd05-financial-control-annex.md): **Approved framework — Physical financial controls pending confirmation**. [PD-06 mappings](pd06-status-mapping-annex.md): **Approved framework — Physical mapping rows and mapping-version IDs pending confirmation**. [PD-07 Chicago runtime](pd07-chicago-time-runtime-annex.md): **Approved specification — Runtime/tzdb verification and executable boundary evidence pending confirmation**. The [cross-contract review](pd05-pd07-cross-contract-validation.md) is an **Approved documentary consistency model — Runtime dependencies remain fail closed**; the 13-row [master pending register](physical-contract-pending-register.md) is an **Approved control register — Open items remain unresolved**. [Project Owner review record](../../04-monitoring-and-control/sprint-03-physical-contract-annex-3-control.md). Seven financial candidates, 23 mapping groups and 15 future executable temporal cases are documented; zero physical control/mapping/predicate rows or timezone runtimes are active. Sprint 3 remains not approved and PD02/PostgreSQL unauthorized.
+### 3. PD-01 through PD-07 Physical Design Rules (2026-09-21)
+- **Scope:** Formulated and approved seven core design rules governing physical contract interpretation: PD-01 (Headers), PD-02 (Schema IDs), PD-03 (Manifests), PD-04 (Applicability), PD-05 (Financial Controls), PD-06 (Mappings), and PD-07 (Chicago Time).
+- **Governance:** Approved as design rules by Project Owner on 2026-09-21; see [Design Rule Approval Record](../../04-monitoring-and-control/sprint-03-pd01-pd07-design-rule-approval.md) and [Decision Package](physical-design-decision-package.md). Literal physical annexes remained pending.
 
-### Executable Implementation Package 1 — 2026-09-22
+### 4. Physical Contract Annexes Increments 1, 2, and 3 (2026-09-22)
+- **Increment 1 (PD-01, PD-02, PD-03):** Approved [Header Annex](pd01-physical-header-annex.md) (pending physical headers), [Version Annex](pd02-schema-version-annex.md) (candidate IDs inactive), and [Manifest Spec](pd03-manifest-json-specification.md) ([one-row](pd03-manifest-normal-example.md) and [zero-row](pd03-manifest-zero-row-example.md) examples). See [Annex 1 Approval](../../04-monitoring-and-control/sprint-03-physical-contract-annex-1-approval.md).
+- **Increment 2 (PD-04):** Approved [Conditional Applicability Annex](pd04-conditional-applicability-annex.md) covering 51 candidate conditional fields across 22 sections with fail-closed dependencies. See [PD-04 Control Record](../../04-monitoring-and-control/sprint-03-pd04-annex-control.md).
+- **Increment 3 (PD-05, PD-06, PD-07):** Approved [Financial Control Annex](pd05-financial-control-annex.md), [Status Mapping Annex](pd06-status-mapping-annex.md), and [Chicago Runtime Annex](pd07-chicago-time-runtime-annex.md) alongside the [Master Pending Register](physical-contract-pending-register.md). See [Annex 3 Control Record](../../04-monitoring-and-control/sprint-03-physical-contract-annex-3-control.md).
 
-The offline contract engine and synthetic banking data foundation are implemented, tested, and validated locally; see [implementation record](executable-implementation-package-01.md) and [control record](../../04-monitoring-and-control/sprint-03-executable-package-01-control.md). Status: **Sprint 3 Executable Implementation Package 1 — Approved by Project Owner — Committed locally**. Implements the contract state model, PD-03 manifest validation, PD-01 header registry, PD-02 schema registry, PD-04 applicability engine, PD-06 status mapping engine, PD-07 Chicago temporal engine with tzdb proof interface, PD-05 exact-decimal financial control engine, and standard-library synthetic banking data generator. All 27 production physical headers, 27 production schemas, 51 candidate predicates, 7 candidate financial controls, 23 domain mapping groups, and runtime tzdb 2026a verification remain PENDING and fail closed; 90 unit tests pass (including 11 original intake baseline tests, 15 PD-07 temporal cases, and 5 PD-05 tolerance tests); baseline inventory remains 27 sections / 333 logical target field rows. Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized.
+### 5. Executable Implementation Package 1 — Offline Contract Engine (2026-09-22)
+- **Scope:** Implemented local contract state machine, PD-03 manifest validation, PD-01/02 registries, PD-04 applicability engine, PD-06 mapping engine, PD-07 Central Time temporal engine, PD-05 exact-decimal financial control engine, and standard-library synthetic banking data generator.
+- **Verification:** 90 passing unit tests; 27 sections / 333 logical field rows reconciled; production mode fails closed. See [Package 1 Record](executable-implementation-package-01.md) and [Control Record](../../04-monitoring-and-control/sprint-03-executable-package-01-control.md).
 
-### Executable Implementation Package 2 — 2026-09-22
+### 6. Executable Implementation Package 2 — Curated Processing Pipeline (2026-09-22)
+- **Scope:** Implemented offline transformation, DD-08 masking, DD-09 data quality (DQ-D01..DQ-D13), quarantine ledger, natural key deduplication, batch replay tracking, lineage ledger, and dual exact row (`RC-D01`) and financial (`RC-D02`) reconciliation with exact scale-4 Decimal arithmetic.
+- **Verification:** 135 passing unit tests; execution mode isolation verified (`ExecutionMode.PRODUCTION` fails closed). Approved via `/approve sprint-3-package-2`. See [Package 2 Record](executable-implementation-package-02.md) and [Control Record](../../04-monitoring-and-control/sprint-03-executable-package-02-control.md).
 
-The offline transformation, data quality, quarantine, lineage, and curated processing pipeline is implemented, tested, audited, and **approved by Project Owner through `/approve sprint-3-package-2`**; see [implementation record](executable-implementation-package-02.md) and [control record](../../04-monitoring-and-control/sprint-03-executable-package-02-control.md). Implements DD-08 data masking, DD-09 data quality rules (DQ-D01..DQ-D13), quarantine ledger, natural key deduplication and conflict detection, batch replay tracking, lineage ledger, exact row (RC-D01) and financial (RC-D02) reconciliation, deterministic JSON artifact writers, and end-to-end orchestration across strict production and isolated fixture modes. 135 unit tests pass (90 baseline + 45 new); baseline intake tests (11/11) pass; source-field inventory remains 27 sections / 333 rows. All 27 production physical headers, schemas, applicability predicates, financial controls (with unresolved production tolerance), and mapping groups remain PENDING in production mode; execution mode isolation is verified. Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized; Package 3 unauthorized status is historical as of 2026-09-22 and superseded by 2026-09-24 review (risk increments complete; K01–K10 computation and analytical marts remain unauthorized).
+### 7. Executable Implementation Package 3 — Risk, KPIs, Marts & Orchestration (2026-09-22..25)
+- **Increments 1 & 2 (Risk Conditions & Classification):** Implemented RC-01 through RC-05 risk evaluation and customer classification ($t/u$).
+- **Risk Hardening Checkpoint (`472f126`):** Hardened execution mode typing and production fail-closed boundaries (187 passed tests).
+- **Increment 3 (Core Banking KPIs & Marts):** Implemented K01–K10 KPI computation engine and four dimensional analytical marts (`mart_transaction_kpis`, `mart_loan_delinquency_kpis`, `mart_customer_risk_kpis`, `mart_complaint_kpis`). Gated publication on missing principal and non-additive exposure (223 passed tests). See [Increment 3 Plan](sprint-03-package-03-increment-03-plan.md) and [Increment 3 Review](executable-implementation-package-03-increment-03-review.md).
+- **Increment 4 (Consolidated Orchestration & Packaging):** Implemented `ConsolidatedPipelineRunner`, `CustomerRiskOrchestrator`, companion `manifest.json.sha256`, diagnostic-only quarantine scoping, and replay tracking (236 passed tests). See [Increment 4 Plan](sprint-03-package-03-increment-04-plan.md) and [Increment 4 Review](executable-implementation-package-03-increment-04-review.md).
+- **Consolidated Package 3 Offline Closure:** Approved via `/approve sprint-3-package-3-offline-closure`. See [Consolidated Review](sprint-03-package-03-consolidated-completion-review.md) and [Approval Record](../../04-monitoring-and-control/sprint-03-package-03-offline-closure-approval.md).
 
-### Executable Implementation Package 3 — completion review
+### 8. Sprint 3 Retrospective & Overall Offline Closure (2026-09-25)
+- **Scope:** Formally closed the entire offline implementation scope of Sprint 3 via `/approve sprint-3-closure`. Reconciled 34 test modules, 236 unit tests, 36 subtests, 27 sections / 333 logical target fields, and 0 broken links.
+- **Key Artifacts:** [Sprint 3 Retrospective](../../04-monitoring-and-control/sprint-03-retrospective.md) and [Sprint 3 Closure Approval Record](../../04-monitoring-and-control/sprint-03-closure-approval.md).
 
-The [Package 3 completion review](executable-implementation-package-03-completion-review.md) verifies committed risk-condition Increment 1 (`46caef7`), customer-classification Increment 2 (`0ee1055`), and risk-evaluation/production-control hardening checkpoint (`472f126`) against the approved catalog. Combined regression: 168 tests passed historically in 0.75s for Increments 1–2; initial hardening checkpoint passed 187 in 0.93s; earlier Phase 2 verification passed 187 and 36 subtests in 1.32s; subsequent final QA passed 187 and 36 subtests in 0.86s; reconciliation remains 27 sections / 333 rows. Status: **Risk increments and hardening complete; Package 3 remains open** at that checkpoint for KPI and mart scope. [Control record](../../04-monitoring-and-control/sprint-03-package-03-completion-review-control.md).
+---
 
-### Executable Implementation Package 3 Increment 3 — Core Banking KPIs & Analytical Marts
+## Authoritative Artifact Inventory
 
-Project Owner approved the Increment 3 implementation plan via `/approve sprint-3-package-3-increment-3-plan`. Implemented deterministic K01–K10 computation engine and four dimensional analytical marts (`mart_transaction_kpis`, `mart_loan_delinquency_kpis`, `mart_customer_risk_kpis`, `mart_complaint_kpis`) in pure offline fixture mode. Enforces DD-09 gating (`PRINCIPAL_MISSING` and quarantined `PRINCIPAL_NEGATIVE` block candidate publication), DD-04 unknown risk segregation (`INCOMPLETE_EVIDENCE` and `UNAVAILABLE` reported as separate unknown populations, never not-high-risk), DD-02 non-additive exposure, K04 eligible-status denominator consistency, continuous 24/7 calendar clocks, strict `>` SLA breach inequality, and strict `ExecutionMode.PRODUCTION` fail-closed isolation. Combined regression passed: **223 passed, 36 subtests passed in 1.14s** (187 baseline + 36 Increment 3 unit/acceptance tests); source-field inventory remains exactly 27 sections / 333 logical target field rows. See [Increment 3 implementation plan](sprint-03-package-03-increment-03-plan.md), [Increment 3 completion review](executable-implementation-package-03-increment-03-review.md), and [control record](../../04-monitoring-and-control/sprint-03-package-03-increment-03-control.md). Package 3 remains open; Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized.
-
-### Executable Implementation Package 3 Increment 4 — Pipeline Orchestration & Packaging
-
-Project Owner approved the Increment 4 implementation plan via `/approve sprint-3-package-3-increment-4-plan` with approved decisions on diagnostic-only quarantined artifacts, companion `manifest.json.sha256`, and exact $t/u$ risk classification rules. Implemented `ConsolidatedPipelineRunner`, `CustomerRiskOrchestrator`, enhanced `OutputArtifactWriter`, and end-to-end execution flow. Enforces AC-ORCH-01 end-to-end fixture execution, AC-ORCH-02 production fail-closed zero-output isolation, AC-ORCH-03 package-level `PUB-D01` diagnostic-only gating, AC-ORCH-04 K06 currency-cohort candidate gating isolation (currency defects block K06 candidate without quarantining the package or suppressing other marts), AC-ORCH-05/06 customer risk flow with exact $t/u$ thresholds and non-additive exposure, AC-ORCH-07 batch replay conflict detection, and AC-ORCH-08 deterministic IDs and companion `manifest.json.sha256`. Combined regression passed: **236 passed, 36 subtests passed in 1.69s** (223 baseline + 13 Increment 4 unit/acceptance tests); source-field inventory remains exactly 27 sections / 333 logical target field rows. See [Increment 4 implementation plan](sprint-03-package-03-increment-04-plan.md), [Increment 4 completion review](executable-implementation-package-03-increment-04-review.md), and [control record](../../04-monitoring-and-control/sprint-03-package-03-increment-04-control.md). Package 3 offline implementation complete; Sprint 3 remains in progress and not approved; PD02/PostgreSQL remains unauthorized.
-
-### Executable Implementation Package 3 — Consolidated Completion Review (Offline Scope Closed)
-
-The [Package 3 Consolidated Completion Review](sprint-03-package-03-consolidated-completion-review.md) and [Consolidated Control Record](../../04-monitoring-and-control/sprint-03-package-03-consolidated-control.md) formally record Project Owner approval and closure of the Sprint 3 Package 3 offline scope on branch `checkpoint/sprint-03-offline-contract-reconciliation` up to commit `1dc7a24c5f182659e8f37b307837e53747300d31` via `/approve sprint-3-package-3-offline-closure`; see the formal [Approval Record](../../04-monitoring-and-control/sprint-03-package-03-offline-closure-approval.md). Synthesizes delivery across Increment 1 (`46caef7`), Increment 2 (`0ee1055`), Risk Hardening (`472f126`), Increment 3 (`ac42d27`), and Increment 4 (`c1eee66`). Full regression suite passes: **236 passed, 36 subtests passed in 1.53s** across 34 test modules; source-field inventory remains exactly 27 sections / 333 logical target field rows. Status: **Package 3 offline scope approved and closed**. Sprint 3 remains in progress and not approved; production physical contracts remain pending (fail-closed); PD02/PostgreSQL remains unauthorized.
-
-### Sprint 3 Retrospective & Overall Closure Approval — 2026-09-25
-
-The [Sprint 3 Retrospective](../../04-monitoring-and-control/sprint-03-retrospective.md) and [Sprint 3 Overall Closure Approval Record](../../04-monitoring-and-control/sprint-03-closure-approval.md) record the formal Project Owner approval and closure of the Sprint 3 offline implementation scope (`/approve sprint-3-closure`) based on checkpoint `b2eba35ddc1dc7ada9aab071d05358e7325c63ee`. Synthesizes all Sprint 3 delivery across WP-PD01 and Packages 1–3. Quality evidence verified: exactly 34 test modules in `tests/`, 236 tests passed, 36 subtests passed in 1.72s; source-field inventory remains exactly 27 sections / 333 logical target field rows; all repository links verified with 0 broken links across 97 files. Status: **Sprint 3 offline implementation scope approved and closed**. PD-01 through PD-07 physical production contracts remain pending fail-closed; PD02/PostgreSQL remains unauthorized.
-
-Authorized by requesting user 2026-09-17: physical-design documentation and foundation SQL for static review only. G3 remains approved. Earlier statement that all executable work required separate authorization describes the historical state at WP-PD01 delivery prior to subsequent authorized Sprint 3 offline packages (Packages 1–2 approved, Package 3 risk and KPI/mart increments implemented locally under checkpoints; Package 3 offline scope approved and closed). PD02 database work remains unauthorized. Status: PD01 authored, static validation recorded separately; no database inspection/execution, dependencies installed, fixtures or runtime results.
-
-## Artifact inventory
-
-### Static WP-PD01 design artifacts
-
-- [Architecture](physical-architecture.md)
-- [109-entity/982-field mapping](logical-to-physical-map.md)
-- [Constraints and typed references](constraint-matrix.md)
-- [Versions and publication](versioning-and-publication.md)
-- [Indexes and partitions](indexing-and-partitioning.md)
+### Static Physical Architecture (WP-PD01)
+- [Physical architecture](physical-architecture.md)
+- [109-entity / 982-field mapping](logical-to-physical-map.md)
+- [Constraint matrix and typed references](constraint-matrix.md)
+- [Versioning and publication](versioning-and-publication.md)
+- [Indexing and partitioning](indexing-and-partitioning.md)
 - [Security enforcement](security-enforcement.md)
 - [Lifecycle execution](lifecycle-execution.md)
-- [Safe cleanup](development-cleanup.md)
-- [Foundation SQL](../../../sql/migrations/0001_foundation.sql)
-- [Static validation](static-validation.md)
+- [Safe development cleanup](development-cleanup.md)
+- [Foundation SQL migration](../../../sql/migrations/0001_foundation.sql)
+- [Static validation evidence](static-validation.md)
 
-### Physical contract framework and annexes
-
-- [Data engineering intake](data-engineering-intake.md)
-- [Proposed offline manifest contract](offline-manifest-contract.md)
-- [Contract reconciliation](contract-reconciliation.md)
-- [Source field inventory](source-field-inventory.md)
+### Physical Contract Annexes & Frameworks
 - [Physical design decision package](physical-design-decision-package.md)
+- [Source field inventory (27 sections / 333 rows)](source-field-inventory.md)
+- [Contract reconciliation](contract-reconciliation.md)
 - [PD-01 physical header annex](pd01-physical-header-annex.md)
 - [PD-02 schema version annex](pd02-schema-version-annex.md)
 - [PD-03 manifest specification](pd03-manifest-json-specification.md)
-- [PD-03 one-row manifest example](pd03-manifest-normal-example.md)
-- [PD-03 zero-row manifest example](pd03-manifest-zero-row-example.md)
+- [PD-03 one-row normal example](pd03-manifest-normal-example.md)
+- [PD-03 zero-row normal example](pd03-manifest-zero-row-example.md)
 - [PD-01–PD-03 cross-contract validation](pd01-pd03-cross-contract-validation.md)
 - [PD-04 conditional applicability annex](pd04-conditional-applicability-annex.md)
 - [PD-05 financial control annex](pd05-financial-control-annex.md)
@@ -87,22 +93,27 @@ Authorized by requesting user 2026-09-17: physical-design documentation and foun
 - [PD-05–PD-07 cross-contract validation](pd05-pd07-cross-contract-validation.md)
 - [Physical contract pending register](physical-contract-pending-register.md)
 
-### Executable packages and delivery records
+### Executable Delivery Records
+- [Implementation Package 1 Record](executable-implementation-package-01.md)
+- [Implementation Package 2 Record](executable-implementation-package-02.md)
+- [Package 3 Completion Review (Risk & Hardening)](executable-implementation-package-03-completion-review.md)
+- [Package 3 Increment 3 Plan](sprint-03-package-03-increment-03-plan.md)
+- [Package 3 Increment 3 Review (KPIs & Marts)](executable-implementation-package-03-increment-03-review.md)
+- [Package 3 Increment 4 Plan](sprint-03-package-03-increment-04-plan.md)
+- [Package 3 Increment 4 Review (Orchestration & Packaging)](executable-implementation-package-03-increment-04-review.md)
+- [Package 3 Consolidated Completion Review](sprint-03-package-03-consolidated-completion-review.md)
 
-- [Executable Implementation Package 1 Record](executable-implementation-package-01.md)
-- [Executable Implementation Package 2 Record](executable-implementation-package-02.md)
-- [Executable Implementation Package 3 Completion Review (Risk & Hardening)](executable-implementation-package-03-completion-review.md)
-- [Executable Implementation Package 3 Increment 3 Plan](sprint-03-package-03-increment-03-plan.md)
-- [Executable Implementation Package 3 Increment 3 Completion Review (KPIs & Marts)](executable-implementation-package-03-increment-03-review.md)
-- [Executable Implementation Package 3 Increment 4 Plan](sprint-03-package-03-increment-04-plan.md)
-- [Executable Implementation Package 3 Increment 4 Completion Review (Orchestration & Packaging)](executable-implementation-package-03-increment-04-review.md)
-- [Executable Implementation Package 3 Consolidated Completion Review](sprint-03-package-03-consolidated-completion-review.md)
+---
 
+## PD02 Prerequisites & Sprint 4 Boundaries
 
-Approved input: [G3 decision](../../04-monitoring-and-control/g3-data-design-approval.md), [authoritative inventory](../sprint-02-data-design/field-level-dictionary.md), [synthetic contract](../sprint-02-data-design/synthetic-source-contract.md) and all DD-01 through DD-12. No logical decisions reopened or changed. Physical helpers are proposed representations, not new logical banking entities.
+Any future authorization to proceed to PostgreSQL deployment (PD02) or Sprint 4 must satisfy strict prerequisites:
+1. **Explicit Project Owner Authorization:** Specific instruction authorizing local environment inspection, database bootstrap credentials, extension installation, and SQL execution.
+2. **Target Database Inspection:** Verify installed PostgreSQL version (target PostgreSQL 18) and examine potential role/schema name collisions.
+3. **Dependency Pinning:** Pin driver/test dependencies and select disposable database test scope.
+4. **Trigger & Security Implementation:** Implement semantic triggers and Row-Level Security (RLS) policies prior to data loading.
+5. **Gate G4 Boundary:** Execution of database migrations does not constitute Gate G4 (Analytics Validation) approval, which remains a separate future milestone.
 
-## PD02 prerequisites
+---
 
-Separate explicit user authorization must specify permitted local environment inspection, database target/bootstrap credential mechanism, dependency/extension installation if needed, SQL execution, disposable test scope and cleanup. Inspect installed PostgreSQL version only then; proposed target is PostgreSQL 18, not confirmed installed. Review role/schema name collisions and required bootstrap privileges. Pin driver/test/timezone dependencies and decide exact authorized next migration scope. Complete target-specific typed binding schemas and semantic triggers before loading their referencing records. Foundation SQL alone does not implement business integrity, RLS or publication.
-
-Next lifecycle gate remains G4 Analytics Validation; neither PD01 nor a successful migration approves it.
+[Execution](../README.md) > [Sprint 02: Data Design](../sprint-02-data-design/README.md) < **Sprint 03: Physical Design & Pipeline** | Next: [Phase 04: Monitoring](../../04-monitoring-and-control/README.md) >>
